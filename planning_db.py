@@ -4,6 +4,8 @@ import re
 import unicodedata
 from datetime import date, datetime, time, timedelta
 
+from psycopg2.extras import RealDictCursor
+
 from database import get_db_connection
 
 CATEGORIES = ['Travail', 'Formation', 'Réunion']
@@ -164,7 +166,7 @@ def format_heures(heures):
 
 def shifts_utilisateur_semaine(user_id, lundi):
     conn = get_db_connection()
-    cursor = conn.cursor(dictionary=True)
+    cursor = conn.cursor(cursor_factory=RealDictCursor)
     try:
         cursor.execute(
             '''
@@ -183,7 +185,7 @@ def shifts_utilisateur_semaine(user_id, lundi):
 def shifts_visibles_semaine(user_id, lundi):
     """Lignes brutes des shifts qui chevauchent la semaine (y compris une nuit commencée le dimanche d'avant)."""
     conn = get_db_connection()
-    cursor = conn.cursor(dictionary=True)
+    cursor = conn.cursor(cursor_factory=RealDictCursor)
     try:
         cursor.execute(
             '''
@@ -202,7 +204,7 @@ def shifts_visibles_semaine(user_id, lundi):
 def shifts_voisins(employe_id, lundi):
     """Shifts commencés hors de la semaine mais proches de ses bords (nuits à cheval sur deux semaines)."""
     conn = get_db_connection()
-    cursor = conn.cursor(dictionary=True)
+    cursor = conn.cursor(cursor_factory=RealDictCursor)
     try:
         cursor.execute(
             '''
@@ -220,9 +222,9 @@ def shifts_voisins(employe_id, lundi):
 
 def recuperer_utilisateur(user_id):
     conn = get_db_connection()
-    cursor = conn.cursor(dictionary=True)
+    cursor = conn.cursor(cursor_factory=RealDictCursor)
     try:
-        cursor.execute('SELECT id, nom, prenom, poste, contrat FROM user WHERE id = %s;', (user_id,))
+        cursor.execute('SELECT id, nom, prenom, poste, contrat FROM "user" WHERE id = %s;', (user_id,))
         return cursor.fetchone()
     finally:
         cursor.close()
@@ -236,7 +238,7 @@ def equipes_du_manager(user_id, lundi):
     membres_ids ne liste que les membres non responsables (ceux qu'on coche dans la fenêtre).
     """
     conn = get_db_connection()
-    cursor = conn.cursor(dictionary=True)
+    cursor = conn.cursor(cursor_factory=RealDictCursor)
     try:
         cursor.execute(
             '''
@@ -244,14 +246,14 @@ def equipes_du_manager(user_id, lundi):
                    COUNT(u.id) AS nb_membres,
                    COALESCE(SUM(u.contrat), 0) AS heures_contrat,
                    COALESCE(SUM(h.minutes), 0) / 60 AS heures_planifiees,
-                   GROUP_CONCAT(CONCAT(u.id, ':', LEFT(u.prenom, 1), LEFT(u.nom, 1)) ORDER BY u.prenom SEPARATOR ',') AS membres,
-                   GROUP_CONCAT(CASE WHEN ut.responsable = 0 THEN u.id END) AS membres_ids
+                   STRING_AGG(u.id || ':' || LEFT(u.prenom, 1) || LEFT(u.nom, 1), ',' ORDER BY u.prenom) AS membres,
+                   STRING_AGG(CASE WHEN ut.responsable = 0 THEN u.id::text END, ',') AS membres_ids
             FROM team t
             JOIN user_team moi ON moi.team_id = t.id AND moi.user_id = %s AND moi.responsable = 1
             LEFT JOIN user_team ut ON ut.team_id = t.id
-            LEFT JOIN user u ON u.id = ut.user_id AND u.valid = 1
+            LEFT JOIN "user" u ON u.id = ut.user_id AND u.valid = 1
             LEFT JOIN (
-                SELECT effectueur_id, SUM(TIMESTAMPDIFF(MINUTE, debut, fin)) AS minutes FROM shift
+                SELECT effectueur_id, SUM(EXTRACT(EPOCH FROM fin - debut) / 60) AS minutes FROM shift
                 WHERE debut >= %s AND debut < %s
                 GROUP BY effectueur_id
             ) h ON h.effectueur_id = u.id
@@ -281,12 +283,12 @@ def membres_disponibles(exclure_id):
     exclure_id : le manager qui gère la fenêtre, déjà responsable de ses équipes.
     """
     conn = get_db_connection()
-    cursor = conn.cursor(dictionary=True)
+    cursor = conn.cursor(cursor_factory=RealDictCursor)
     try:
         cursor.execute(
             '''
             SELECT u.id, u.nom, u.prenom, u.poste, u.manager, COUNT(ut.team_id) AS nb_equipes
-            FROM user u
+            FROM "user" u
             LEFT JOIN user_team ut ON ut.user_id = u.id
             WHERE u.valid = 1 AND u.supervisor = 0 AND u.id <> %s
             GROUP BY u.id
@@ -305,9 +307,8 @@ def creer_equipe(nom, manager_id, membres_ids):
     conn = get_db_connection()
     cursor = conn.cursor()
     try:
-        conn.start_transaction()
-        cursor.execute('INSERT INTO team (nom) VALUES (%s);', (nom,))
-        team_id = cursor.lastrowid
+        cursor.execute('INSERT INTO team (nom) VALUES (%s) RETURNING id;', (nom,))
+        team_id = cursor.fetchone()[0]
         cursor.execute('INSERT INTO user_team (user_id, team_id, responsable) VALUES (%s, %s, 1);', (manager_id, team_id))
         for user_id in membres_ids:
             if user_id != manager_id:
@@ -327,12 +328,11 @@ def modifier_equipe(team_id, nom, membres_ids):
     conn = get_db_connection()
     cursor = conn.cursor()
     try:
-        conn.start_transaction()
         cursor.execute('UPDATE team SET nom = %s WHERE id = %s;', (nom, team_id))
         cursor.execute('DELETE FROM user_team WHERE team_id = %s AND responsable = 0;', (team_id,))
         for user_id in membres_ids:
-            # IGNORE : un responsable coché reste responsable (clé primaire user_id, team_id)
-            cursor.execute('INSERT IGNORE INTO user_team (user_id, team_id, responsable) VALUES (%s, %s, 0);',
+            # ON CONFLICT : un responsable coché reste responsable (clé primaire user_id, team_id)
+            cursor.execute('INSERT INTO user_team (user_id, team_id, responsable) VALUES (%s, %s, 0) ON CONFLICT DO NOTHING;',
                            (user_id, team_id))
         conn.commit()
     except Exception:
@@ -358,7 +358,7 @@ def supprimer_equipe(team_id):
 def equipe_geree(team_id, user_id):
     """Renvoie l'équipe si user_id en est responsable, sinon None (contrôle d'accès)."""
     conn = get_db_connection()
-    cursor = conn.cursor(dictionary=True)
+    cursor = conn.cursor(cursor_factory=RealDictCursor)
     try:
         cursor.execute(
             '''
@@ -377,11 +377,11 @@ def equipe_geree(team_id, user_id):
 def membres_equipe(team_id):
     """Membres validés de l'équipe, responsables et managers compris (tous sont planifiables)."""
     conn = get_db_connection()
-    cursor = conn.cursor(dictionary=True)
+    cursor = conn.cursor(cursor_factory=RealDictCursor)
     try:
         cursor.execute(
             '''
-            SELECT u.id, u.nom, u.prenom, u.poste, u.contrat, ut.responsable FROM user u
+            SELECT u.id, u.nom, u.prenom, u.poste, u.contrat, ut.responsable FROM "user" u
             JOIN user_team ut ON ut.user_id = u.id
             WHERE ut.team_id = %s AND u.valid = 1
             ORDER BY u.prenom, u.nom;
@@ -396,13 +396,13 @@ def membres_equipe(team_id):
 
 def shifts_equipe_semaine(team_id, lundi):
     conn = get_db_connection()
-    cursor = conn.cursor(dictionary=True)
+    cursor = conn.cursor(cursor_factory=RealDictCursor)
     try:
         cursor.execute(
             '''
             SELECT s.id, s.categorie, s.debut, s.fin, s.effectueur_id FROM shift s
             JOIN user_team ut ON ut.user_id = s.effectueur_id AND ut.team_id = %s
-            JOIN user u ON u.id = s.effectueur_id AND u.valid = 1
+            JOIN "user" u ON u.id = s.effectueur_id AND u.valid = 1
             WHERE s.debut >= %s AND s.debut < %s
             ORDER BY s.debut;
             ''',
@@ -485,7 +485,6 @@ def appliquer_planning(modifications, assigneur_id, lundi):
     conn = get_db_connection()
     cursor = conn.cursor()
     try:
-        conn.start_transaction()
         for employe_id, shifts in modifications.items():
             cursor.execute(
                 'SELECT id FROM shift WHERE effectueur_id = %s AND debut >= %s AND debut < %s;',

@@ -99,11 +99,9 @@ def main():
     conn = get_db_connection()
     cursor = conn.cursor()
     try:
-        conn.start_transaction()
-
         # 1. Vidage dans l'ordre des clés étrangères
         for table in ('shift', 'user_team', 'team', 'user'):
-            cursor.execute(f'DELETE FROM `{table}`;')
+            cursor.execute(f'DELETE FROM "{table}";')
 
         # 2. Utilisateurs (un seul hachage : même mot de passe de démo pour tous)
         hash_mdp = generate_password_hash(MOT_DE_PASSE)
@@ -111,18 +109,18 @@ def main():
         for login, nom, prenom, poste, manager, superviseur, contrat, valide in UTILISATEURS:
             cursor.execute(
                 '''
-                INSERT INTO user (nom, prenom, email, poste, login, password_hash, manager, supervisor, contrat, valid)
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+                INSERT INTO "user" (nom, prenom, email, poste, login, password_hash, manager, supervisor, contrat, valid)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s) RETURNING id;
                 ''',
                 (nom, prenom, email_de(login, prenom, nom), poste, login, hash_mdp, manager, superviseur, contrat, valide)
             )
-            ids[login] = cursor.lastrowid
+            ids[login] = cursor.fetchone()[0]
 
         # 3. Équipes : le manager en est responsable (il la gère), les autres en sont membres (planifiés)
         managers_de = {}
         for nom_equipe, (manager, membres) in EQUIPES.items():
-            cursor.execute('INSERT INTO team (nom) VALUES (%s);', (nom_equipe,))
-            team_id = cursor.lastrowid
+            cursor.execute('INSERT INTO team (nom) VALUES (%s) RETURNING id;', (nom_equipe,))
+            team_id = cursor.fetchone()[0]
             for login in [manager] + membres:
                 cursor.execute('INSERT INTO user_team (user_id, team_id, responsable) VALUES (%s, %s, %s);',
                                (ids[login], team_id, int(login == manager)))

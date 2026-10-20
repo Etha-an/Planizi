@@ -1,4 +1,5 @@
-import mysql.connector
+import psycopg2
+from psycopg2.extras import RealDictCursor
 import os
 import re
 import unicodedata
@@ -10,20 +11,20 @@ load_dotenv()
 
 def get_db_connection():
     """Crée et retourne la connexion à la base de données."""
-    return mysql.connector.connect(
+    return psycopg2.connect(
         host=os.getenv("DB_HOST"),
         user=os.getenv("DB_USER"),
         password=os.getenv("DB_PASSWORD"),
-        database=os.getenv("DB_NAME"),
-        port=os.getenv("DB_PORT", 3306)
+        dbname=os.getenv("DB_NAME"),
+        port=os.getenv("DB_PORT", 5432)
     )
 
 def recuperer_utilisateurs():
     """Récupère tous les utilisateurs de la base."""
     conn = get_db_connection()
-    cursor = conn.cursor(dictionary=True)
+    cursor = conn.cursor(cursor_factory=RealDictCursor)
     try:
-        cursor.execute('SELECT * FROM user;')
+        cursor.execute('SELECT * FROM "user";')
         return cursor.fetchall()
     finally:
         # Toujours fermer, même en cas d'erreur SQL
@@ -32,11 +33,11 @@ def recuperer_utilisateurs():
 
 def utilisateurs_non_valide():
     conn = get_db_connection()
-    # Le dictionary=True est vital pour que Flask comprenne les colonnes
-    cursor = conn.cursor(dictionary=True)
+    # Le RealDictCursor est vital pour que Flask comprenne les colonnes
+    cursor = conn.cursor(cursor_factory=RealDictCursor)
     try:
         # On cherche tous ceux qui ont valid = 0
-        cursor.execute('SELECT * FROM user WHERE valid = 0;')
+        cursor.execute('SELECT * FROM "user" WHERE valid = 0;')
         return cursor.fetchall()
     finally:
         cursor.close()
@@ -49,7 +50,7 @@ def valider_utilisateur(id, poste, contrat, manager, supervisor):
         # On met à jour valid, poste, contrat, manager et supervisor
         cursor.execute(
             '''
-            UPDATE user
+            UPDATE "user"
             SET valid = 1, poste = %s, contrat = %s, manager = %s, supervisor = %s
             WHERE id = %s;
             ''',
@@ -65,7 +66,7 @@ def refuser_utilisateur(id):
     cursor = conn.cursor()
     try:
         cursor.execute(
-            'DELETE FROM user WHERE id = %s;',
+            'DELETE FROM "user" WHERE id = %s;',
             (id,)
         )
         conn.commit()
@@ -81,7 +82,7 @@ def normaliser(texte):
 def generer_login(cursor, nom, prenom):
     """Construit un login 'p.nom' unique : e.renucci, puis e.renucci2, e.renucci3..."""
     base = f"{normaliser(prenom)[:1]}.{normaliser(nom)}"
-    cursor.execute('SELECT login FROM user WHERE login = %s OR login LIKE %s;', (base, base + '%'))
+    cursor.execute('SELECT login FROM "user" WHERE login = %s OR login LIKE %s;', (base, base + '%'))
     pris = {ligne[0] for ligne in cursor.fetchall()}
 
     login, numero = base, 2
@@ -101,12 +102,12 @@ def ajouter_utilisateur(nom, prenom, email, mot_de_passe_en_clair):
         login = generer_login(cursor, nom, prenom)
         # Requête SQL avec 5 valeurs
         cursor.execute(
-            'INSERT INTO user (nom, prenom, email, login, password_hash, manager, supervisor) VALUES (%s, %s, %s, %s, %s, 0, 0)',
+            'INSERT INTO "user" (nom, prenom, email, login, password_hash, manager, supervisor) VALUES (%s, %s, %s, %s, %s, 0, 0)',
             (nom, prenom, email, login, mot_de_passe_securise)
         )
         conn.commit()
         return {"succes": True, "login": login}
-    except mysql.connector.IntegrityError:
+    except psycopg2.IntegrityError:
         # La colonne email est UNIQUE : l'adresse est déjà utilisée
         return {"succes": False, "erreur": "Cet email est déjà utilisé."}
     finally:
@@ -116,9 +117,9 @@ def ajouter_utilisateur(nom, prenom, email, mot_de_passe_en_clair):
 def roles_utilisateur(id):
     """Nom, prénom, rôles et état du compte (relu à chaque requête pour appliquer les changements sans reconnexion)."""
     conn = get_db_connection()
-    cursor = conn.cursor(dictionary=True)
+    cursor = conn.cursor(cursor_factory=RealDictCursor)
     try:
-        cursor.execute('SELECT nom, prenom, manager, supervisor, valid FROM user WHERE id = %s;', (id,))
+        cursor.execute('SELECT nom, prenom, manager, supervisor, valid FROM "user" WHERE id = %s;', (id,))
         return cursor.fetchone()
     finally:
         cursor.close()
@@ -127,13 +128,13 @@ def roles_utilisateur(id):
 def utilisateurs_valides():
     """Comptes actifs, avec le nombre d'équipes de chacun (onglet Utilisateurs)."""
     conn = get_db_connection()
-    cursor = conn.cursor(dictionary=True)
+    cursor = conn.cursor(cursor_factory=RealDictCursor)
     try:
         cursor.execute(
             '''
             SELECT u.id, u.nom, u.prenom, u.email, u.login, u.poste, u.contrat, u.manager, u.supervisor,
                    COUNT(ut.team_id) AS nb_equipes
-            FROM user u
+            FROM "user" u
             LEFT JOIN user_team ut ON ut.user_id = u.id
             WHERE u.valid = 1
             GROUP BY u.id
@@ -156,23 +157,23 @@ def modifier_utilisateur(id, nom, prenom, email, login, poste, contrat, manager,
     cursor = conn.cursor()
     try:
         # La colonne login n'est pas UNIQUE en base : on vérifie nous-mêmes
-        cursor.execute('SELECT 1 FROM user WHERE login = %s AND id <> %s;', (login, id))
+        cursor.execute('SELECT 1 FROM "user" WHERE login = %s AND id <> %s;', (login, id))
         if cursor.fetchone():
             return {"succes": False, "erreur": f"Le login « {login} » est déjà utilisé."}
 
         cursor.execute(
             '''
-            UPDATE user
+            UPDATE "user"
             SET nom = %s, prenom = %s, email = %s, login = %s, poste = %s, contrat = %s, manager = %s, supervisor = %s
             WHERE id = %s;
             ''',
             (nom, prenom, email, login, poste, contrat, manager, supervisor, id)
         )
         if nouveau_mdp:
-            cursor.execute('UPDATE user SET password_hash = %s WHERE id = %s;', (generate_password_hash(nouveau_mdp), id))
+            cursor.execute('UPDATE "user" SET password_hash = %s WHERE id = %s;', (generate_password_hash(nouveau_mdp), id))
         conn.commit()
         return {"succes": True}
-    except mysql.connector.IntegrityError:
+    except psycopg2.IntegrityError:
         conn.rollback()
         return {"succes": False, "erreur": "Cet email est déjà utilisé."}
     finally:
@@ -184,7 +185,7 @@ def desactiver_utilisateur(id):
     conn = get_db_connection()
     cursor = conn.cursor()
     try:
-        cursor.execute('UPDATE user SET valid = 0 WHERE id = %s;', (id,))
+        cursor.execute('UPDATE "user" SET valid = 0 WHERE id = %s;', (id,))
         conn.commit()
     finally:
         cursor.close()
@@ -192,9 +193,9 @@ def desactiver_utilisateur(id):
 
 def verifier_connexion(login, mot_de_passe_tente):
     conn = get_db_connection()
-    cursor = conn.cursor(dictionary=True)
+    cursor = conn.cursor(cursor_factory=RealDictCursor)
     try:
-        cursor.execute('SELECT * FROM user WHERE login = %s;', (login,))
+        cursor.execute('SELECT * FROM "user" WHERE login = %s;', (login,))
         utilisateur = cursor.fetchone()
     finally:
         cursor.close()

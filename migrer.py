@@ -13,7 +13,7 @@ def colonne_existe(cursor, table, colonne):
     cursor.execute(
         '''
         SELECT 1 FROM information_schema.COLUMNS
-        WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = %s AND COLUMN_NAME = %s;
+        WHERE TABLE_SCHEMA = current_schema() AND TABLE_NAME = %s AND COLUMN_NAME = %s;
         ''',
         (table, colonne)
     )
@@ -27,11 +27,11 @@ def migrer():
     changements = []
     try:
         if not colonne_existe(cursor, 'user_team', 'responsable'):
-            cursor.execute('ALTER TABLE user_team ADD COLUMN responsable TINYINT(1) NOT NULL DEFAULT 0;')
+            cursor.execute('ALTER TABLE user_team ADD COLUMN responsable SMALLINT NOT NULL DEFAULT 0;')
             cursor.execute(
                 '''
-                UPDATE user_team ut JOIN user u ON u.id = ut.user_id
-                SET ut.responsable = 1 WHERE u.manager = 1;
+                UPDATE user_team ut SET responsable = 1
+                FROM "user" u WHERE u.id = ut.user_id AND u.manager = 1;
                 '''
             )
             conn.commit()
