@@ -10,6 +10,7 @@ Les employés consultent leur planning de la semaine, les managers organisent le
 
 - [Fonctionnalités](#fonctionnalités)
 - [Rôles et écrans](#rôles-et-écrans)
+- [Maquettes](#maquettes)
 - [Technologies](#technologies)
 - [Structure du projet](#structure-du-projet)
 - [Installation](#installation)
@@ -50,6 +51,24 @@ Un utilisateur peut cumuler plusieurs rôles. Les rôles sont relus en base à *
 
 ---
 
+## Maquettes
+
+Le prototype a été réalisé avec **Figma Make** : [ouvrir le prototype sur Figma](https://www.figma.com/community/file/1691384090162897493).
+
+| Connexion | Inscription |
+|---|---|
+| ![Connexion](maquettes/connexion.png) | ![Inscription](maquettes/inscription.png) |
+
+| Écran 3 – Mon planning | Écran 4 – Mes équipes |
+|---|---|
+| ![Mon planning](maquettes/planning.png) | ![Mes équipes](maquettes/equipes.png) |
+
+| Écran 5 – Organisation du planning | Écran 6 – Validation des comptes |
+|---|---|
+| ![Organisation](maquettes/organisation.png) | ![Validation](maquettes/validation.png) |
+
+---
+
 ## Technologies
 
 - **Python 3** / **Flask 3.1**
@@ -73,6 +92,7 @@ Planizi/
 ├── data.sql            # Dump MySQL (structure + données)
 ├── requirements.txt    # Dépendances Python
 ├── .env                # Configuration locale (non versionné)
+├── maquettes/          # Captures du prototype Figma
 ├── static/             # Feuilles de style CSS
 │   ├── app.css
 │   ├── connexion.css
