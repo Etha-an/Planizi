@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mon Application</title>
+</head>
+<body>
+    <h1>Liste de mes données</h1>
+    <ul>
+    {% for ligne in donnees_pour_html %}
+        <li>
+            <!-- Affiche les colonnes 'prenom' et 'nom' en gras -->
+            <strong>{{ ligne.prenom }} {{ ligne.nom }}</strong> 
+            <br>
+            <!-- Affiche la colonne 'email' en dessous -->
+            Email : {{ ligne.email }}
+        </li>
+    {% endfor %}
+</ul>
+<br>
+
+<a href="/inscription">Aller à la page d'inscription</a>
+<a href="/valider-compte">Aller à la page de validation</a>
+<a href="/connexion">Aller à la page de connexion</a>
+</body>
+</html>

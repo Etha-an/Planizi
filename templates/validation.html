@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planizi - Validation des inscriptions</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='validation.css') }}">
+</head>
+<body>
+
+  <!-- Barre de navigation supérieure (Prototype) -->
+  <header class="prototype-bar">
+    <div class="proto-left">
+      <span class="proto-tag">PLANIZI</span>
+      <nav class="proto-menu">
+        <a href="/valider-compte" class="proto-link active">Validation</a>
+        <a href="/utilisateurs" class="proto-link">Utilisateurs</a>
+        <a href="/planning" class="proto-link">Mon planning</a>
+        {% if session.role_manager %}
+        <a href="/equipes" class="proto-link">Mes équipes</a>
+        {% endif %}
+
+      </nav>
+    </div>
+    <div class="proto-right">
+      <span class="access-label">Accès restreint</span>
+      <a href="/deconnexion" class="proto-link" style="margin-left: 24px;">Déconnexion</a>
+    </div>
+  </header>
+
+
+
+  <!-- Conteneur principal -->
+  <main class="container">
+    <!-- En-tête de la page -->
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Validation des inscriptions</h1>
+        <p class="page-subtitle">Comptes en attente d'activation</p>
+      </div>
+
+      <!-- Badge compteur "En attente" -->
+      <div class="pending-badge">
+        <span class="pending-count" id="pendingCount">-1</span>
+        <span class="pending-label">En attente</span>
+      </div>
+    </div>
+
+
+    <div class="cards-list" id="cardsList">
+
+    {% for ligne in donnees_validation %}
+    <!-- Carte -->
+    <div class="user-card">
+      <div class="user-info">
+        <div class="avatar-circle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4E0B9A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </div>
+        <div class="user-details">
+          <!-- Correction de la faute de frappe ici -->
+          <h3 class="username">{{ ligne.nom }} {{ ligne.prenom }}</h3>
+        </div>
+      </div>
+      
+      <!-- On transforme la div "card-actions" en un formulaire POST -->
+      <form action="/valider-compte" method="POST" class="card-actions">
+        
+        <!-- L'ID caché pour que Python sache qui modifier -->
+        <input type="hidden" name="user_id" value="{{ ligne.id }}">
+        
+        <!-- Bouton Refuser -->
+        <button type="submit" name="action" value="refuser" class="btn-refuse">
+          <span class="btn-icon">✕</span> Refuser
+        </button>
+        
+        <!-- Bouton Approuver -->
+        <!-- Bouton Approuver corrigé -->
+      <button type="button" class="btn-approve" onclick="openApproveModal(this, '{{ ligne.id }}')">
+        <span class="btn-icon">✓</span> Approuver
+      </button>
+        
+      </form>
+    </div>
+    {% endfor %}
+
+  </div>
+
+
+  </main>
+
+<!-- Le fond sombre (Overlay) -->
+<div id="approveModal" class="modal-overlay">
+  
+  <!-- La boîte blanche (Content) -->
+  <div class="modal-content">
+    <h2 class="modal-title">Valider l'utilisateur</h2>
+    <p class="modal-subtitle">Définissez son rôle avant d'approuver l'accès.</p>
+
+    <!-- Le formulaire -->
+    <form action="/valider-compte" method="POST">
+      <input type="hidden" name="action" value="valider">
+      <input type="hidden" name="user_id" id="modal_user_id" value="">
+
+      <!-- Champ Poste -->
+      <label class="modal-label">Poste :</label>
+      <input type="text" name="poste" class="modal-input" required placeholder="Ex: Développeur">
+
+      <!-- Champ Contrat -->
+      <label class="modal-label">Contrat (heures) :</label>
+      <input type="number" name="contrat" class="modal-input" required placeholder="Ex: 35">
+
+      <!-- Les cases à cocher alignées proprement -->
+      <div class="modal-checkboxes">
+        <label class="checkbox-label">
+          <input type="checkbox" name="manager" value="1"> Manager
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" name="supervisor" value="1"> Supervisor
+        </label>
+      </div>
+
+      <!-- Les boutons d'action en bas à droite -->
+      <div class="modal-actions">
+        <!-- Le bouton pour annuler -->
+        <button type="button" class="btn-cancel" onclick="closeModal()">Annuler</button>
+        <!-- Le bouton pour valider -->
+        <button type="submit" class="btn-confirm">Confirmer</button>
+      </div>
+    </form>
+  </div>
+
+</div>
+
+  <!-- Script JS pour la suppression de la carte -->
+  <script>
+  let cardToApprove = null;
+
+  function openApproveModal(button, userId) {
+  // 1. On donne l'ID au champ caché du formulaire
+  document.getElementById('modal_user_id').value = userId;
+  
+  // 2. On ajoute la classe "active" (ce qui active le CSS display: flex)
+  document.getElementById('approveModal').classList.add('active');
+  }
+
+  function closeModal() {
+    // On retire la classe "active", le modal redevient display: none
+    document.getElementById('approveModal').classList.remove('active');
+  }
+
+    function removeCard(button) {
+      // Trouver la carte parente du bouton cliqué
+      const card = button.closest('.user-card');
+      
+      // Animation de disparition
+      card.style.transition = 'all 0.3s ease-out';
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(-10px)';
+      
+      // Suppression de l'élément HTML après la fin de l'animation
+      setTimeout(() => {
+        card.remove();
+        updateCounter();
+      }, 300);
+    }
+
+    // Met à jour le chiffre "En attente"
+    function updateCounter() {
+      const remainingCards = document.querySelectorAll('.user-card').length;
+      document.getElementById('pendingCount').textContent = remainingCards;
+    }
+
+    document.addEventListener("DOMContentLoaded", updateCounter);
+
+  </script>
+</body>
+</html>

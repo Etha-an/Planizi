@@ -1,0 +1,516 @@
+{% extends 'base.html' %}
+{% block titre %}{{ equipe.nom }} · Organisation{% endblock %}
+
+{% block contenu %}
+<div class="page-header">
+  <div>
+    <div class="breadcrumb"><a href="{{ url_for('equipes', semaine=semaine.lundi) }}">Mes équipes</a> › {{ equipe.nom }}</div>
+    <h1 class="page-title">Organisation du planning</h1>
+    <p class="page-subtitle">
+      Équipe {{ equipe.nom }} · {{ membres|length }} employé{{ 's' if membres|length > 1 }} ·
+      <a href="{{ url_for('equipes', semaine=semaine.lundi, modifier=equipe.id) }}" class="link-muted" style="text-decoration: underline;">Gérer les membres</a>
+    </p>
+  </div>
+  <div class="week-nav">
+    <a href="?semaine={{ semaine.precedente }}" class="btn-icon js-week" title="Semaine précédente">‹</a>
+    <span class="week-label">{{ semaine.libelle }}</span>
+    <a href="?semaine={{ semaine.suivante }}" class="btn-icon js-week" title="Semaine suivante">›</a>
+    {% if not semaine.courante %}<a href="?" class="link-muted week-today js-week">Aujourd'hui</a>{% endif %}
+  </div>
+</div>
+
+{% if not membres %}
+<div class="card empty">
+  <p style="margin-bottom: 16px;">Cette équipe ne compte encore aucun employé.</p>
+  <a href="{{ url_for('equipes', semaine=semaine.lundi, modifier=equipe.id) }}" class="btn btn-primary">Ajouter des employés</a>
+</div>
+{% else %}
+<div class="org-layout">
+  <!-- Panneau gauche : sélection de l'employé + édition de ses shifts -->
+  <aside class="card">
+    <div class="panel-title"><span class="card-title">Employés</span></div>
+    <div class="member-list" id="memberList"></div>
+
+    <div class="editor">
+      <div class="panel-title">
+        <span class="card-title" id="editorTitle"></span>
+        <span class="member-hours" id="editorHours"></span>
+      </div>
+      <div id="shiftRows"></div>
+      <p class="empty" id="noShift" hidden style="padding: 12px;">Aucun shift cette semaine.</p>
+      <div class="editor-error" id="editorError"></div>
+      <button type="button" class="btn btn-ghost btn-block" id="addShift">+ Ajouter un shift</button>
+
+      <form method="POST" class="editor-actions" id="applyForm">
+        <input type="hidden" name="semaine" value="{{ semaine.lundi }}">
+        <input type="hidden" name="employe" id="employeField">
+        <input type="hidden" name="modifications" id="modificationsField">
+        <button type="submit" class="btn btn-primary btn-block" id="applyBtn" disabled>Appliquer</button>
+        <button type="button" class="btn btn-ghost btn-block" id="resetBtn" hidden>Annuler les modifications</button>
+        <div class="draft-status" id="draftStatus"></div>
+      </form>
+    </div>
+  </aside>
+
+  <!-- Panneau droit : planning de la semaine de toute l'équipe, puis planning horaire par type -->
+  <div class="org-right">
+  <section class="card">
+    <div class="panel-title"><span class="card-title">Planning de l'équipe</span></div>
+    <div class="team-table-wrap">
+      <table class="team-table">
+        <colgroup>
+          <col class="col-name">
+          {% for jour in semaine.jours %}<col>{% endfor %}
+          <col class="col-total">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>Employé</th>
+            {% for jour in semaine.jours %}
+            <th class="{{ 'today' if jour.aujourdhui }}"><strong>{{ jour.court }}</strong>{{ jour.date }}</th>
+            {% endfor %}
+            <th style="text-align:right;">Total</th>
+          </tr>
+        </thead>
+        <tbody id="teamBody"></tbody>
+      </table>
+    </div>
+    <div class="legend">
+      <span id="legendTypes" class="legend-types"></span>
+      <span class="legend-item">· Cliquez sur une ligne pour sélectionner l'employé, sur un type pour l'afficher ci-dessous</span>
+    </div>
+  </section>
+
+  <section class="card type-grid">
+    <div class="panel-title">
+      <span class="card-title">Planning par type</span>
+      <span class="type-current"><span class="legend-swatch" id="typeSwatch"></span><span id="typeName"></span> · <span id="typeHours"></span></span>
+    </div>
+    <div class="grid-scroll" id="typeGridWrap">
+      <div class="week-grid" id="typeGrid"></div>
+    </div>
+    <p class="empty" id="typeEmpty" hidden></p>
+  </section>
+  </div>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+{% if membres %}
+<script>
+  const MEMBRES = {{ membres|tojson }};
+  const SHIFTS = {{ shifts|tojson }};
+  const JOURS = {{ semaine.jours|tojson }};
+  const CATEGORIES = {{ categories|tojson }};  // types de base et types personnalisés, par ordre alphabétique
+  const CLASSES = { 'Travail': 'cat-travail', 'Formation': 'cat-formation', 'Réunion': 'cat-reunion' };
+  const CATEGORIES_BASE = Object.keys(CLASSES);
+  const CATEGORIE_MAX = {{ categorie_max }};
+  const NB_TEINTES = {{ nb_teintes }};
+  const NOUVEAU_TYPE = '__nouveau__';
+  const HEURE_MIN = 7, HEURE_MAX = 21;  // plage affichée par défaut dans le planning par type
+  // Couleur de chaque utilisateur, la même sur toutes les pages (planning_db.couleur_utilisateur)
+  const COULEURS = {{ couleurs|tojson }};
+
+  // --- État : planning d'origine (base) et brouillon (modifications non appliquées) ---
+  const origine = {};
+  MEMBRES.forEach(m => { origine[m.id] = []; });
+  SHIFTS.forEach(s => {
+    if (origine[s.employe_id]) {
+      origine[s.employe_id].push({ id: s.id, jour: s.jour, debut: s.debut, fin: s.fin, categorie: s.categorie });
+    }
+  });
+  let brouillon = structuredClone(origine);
+  let selection = MEMBRES.some(m => m.id === {{ employe_choisi|tojson }}) ? {{ employe_choisi|tojson }} : MEMBRES[0].id;
+  let typeChoisi = new URLSearchParams(location.search).get('type') || 'Travail';  // planning par type
+
+  // --- Utilitaires ---
+  const minutes = hhmm => { const [h, m] = hhmm.split(':').map(Number); return h * 60 + m; };
+  const formatHeures = min => { const h = Math.floor(min / 60), m = min % 60; return m ? `${h}h${String(m).padStart(2, '0')}` : `${h}h`; };
+  const formatCourt = hhmm => { const [h, m] = hhmm.split(':'); return `${Number(h)}h${m === '00' ? '' : m}`; };  // '09:30' -> '9h30'
+  const complet = s => Boolean(s.debut && s.fin);
+  // Une fin antérieure au début = shift de nuit qui se termine le lendemain
+  const lendemain = s => complet(s) && minutes(s.fin) < minutes(s.debut);
+  const duree = s => (minutes(s.fin) - minutes(s.debut) + 1440) % 1440;
+  const debutAbsolu = s => s.jour * 1440 + minutes(s.debut);  // minutes depuis lundi 0h
+  const totalMinutes = shifts => shifts.reduce((t, s) => t + (complet(s) ? duree(s) : 0), 0);
+  const cle = shifts => JSON.stringify([...shifts].map(s => [s.id, s.jour, s.debut, s.fin, s.categorie]).sort());
+  const estModifie = id => cle(brouillon[id]) !== cle(origine[id]);
+  const membresModifies = () => MEMBRES.filter(m => estModifie(m.id));
+  const nomDe = m => `${m.prenom} ${m.nom}`;
+  const initiales = m => m.prenom[0] + m.nom[0];
+  const couleurEmploye = id => COULEURS[id % COULEURS.length];
+
+  // --- Types de shift : même calcul de teinte que planning_db.classe_categorie ---
+  const classeCategorie = nom => CLASSES[nom]
+    ?? `cat-perso-${[...nom].reduce((t, c) => t + c.codePointAt(0), 0) % NB_TEINTES}`;
+  // Types connus + types créés dans ce brouillon ; un nom connu à la casse près reprend l'orthographe existante
+  const trierTypes = (a, b) => a.localeCompare(b, 'fr', { sensitivity: 'base' });
+  const typesConnus = [...CATEGORIES];
+  function normaliserType(saisie) {
+    const nom = saisie.replace(/\s+/g, ' ').trim();
+    if (!nom || nom.length > CATEGORIE_MAX) return null;
+    const existant = typesConnus.find(t => t.toLowerCase() === nom.toLowerCase());
+    if (existant) return existant;
+    typesConnus.push(nom);
+    typesConnus.sort(trierTypes);
+    return nom;
+  }
+
+  function el(tag, attrs = {}, enfants = []) {
+    const noeud = document.createElement(tag);
+    Object.entries(attrs).forEach(([k, v]) => {
+      if (k === 'text') noeud.textContent = v;
+      else if (k.startsWith('on')) noeud.addEventListener(k.slice(2), v);
+      else noeud.setAttribute(k, v);
+    });
+    enfants.forEach(e => noeud.append(e));
+    return noeud;
+  }
+
+  // Erreurs du brouillon d'un employé : renvoie { indexInvalides, message }
+  function erreurs(shifts) {
+    const invalides = new Set();
+    let message = '';
+    shifts.forEach((s, i) => {
+      if (!complet(s)) { invalides.add(i); message ||= 'Renseignez le début et la fin de chaque shift.'; return; }
+      if (duree(s) === 0) { invalides.add(i); message ||= 'Un shift ne peut pas avoir une durée nulle.'; }
+    });
+    // Chevauchements en minutes absolues : une nuit du lundi déborde bien sur le mardi
+    shifts.forEach((a, i) => shifts.forEach((b, j) => {
+      if (i < j && complet(a) && complet(b)
+          && debutAbsolu(a) < debutAbsolu(b) + duree(b) && debutAbsolu(b) < debutAbsolu(a) + duree(a)) {
+        invalides.add(i); invalides.add(j);
+        message ||= `Deux shifts se chevauchent (${JOURS[a.jour].nom.toLowerCase()}).`;
+      }
+    }));
+    return { invalides, message };
+  }
+
+  // --- Rendu ---
+  function rendreMembres() {
+    const liste = document.getElementById('memberList');
+    liste.replaceChildren(...MEMBRES.map(m => {
+      const total = totalMinutes(brouillon[m.id]);
+      const depasse = m.contrat && total > m.contrat * 60;
+      return el('button', {
+        type: 'button',
+        class: 'member' + (m.id === selection ? ' selected' : ''),
+        onclick: () => selectionner(m.id),
+      }, [
+        el('span', { class: 'avatar avatar-emp', style: `--emp: ${couleurEmploye(m.id)}`, text: initiales(m) }),
+        el('span', { class: 'member-info' }, [
+          el('div', { class: 'member-name', text: nomDe(m) }),
+          el('div', { class: 'member-poste', text: m.responsable ? 'Responsable' + (m.poste ? ` · ${m.poste}` : '') : (m.poste || '') }),
+        ]),
+        ...(estModifie(m.id) ? [el('span', { class: 'dot-draft', title: 'Modifications non appliquées' })] : []),
+        el('span', {
+          class: 'member-hours' + (depasse ? ' over' : ''),
+          title: depasse ? 'Dépasse le contrat' : '',
+          text: formatHeures(total) + (m.contrat ? ` / ${m.contrat}h` : ''),
+        }),
+      ]);
+    }));
+  }
+
+  // reconstruire = false : simple modification d'un champ, on garde les lignes (et le focus) en place
+  function rendreEditeur(reconstruire = true) {
+    const membre = MEMBRES.find(m => m.id === selection);
+    const shifts = brouillon[selection];
+    const { invalides, message } = erreurs(shifts);
+
+    document.getElementById('editorTitle').textContent = `Shifts de ${membre.prenom}`;
+    document.getElementById('editorHours').textContent =
+      formatHeures(totalMinutes(shifts)) + (membre.contrat ? ` / ${membre.contrat}h` : '');
+    document.getElementById('editorError').textContent = message;
+    document.getElementById('noShift').hidden = shifts.length > 0;
+
+    const lignes = document.getElementById('shiftRows');
+    if (!reconstruire) {
+      [...lignes.children].forEach((ligne, i) => {
+        ligne.classList.toggle('invalid', invalides.has(i));
+        ligne.querySelector('.badge-nuit').hidden = !lendemain(shifts[i]);
+      });
+      return;
+    }
+
+    lignes.replaceChildren(...shifts.map((s, i) => {
+      const maj = champ => e => { s[champ] = champ === 'jour' ? Number(e.target.value) : e.target.value; rafraichir(false); };
+      const badge = el('span', { class: 'badge-nuit', title: 'Se termine le lendemain', text: '+1 j' });
+      badge.hidden = !lendemain(s);
+      // Ligne 1 : jour · type · supprimer — Ligne 2 : début → fin (+1 j)
+      return el('div', { class: 'shift-row' + (invalides.has(i) ? ' invalid' : '') }, [
+        el('select', { 'aria-label': 'Jour', onchange: maj('jour') },
+          JOURS.map((j, k) => {
+            const o = el('option', { value: k, text: `${j.court} ${j.date}` });
+            o.selected = k === s.jour;
+            return o;
+          })),
+        selectType(s),
+        el('button', {
+          type: 'button', class: 'btn-icon', title: 'Supprimer ce shift',
+          text: '✕',
+          onclick: () => { shifts.splice(i, 1); rafraichir(); },
+        }),
+        el('div', { class: 'shift-hours' }, [
+          el('input', { type: 'time', value: s.debut, step: 900, 'aria-label': 'Début', onchange: maj('debut') }),
+          el('span', { class: 'shift-arrow', text: '→' }),
+          el('input', { type: 'time', value: s.fin, step: 900, 'aria-label': 'Fin', onchange: maj('fin') }),
+          badge,
+        ]),
+      ]);
+    }));
+  }
+
+  // Liste « Type » d'un shift ; « + Nouveau type… » la remplace par un champ de saisie
+  function selectType(s) {
+    const select = el('select', { 'aria-label': 'Type' }, [
+      ...typesConnus.map(c => {
+        const o = el('option', { value: c, text: c });
+        o.selected = c === s.categorie;
+        return o;
+      }),
+      el('option', { value: NOUVEAU_TYPE, text: '+ Nouveau type…' }),
+    ]);
+    select.addEventListener('change', () => {
+      if (select.value !== NOUVEAU_TYPE) { s.categorie = select.value; rafraichir(false); return; }
+      const champ = el('input', {
+        type: 'text', class: 'type-input', maxlength: CATEGORIE_MAX,
+        placeholder: 'Nom du type', 'aria-label': 'Nom du nouveau type',
+      });
+      let fini = false;
+      const terminer = valider => {
+        if (fini) return;
+        fini = true;
+        const nom = valider ? normaliserType(champ.value) : null;
+        if (nom) s.categorie = nom;
+        rafraichir();  // reconstruit l'éditeur : la liste revient, avec le nouveau type
+      };
+      champ.addEventListener('keydown', e => {
+        if (e.key === 'Enter') { e.preventDefault(); terminer(true); }
+        if (e.key === 'Escape') { e.preventDefault(); e.stopPropagation(); terminer(false); }
+      });
+      champ.addEventListener('blur', () => terminer(true));
+      select.replaceWith(champ);
+      champ.focus();
+    });
+    return select;
+  }
+
+  function rendreLegende() {
+    const types = [...new Set([...CATEGORIES_BASE, ...Object.values(brouillon).flat().map(s => s.categorie)])]
+      .sort(trierTypes);
+    if (!types.includes(typeChoisi)) typeChoisi = 'Travail';  // type retiré du brouillon
+    document.getElementById('legendTypes').replaceChildren(...types.map(c => el('button', {
+      type: 'button', class: 'legend-item legend-btn', 'aria-pressed': String(c === typeChoisi),
+      title: `Afficher les shifts « ${c} » ci-dessous`, onclick: () => choisirType(c),
+    }, [el('span', { class: 'legend-swatch ' + classeCategorie(c) }), c])));
+  }
+
+  // --- Planning par type : grille horaire de tous les employés pour le type choisi ---
+  // Segments d'une journée (minutes depuis 0h) ; une nuit déborde sur le lendemain, sauf hors de la semaine
+  function segmentsDuType(type) {
+    const segments = [];
+    MEMBRES.forEach(m => brouillon[m.id].forEach(s => {
+      if (s.categorie !== type || !complet(s) || duree(s) === 0) return;
+      const debut = minutes(s.debut), fin = debut + duree(s);
+      segments.push({ m, s, jour: s.jour, debut, fin: Math.min(fin, 1440), suite: false });
+      if (fin > 1440 && s.jour < 6) segments.push({ m, s, jour: s.jour + 1, debut: 0, fin: fin - 1440, suite: true });
+    }));
+    return segments;
+  }
+
+  // Shifts simultanés d'une journée : chacun reçoit une colonne (g.colonne) parmi g.nb dans son groupe
+  function placerEnColonnes(segments) {
+    segments.sort((a, b) => a.debut - b.debut || b.fin - a.fin);
+    let groupe = [], finGroupe = -1, finsColonnes = [];
+    const fermer = () => {
+      groupe.forEach(g => { g.nb = finsColonnes.length; });
+      groupe = []; finGroupe = -1; finsColonnes = [];
+    };
+    segments.forEach(g => {
+      if (groupe.length && g.debut >= finGroupe) fermer();  // plus aucun chevauchement avec le groupe
+      let colonne = finsColonnes.findIndex(fin => fin <= g.debut);
+      if (colonne === -1) colonne = finsColonnes.push(g.fin) - 1;
+      else finsColonnes[colonne] = g.fin;
+      g.colonne = colonne;
+      groupe.push(g);
+      finGroupe = Math.max(finGroupe, g.fin);
+    });
+    fermer();
+  }
+
+  function blocType(g, heureDebut) {
+    const { m, s } = g;
+    const compact = g.nb >= 3;  // trop étroit : initiales seules, l'horaire reste dans l'infobulle
+    const bloc = el('div', {
+      class: 'shift' + (compact ? ' shift-compact' : '') + (m.id === selection ? ' moi' : ''),
+      title: `${nomDe(m)} · ${s.categorie} · ${s.debut} – ${s.fin}${lendemain(s) ? ' (lendemain)' : ''}`,
+      onclick: () => selectionner(m.id),
+    }, [
+      el('div', { class: 'shift-time', text: initiales(m) }),
+      ...(compact ? [] : [el('div', { class: 'shift-cat',
+        text: g.suite ? `→ ${formatCourt(s.fin)}` : `${formatCourt(s.debut)}–${formatCourt(s.fin)}${lendemain(s) ? ' +1' : ''}` })]),
+    ]);
+    Object.assign(bloc.style, {
+      top: `calc(var(--h) * ${g.debut / 60 - heureDebut})`,
+      height: `calc(var(--h) * ${(g.fin - g.debut) / 60})`,
+      left: `calc(3px + (100% - 6px) * ${g.colonne} / ${g.nb})`,
+      width: `calc((100% - 6px) / ${g.nb} - 2px)`,
+      right: 'auto',
+    });
+    bloc.style.setProperty('--cat', couleurEmploye(m.id));
+    return bloc;
+  }
+
+  function rendreGrilleType() {
+    const segments = segmentsDuType(typeChoisi);
+    const total = MEMBRES.reduce((t, m) => t + totalMinutes(brouillon[m.id].filter(s => s.categorie === typeChoisi)), 0);
+    document.getElementById('typeSwatch').className = 'legend-swatch ' + classeCategorie(typeChoisi);
+    document.getElementById('typeName').textContent = typeChoisi;
+    document.getElementById('typeHours').textContent = formatHeures(total);
+
+    const grille = document.getElementById('typeGrid');
+    const vide = segments.length === 0;
+    document.getElementById('typeGridWrap').hidden = vide;
+    document.getElementById('typeEmpty').hidden = !vide;
+    document.getElementById('typeEmpty').textContent = `Aucun shift « ${typeChoisi} » cette semaine.`;
+    if (vide) { grille.replaceChildren(); return; }
+
+    // Même plage que l'écran 3 : 7h-21h, élargie pour contenir les shifts affichés
+    const heureDebut = Math.min(HEURE_MIN, ...segments.map(g => Math.floor(g.debut / 60)));
+    const heureFin = Math.max(HEURE_MAX, ...segments.map(g => Math.ceil(g.fin / 60)));
+    grille.style.setProperty('--h', `${heureFin - heureDebut > 15 ? 30 : 44}px`);
+
+    const heures = [];
+    for (let h = heureDebut; h < heureFin; h++) heures.push(el('div', { class: 'hour-label', text: `${h}h` }));
+    const colonnes = JOURS.map((_, k) => {
+      const duJour = segments.filter(g => g.jour === k);
+      placerEnColonnes(duJour);
+      const colonne = el('div', { class: 'day-col' }, duJour.map(g => blocType(g, heureDebut)));
+      colonne.style.height = `calc(var(--h) * ${heureFin - heureDebut})`;
+      return colonne;
+    });
+    grille.replaceChildren(
+      el('div'),
+      ...JOURS.map(j => el('div', { class: 'grid-head' + (j.aujourdhui ? ' today' : '') }, [el('strong', { text: j.court }), j.date])),
+      el('div', { class: 'hours-col' }, heures),
+      ...colonnes,
+    );
+  }
+
+  function choisirType(type) {
+    typeChoisi = type;
+    majUrl();
+    rendreLegende();
+    rendreGrilleType();
+  }
+
+  function rendreEquipe() {
+    document.getElementById('teamBody').replaceChildren(...MEMBRES.map(m => {
+      const shifts = brouillon[m.id];
+      const cellules = JOURS.map((_, k) => {
+        // Suites des nuits commencées la veille, puis shifts commençant ce jour
+        const suites = shifts.filter(s => s.jour === k - 1 && lendemain(s)).map(s => el('span', {
+          class: 'chip chip-suite ' + classeCategorie(s.categorie),
+          title: `${s.categorie} · suite de la nuit, jusqu'à ${s.fin}`,
+          text: `→ ${formatCourt(s.fin)}`,
+        }));
+        const debuts = shifts
+          .filter(s => s.jour === k && complet(s))
+          .sort((a, b) => minutes(a.debut) - minutes(b.debut))
+          .map(s => el('span', {
+            class: 'chip ' + classeCategorie(s.categorie),
+            title: `${s.categorie} · ${s.debut} – ${s.fin}${lendemain(s) ? ' (lendemain)' : ''}`,
+            text: `${formatCourt(s.debut)}–${formatCourt(s.fin)}${lendemain(s) ? ' +1' : ''}`,
+          }));
+        return el('td', {}, [...suites, ...debuts]);
+      });
+      return el('tr', { class: m.id === selection ? 'selected' : '', onclick: () => selectionner(m.id) }, [
+        el('td', {}, [
+          el('div', { class: 'row-name', text: nomDe(m) + (estModifie(m.id) ? ' •' : '') }),
+          el('div', { class: 'member-poste', text: m.poste || '' }),
+        ]),
+        ...cellules,
+        el('td', { class: 'row-total', text: formatHeures(totalMinutes(shifts)) }),
+      ]);
+    }));
+  }
+
+  function rendreActions() {
+    const modifies = membresModifies();
+    const enErreur = modifies.some(m => erreurs(brouillon[m.id]).message);
+    document.getElementById('applyBtn').disabled = modifies.length === 0 || enErreur;
+    document.getElementById('resetBtn').hidden = modifies.length === 0;
+    document.getElementById('draftStatus').textContent = modifies.length === 0
+      ? 'Aucune modification en attente'
+      : enErreur
+        ? 'Corrigez les erreurs avant d\'appliquer'
+        : `Modifications non appliquées : ${modifies.map(m => m.prenom).join(', ')}`;
+  }
+
+  function rafraichir(reconstruireEditeur = true) {
+    rendreMembres();
+    rendreEditeur(reconstruireEditeur);
+    rendreEquipe();
+    rendreLegende();
+    rendreGrilleType();
+    rendreActions();
+  }
+
+  // L'employé et le type affichés restent dans l'URL (rechargement, retour après « Appliquer »)
+  function majUrl() {
+    const url = new URL(location);
+    url.searchParams.set('employe', selection);
+    url.searchParams.set('type', typeChoisi);
+    history.replaceState(null, '', url);
+  }
+
+  function selectionner(id) {
+    selection = id;
+    majUrl();
+    rafraichir();
+  }
+
+  // --- Actions ---
+  document.getElementById('addShift').addEventListener('click', () => {
+    const shifts = brouillon[selection];
+    const occupes = new Set(shifts.map(s => s.jour));
+    const jourLibre = [0, 1, 2, 3, 4, 5, 6].find(k => !occupes.has(k));
+    shifts.push({ id: null, jour: jourLibre ?? 0, debut: '09:00', fin: jourLibre === undefined ? '12:00' : '16:00', categorie: 'Travail' });
+    rafraichir();
+  });
+
+  document.getElementById('resetBtn').addEventListener('click', () => {
+    brouillon = structuredClone(origine);
+    rafraichir();
+  });
+
+  let envoi = false;
+  document.getElementById('applyForm').addEventListener('submit', e => {
+    const modifies = membresModifies();
+    if (modifies.length === 0) { e.preventDefault(); return; }
+    const modifications = {};
+    modifies.forEach(m => { modifications[m.id] = brouillon[m.id]; });
+    document.getElementById('modificationsField').value = JSON.stringify(modifications);
+    document.getElementById('employeField').value = selection;
+    envoi = true;
+  });
+
+  // Les liens de semaine conservent l'employé et le type sélectionnés
+  document.querySelectorAll('.js-week').forEach(lien => lien.addEventListener('click', () => {
+    const url = new URL(lien.href);
+    url.searchParams.set('employe', selection);
+    url.searchParams.set('type', typeChoisi);
+    lien.href = url;
+  }));
+
+  // Avertit avant de quitter la page avec un brouillon non appliqué
+  window.addEventListener('beforeunload', e => {
+    if (!envoi && membresModifies().length) { e.preventDefault(); e.returnValue = ''; }
+  });
+
+  rafraichir();
+</script>
+{% endif %}
+{% endblock %}

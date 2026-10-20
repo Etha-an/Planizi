@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Planizi - Inscription</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='inscription.css') }}">
+  <style>
+    /* Styles pour les messages d'erreur */
+    .error-message {
+      color: #e53e3e;
+      font-size: 12px;
+      margin-top: 4px;
+      display: block;
+      min-height: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="center-container">
+    <div style="width:100%">
+      <div class="text-center" style="margin-bottom: 40px;">
+        <div style="font-family:var(--font-heading); font-weight:700; font-size:32px; color:var(--primary-color);">Planizi</div>
+        <div style="color:var(--secondary-color); font-size:15px; margin-top: 8px;">Créer un compte</div>
+      </div>
+      <div class="card">
+        <h2 class="card-title">Inscription</h2>
+
+        {% if erreur_msg %}
+        <div style="color: red; background: #ffe6e6; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
+          {{ erreur_msg }}
+        </div>
+        {% endif %}
+
+        <form action="/creer-compte" method="POST" id="signupForm" novalidate>
+          <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" placeholder="Ex: Dupont">
+            <span class="error-message" id="error-nom"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" placeholder="Ex: Jean">
+            <span class="error-message" id="error-prenom"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="jean@entreprise.com">
+            <span class="error-message" id="error-email"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="mot_de_passe" placeholder="••••••••">
+            <span class="error-message" id="error-password"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="confirmPassword">Confirmation du mot de passe</label>
+            <input type="password" id="confirmPassword" name="mot_de_passe_confirmation" placeholder="••••••••">
+            <span class="error-message" id="error-confirmPassword"></span>
+          </div>
+
+          <button type="submit" class="btn-primary">S'inscrire</button>
+        </form>
+
+        <div class="text-center" style="margin-top:20px;font-size:13px;color:var(--secondary-color);">
+          Déjà un compte ? <a href="/connexion" style="color:var(--primary-color);font-weight:600;text-decoration:none;">Se connecter</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+      // Empêche la soumission du formulaire et la redirection automatique
+      event.preventDefault();
+
+      let isValid = true;
+
+      // Récupération des champs
+      const prenom = document.getElementById('prenom');
+      const nom = document.getElementById('nom');
+      const email = document.getElementById('email');
+      const password = document.getElementById('password');
+      const confirmPassword = document.getElementById('confirmPassword');
+
+      // Récupération des éléments d'erreur
+      const errorPrenom = document.getElementById('error-prenom');
+      const errorNom = document.getElementById('error-nom');
+      const errorEmail = document.getElementById('error-email');
+      const errorPassword = document.getElementById('error-password');
+      const errorConfirmPassword = document.getElementById('error-confirmPassword');
+
+      // Réinitialisation des messages d'erreur
+      errorPrenom.textContent = '';
+      errorNom.textContent = '';
+      errorEmail.textContent = '';
+      errorPassword.textContent = '';
+      errorConfirmPassword.textContent = '';
+
+      // 1. Validation : Tous les champs doivent être remplis
+      if (!prenom.value.trim()) {
+        errorPrenom.textContent = 'Ce champ doit être rempli.';
+        isValid = false;
+      }
+
+      if (!nom.value.trim()) {
+        errorNom.textContent = 'Ce champ doit être rempli.';
+        isValid = false;
+      }
+
+      // 2. Validation de l'Email
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email.value.trim()) {
+        errorEmail.textContent = 'Ce champ doit être rempli.';
+        isValid = false;
+      } else if (!emailRegex.test(email.value.trim())) {
+        errorEmail.textContent = 'Veuillez saisir une adresse email valide (ex: exemple@domaine.com).';
+        isValid = false;
+      }
+
+      // 3. Validation des mots de passe
+      if (!password.value) {
+        errorPassword.textContent = 'Ce champ doit être rempli.';
+        isValid = false;
+      }
+
+      if (!confirmPassword.value) {
+        errorConfirmPassword.textContent = 'Ce champ doit être rempli.';
+        isValid = false;
+      } else if (password.value !== confirmPassword.value) {
+        errorConfirmPassword.textContent = 'Les mots de passe ne correspondent pas.';
+        isValid = false;
+      }
+
+      // Redirection si toutes les conditions sont validées
+      if (isValid) {
+        document.getElementById('signupForm').submit();
+      }
+    });
+  </script>
+</body>
+</html>

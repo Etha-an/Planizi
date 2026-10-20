@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Planizi - Connexion</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='connexion.css') }}">
+</head> <!-- Correction : ajout de la balise fermante -->
+<body>
+  <div class="center-container">
+    <div style="width:100%">
+      <div class="text-center" style="margin-bottom: 40px;">
+        <div style="font-family:var(--font-heading); font-weight:700; font-size:32px; color:var(--primary-color);">Planizi</div>
+        <div style="color:var(--secondary-color); font-size:15px; margin-top: 8px;">Gestion d'équipe</div>
+      </div>
+      <div class="card">
+        <h2 class="card-title">Connexion</h2>
+
+        {% if inscrit %}
+        <div style="color: var(--primary-color); background: var(--border-color); padding: 10px; border-radius: 5px; margin-bottom: 15px; font-size: 14px;">
+            Inscription envoyée ! Votre identifiant est <strong>{{ inscrit }}</strong>.
+            Vous pourrez vous connecter dès que votre compte aura été validé.
+        </div>
+        {% endif %}
+
+        <!-- 1. On enveloppe les champs et le bouton dans un formulaire -->
+        <form action="/connexion" method="POST">
+            
+            <!-- 2. On ajoute name-->
+            <div class="form-group">
+                <label>Identifiant</label>
+                <input type="text" name="login" placeholder="j.dupont" required>
+            </div>
+            
+            <!-- 3. On ajoute name="mot_de_passe" -->
+            <div class="form-group">
+                <label>Mot de passe</label>
+                <input type="password" name="mot_de_passe" placeholder="••••••••" required>
+            </div>
+            
+            <!-- L'affichage de l'erreur est parfaitement placé -->
+            {% if erreur_msg %}
+            <div style="color: red; background: #ffe6e6; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
+                {{ erreur_msg }}
+            </div>
+            {% endif %}
+            
+            <!-- 4. On précise que le bouton sert à soumettre le formulaire -->
+            <button type="submit" class="btn-primary">Se connecter</button>
+            
+        </form>
+
+        <div class="text-center" style="margin-top:20px;font-size:13px;color:var(--secondary-color);">
+            Pas encore de compte ? <a href="/inscription" style="color:var(--primary-color);font-weight:600;text-decoration:none;">S'inscrire</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planizi - Utilisateurs</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='validation.css') }}">
+  <style>
+    /* Compléments propres à l'onglet Utilisateurs (même charte que validation.css) */
+    [hidden] {
+      display: none !important;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .search-input {
+      height: 42px;
+      min-width: 240px;
+      padding: 0 14px;
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      background: var(--card-bg);
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .search-input:focus {
+      border-color: var(--primary-purple);
+    }
+
+    .banner {
+      padding: 12px 16px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .banner-ok {
+      background: var(--purple-light-bg);
+      color: var(--primary-purple);
+    }
+
+    .banner-erreur {
+      background: var(--btn-refuse-bg);
+      color: var(--btn-refuse-text);
+      border: 1px solid var(--btn-refuse-border);
+    }
+
+    .user-meta {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .user-meta code {
+      font-family: inherit;
+      font-weight: 600;
+      color: var(--primary-purple);
+    }
+
+    .badges {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .modal-content {
+      max-width: 520px;
+      max-height: calc(100vh - 32px);
+      overflow-y: auto;
+    }
+
+    .modal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 12px;
+    }
+
+    .modal-hint {
+      font-weight: 400;
+      color: var(--text-secondary);
+      font-size: 12px;
+    }
+
+    .btn-deactivate {
+      background: none;
+      border: none;
+      color: var(--btn-refuse-text);
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      padding: 8px 0;
+      margin-right: auto;
+    }
+
+    .btn-deactivate:hover {
+      text-decoration: underline;
+    }
+
+    .btn-deactivate:disabled {
+      color: #BBB;
+      cursor: not-allowed;
+      text-decoration: none;
+    }
+
+    .btn-danger {
+      background: var(--btn-refuse-text);
+      color: #FFF;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .empty-list {
+      text-align: center;
+      color: var(--text-secondary);
+      padding: 32px;
+    }
+
+    @media (max-width: 640px) {
+      .user-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .modal-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .search-input {
+        min-width: 0;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="prototype-bar">
+    <div class="proto-left">
+      <span class="proto-tag">PLANIZI</span>
+      <nav class="proto-menu">
+        <a href="/valider-compte" class="proto-link">Validation</a>
+        <a href="/utilisateurs" class="proto-link active">Utilisateurs</a>
+        <a href="/planning" class="proto-link">Mon planning</a>
+        {% if session.role_manager %}
+        <a href="/equipes" class="proto-link">Mes équipes</a>
+        {% endif %}
+      </nav>
+    </div>
+    <div class="proto-right">
+      <span class="access-label">Accès restreint</span>
+      <a href="/deconnexion" class="proto-link" style="margin-left: 24px;">Déconnexion</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Utilisateurs</h1>
+        <p class="page-subtitle">Comptes actifs : rôles, contrats et accès</p>
+      </div>
+      <div class="header-right">
+        <input type="search" class="search-input" id="search" placeholder="Rechercher un nom, login, poste…"
+          autocomplete="off">
+        <div class="pending-badge">
+          <span class="pending-count" id="userCount">{{ utilisateurs|length }}</span>
+          <span class="pending-label">Comptes</span>
+        </div>
+      </div>
+    </div>
+
+    {% if message_ok %}<div class="banner banner-ok">{{ message_ok }}</div>{% endif %}
+    {% if message_erreur %}<div class="banner banner-erreur">{{ message_erreur }}</div>{% endif %}
+
+    <div class="cards-list">
+      {% for u in utilisateurs %}
+      <div class="user-card"
+        data-recherche="{{ (u.prenom ~ ' ' ~ u.nom ~ ' ' ~ u.login ~ ' ' ~ (u.poste or '') ~ ' ' ~ u.email)|lower }}">
+        <div class="user-info">
+          <div class="avatar-circle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4E0B9A" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <div class="user-details">
+            <h3 class="username">{{ u.nom }} {{ u.prenom }}{% if u.id == session.user_id %} <span
+                class="user-meta">(vous)</span>{% endif %}</h3>
+            <div class="user-meta">
+              <code>{{ u.login }}</code> · {{ u.poste or 'Sans poste' }}{% if u.contrat is not none %} · {{ u.contrat
+              }}h / semaine{% endif %}
+              · {{ u.nb_equipes }} équipe{{ 's' if u.nb_equipes > 1 }}
+            </div>
+            <div class="badges">
+              {% if u.manager %}<span class="role-badge">Manager</span>{% endif %}
+              {% if u.supervisor %}<span class="role-badge">Superviseur</span>{% endif %}
+              {% if not u.manager and not u.supervisor %}<span class="role-badge"
+                style="background: transparent; color: var(--text-secondary); padding-left: 0;">Employé</span>{% endif
+              %}
+            </div>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button type="button" class="btn-approve" data-modifier="{{ u.id }}">✎ Modifier</button>
+        </div>
+      </div>
+      {% endfor %}
+      <p class="empty-list" id="noResult" {% if utilisateurs %}hidden{% endif %}>Aucun utilisateur ne correspond.</p>
+    </div>
+  </main>
+
+  <!-- Fenêtre de modification -->
+  <div id="editModal" class="modal-overlay">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="editTitle">
+      <form method="POST" id="editForm">
+        <input type="hidden" name="action" value="modifier">
+        <h2 class="modal-title" id="editTitle">Modifier l'utilisateur</h2>
+        <p class="modal-subtitle" id="editSubtitle"></p>
+
+        <div class="modal-grid">
+          <div>
+            <label class="modal-label" for="f_nom">Nom</label>
+            <input class="modal-input" id="f_nom" name="nom" required maxlength="50">
+          </div>
+          <div>
+            <label class="modal-label" for="f_prenom">Prénom</label>
+            <input class="modal-input" id="f_prenom" name="prenom" required maxlength="50">
+          </div>
+        </div>
+
+        <label class="modal-label" for="f_email">Email</label>
+        <input class="modal-input" id="f_email" name="email" type="email" required maxlength="255">
+
+        <div class="modal-grid">
+          <div>
+            <label class="modal-label" for="f_login">Login</label>
+            <input class="modal-input" id="f_login" name="login" required maxlength="102"
+              pattern="[a-zA-Z0-9._\-]{2,102}">
+          </div>
+          <div>
+            <label class="modal-label" for="f_contrat">Contrat (heures)</label>
+            <input class="modal-input" id="f_contrat" name="contrat" type="number" min="0" max="60">
+          </div>
+        </div>
+
+        <label class="modal-label" for="f_poste">Poste</label>
+        <input class="modal-input" id="f_poste" name="poste" maxlength="100" placeholder="Ex : Hôtesse d'accueil">
+
+        <label class="modal-label" for="f_mdp">Nouveau mot de passe <span class="modal-hint">(laisser vide pour ne pas
+            le changer)</span></label>
+        <input class="modal-input" id="f_mdp" name="nouveau_mdp" type="password" autocomplete="new-password"
+          placeholder="Inchangé">
+
+        <div class="modal-checkboxes">
+          <label class="checkbox-label"><input type="checkbox" id="f_manager" name="manager" value="1"> Manager</label>
+          <label class="checkbox-label"><input type="checkbox" id="f_supervisor" name="supervisor" value="1">
+            Superviseur</label>
+          <!-- Son propre compte : la case est verrouillée, la valeur est envoyée par ce champ caché -->
+          <input type="hidden" id="f_supervisor_self" name="supervisor" value="1" disabled>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-deactivate" id="deactivateAsk">Désactiver le compte</button>
+          <button type="button" class="btn-cancel" data-fermer>Annuler</button>
+          <button type="submit" class="btn-confirm">Enregistrer</button>
+        </div>
+      </form>
+
+      <!-- Confirmation de désactivation -->
+      <form method="POST" id="deactivateForm" hidden>
+        <input type="hidden" name="action" value="desactiver">
+        <h2 class="modal-title">Désactiver le compte ?</h2>
+        <p class="modal-subtitle">
+          <strong id="deactivateName"></strong> ne pourra plus se connecter. Le compte repassera en attente
+          dans l'onglet Validation, où il pourra être réactivé ou refusé.
+        </p>
+        <div class="modal-actions">
+          <button type="button" class="btn-cancel" id="deactivateCancel">Annuler</button>
+          <button type="submit" class="btn-danger">Désactiver</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const UTILISATEURS = {{ utilisateurs| tojson }};
+    const MOI = {{ session.user_id| tojson }};
+
+    const modal = document.getElementById('editModal');
+    const editForm = document.getElementById('editForm');
+    const deactivateForm = document.getElementById('deactivateForm');
+    const $ = id => document.getElementById(id);
+
+    function ouvrir(u) {
+      editForm.action = deactivateForm.action = `/utilisateurs/${u.id}`;
+      editForm.hidden = false;
+      deactivateForm.hidden = true;
+      $('editSubtitle').textContent = `${u.prenom} ${u.nom}`;
+      $('deactivateName').textContent = `${u.prenom} ${u.nom}`;
+      $('f_nom').value = u.nom;
+      $('f_prenom').value = u.prenom;
+      $('f_email').value = u.email;
+      $('f_login').value = u.login;
+      $('f_contrat').value = u.contrat ?? '';
+      $('f_poste').value = u.poste ?? '';
+      $('f_mdp').value = '';
+      $('f_manager').checked = Boolean(u.manager);
+      $('f_supervisor').checked = Boolean(u.supervisor);
+
+      // Garde-fous sur son propre compte : impossible de se retirer le rôle superviseur ou de se désactiver
+      const soiMeme = u.id === MOI;
+      $('f_supervisor').disabled = soiMeme;
+      $('f_supervisor_self').disabled = !soiMeme;
+      $('deactivateAsk').disabled = soiMeme;
+      $('deactivateAsk').title = soiMeme ? 'Vous ne pouvez pas désactiver votre propre compte' : '';
+
+      modal.classList.add('active');
+      $('f_nom').focus();
+    }
+
+    function fermer() { modal.classList.remove('active'); }
+
+    document.querySelectorAll('[data-modifier]').forEach(b => b.addEventListener('click', () =>
+      ouvrir(UTILISATEURS.find(u => u.id === Number(b.dataset.modifier)))));
+    document.querySelectorAll('[data-fermer]').forEach(b => b.addEventListener('click', fermer));
+    modal.addEventListener('click', e => { if (e.target === modal) fermer(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') fermer(); });
+    $('deactivateAsk').addEventListener('click', () => { editForm.hidden = true; deactivateForm.hidden = false; });
+    $('deactivateCancel').addEventListener('click', () => { deactivateForm.hidden = true; editForm.hidden = false; });
+
+    // Recherche instantanée
+    $('search').addEventListener('input', e => {
+      const q = e.target.value.trim().toLowerCase();
+      let visibles = 0;
+      document.querySelectorAll('.user-card').forEach(carte => {
+        carte.hidden = q && !carte.dataset.recherche.includes(q);
+        if (!carte.hidden) visibles++;
+      });
+      $('userCount').textContent = visibles;
+      $('noResult').hidden = visibles > 0;
+    });
+  </script>
+</body>
+
+</html>

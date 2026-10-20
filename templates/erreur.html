@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block titre %}Erreur {{ code }}{% endblock %}
+
+{% block contenu %}
+<div class="card empty">
+  <div class="page-title">{{ code }}</div>
+  <p class="page-subtitle" style="margin: 8px 0 20px;">{{ message }}</p>
+  <a href="/" class="btn btn-primary">Retour à l'accueil</a>
+</div>
+{% endblock %}

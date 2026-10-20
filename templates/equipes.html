@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% block titre %}Mes équipes{% endblock %}
+
+{% block contenu %}
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Mes équipes</h1>
+    <p class="page-subtitle">Choisissez une équipe pour organiser son planning</p>
+  </div>
+  <div class="header-actions">
+    <div class="week-nav">
+      <a href="?semaine={{ semaine.precedente }}" class="btn-icon" title="Semaine précédente">‹</a>
+      <span class="week-label">{{ semaine.libelle }}</span>
+      <a href="?semaine={{ semaine.suivante }}" class="btn-icon" title="Semaine suivante">›</a>
+      {% if not semaine.courante %}<a href="/equipes" class="link-muted week-today">Aujourd'hui</a>{% endif %}
+    </div>
+    <button type="button" class="btn btn-primary" data-nouvelle-equipe>+ Nouvelle équipe</button>
+  </div>
+</div>
+
+{% if equipes %}
+<div class="teams-grid">
+  {% for equipe in equipes %}
+  <div class="card team-card">
+    <div class="team-card-top">
+      <div>
+        <a href="{{ url_for('organisation', team_id=equipe.id, semaine=semaine.lundi) }}" class="team-name stretched-link">{{ equipe.nom }}</a>
+        <div class="team-meta">{{ equipe.nb_membres }} membre{{ 's' if equipe.nb_membres > 1 }}</div>
+      </div>
+      <button type="button" class="btn-icon team-edit" title="Modifier l'équipe" data-modifier-equipe="{{ equipe.id }}">✎</button>
+    </div>
+
+    <div class="avatars">
+      {% for m in equipe.membres[:6] %}<span class="avatar avatar-emp" style="--emp: {{ couleur_utilisateur(m.id) }}">{{ m.initiales }}</span>{% endfor %}
+      {% if equipe.membres|length > 6 %}<span class="avatar">+{{ equipe.membres|length - 6 }}</span>{% endif %}
+      {% if not equipe.membres %}<span class="team-meta">Aucun membre pour l'instant</span>{% endif %}
+    </div>
+
+    <div class="team-hours">
+      <span>Heures planifiées</span>
+      <span><strong>{{ equipe.planifie_txt }}</strong> / {{ equipe.contrat_txt }}</span>
+    </div>
+    <div class="progress"><span style="width: {{ equipe.taux }}%"></span></div>
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<div class="card empty">
+  <p style="margin-bottom: 16px;">Vous ne gérez encore aucune équipe.</p>
+  <button type="button" class="btn btn-primary" data-nouvelle-equipe>+ Créer ma première équipe</button>
+</div>
+{% endif %}
+
+<!-- Fenêtre de création / modification d'équipe -->
+<div class="modal" id="teamModal" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="teamModalTitle">
+    <form method="POST" id="teamForm">
+      <h2 class="card-title" id="teamModalTitle">Nouvelle équipe</h2>
+
+      <div class="field">
+        <label for="teamName">Nom de l'équipe</label>
+        <input type="text" id="teamName" name="nom" maxlength="100" required placeholder="Ex : Accueil week-end">
+      </div>
+
+      <div class="field">
+        <label for="teamSearch">Membres <span class="muted" id="teamCount"></span></label>
+        <input type="search" id="teamSearch" placeholder="Rechercher un nom ou un poste…" autocomplete="off">
+      </div>
+      <div class="pick-list" id="pickList">
+        {% for e in employes %}
+        <label class="pick" data-recherche="{{ (e.prenom ~ ' ' ~ e.nom ~ ' ' ~ (e.poste or '') ~ (' manager' if e.manager else ''))|lower }}">
+          <input type="checkbox" name="membres" value="{{ e.id }}">
+          <span class="avatar avatar-emp" style="--emp: {{ couleur_utilisateur(e.id) }}">{{ e.prenom[:1] }}{{ e.nom[:1] }}</span>
+          <span class="member-info">
+            <span class="member-name">{{ e.prenom }} {{ e.nom }}{% if e.manager %} <span class="badge-role">Manager</span>{% endif %}</span>
+            <span class="member-poste">{{ e.poste or 'Sans poste' }}</span>
+          </span>
+          {% if e.nb_equipes %}<span class="pick-teams">{{ e.nb_equipes }} équipe{{ 's' if e.nb_equipes > 1 }}</span>{% endif %}
+        </label>
+        {% else %}
+        <p class="empty" style="padding: 16px;">Aucun compte validé à ajouter pour le moment.</p>
+        {% endfor %}
+        <p class="empty" id="pickEmpty" hidden style="padding: 16px;">Aucun membre ne correspond.</p>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger-ghost" id="deleteAsk" hidden>Supprimer l'équipe</button>
+        <span class="spacer"></span>
+        <button type="button" class="btn btn-ghost" data-fermer>Annuler</button>
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+      </div>
+    </form>
+
+    <!-- Confirmation de suppression, dans la fenêtre -->
+    <form method="POST" id="deleteForm" class="confirm" hidden>
+      <h2 class="card-title">Supprimer l'équipe ?</h2>
+      <p class="confirm-text">
+        L'équipe <strong id="deleteName"></strong> sera supprimée définitivement.
+        Les membres et leurs shifts sont conservés.
+      </p>
+      <div class="modal-footer">
+        <span class="spacer"></span>
+        <button type="button" class="btn btn-ghost" id="deleteCancel">Annuler</button>
+        <button type="submit" class="btn btn-danger">Supprimer</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  const EQUIPES = [
+    {% for e in equipes %}{ id: {{ e.id }}, nom: {{ e.nom|tojson }}, membres: {{ e.membres_ids|tojson }} },
+    {% endfor %}
+  ];
+
+  const modal = document.getElementById('teamModal');
+  const form = document.getElementById('teamForm');
+  const deleteForm = document.getElementById('deleteForm');
+  const champNom = document.getElementById('teamName');
+  const recherche = document.getElementById('teamSearch');
+  const cases = [...document.querySelectorAll('#pickList input[type=checkbox]')];
+  const lignes = [...document.querySelectorAll('#pickList .pick')];
+
+  function majCompteur() {
+    const n = cases.filter(c => c.checked).length;
+    document.getElementById('teamCount').textContent = `· ${n} sélectionné${n > 1 ? 's' : ''}`;
+  }
+
+  function filtrer() {
+    const q = recherche.value.trim().toLowerCase();
+    let visibles = 0;
+    lignes.forEach(l => { l.hidden = q && !l.dataset.recherche.includes(q); if (!l.hidden) visibles++; });
+    document.getElementById('pickEmpty').hidden = visibles > 0 || lignes.length === 0;
+  }
+
+  function ouvrir(equipe) {
+    form.hidden = false;
+    deleteForm.hidden = true;
+    document.getElementById('teamModalTitle').textContent = equipe ? "Modifier l'équipe" : 'Nouvelle équipe';
+    form.action = equipe ? `/equipes/${equipe.id}/modifier` : '/equipes/creer';
+    champNom.value = equipe ? equipe.nom : '';
+    cases.forEach(c => { c.checked = equipe ? equipe.membres.includes(Number(c.value)) : false; });
+    document.getElementById('deleteAsk').hidden = !equipe;
+    if (equipe) {
+      deleteForm.action = `/equipes/${equipe.id}/supprimer`;
+      document.getElementById('deleteName').textContent = equipe.nom;
+    }
+    recherche.value = '';
+    filtrer();
+    majCompteur();
+    modal.hidden = false;
+    champNom.focus();
+  }
+
+  function fermer() { modal.hidden = true; }
+
+  document.querySelectorAll('[data-nouvelle-equipe]').forEach(b => b.addEventListener('click', () => ouvrir(null)));
+  document.querySelectorAll('[data-modifier-equipe]').forEach(b => b.addEventListener('click', () =>
+    ouvrir(EQUIPES.find(e => e.id === Number(b.dataset.modifierEquipe)))));
+  document.querySelectorAll('[data-fermer]').forEach(b => b.addEventListener('click', fermer));
+  modal.addEventListener('click', e => { if (e.target === modal) fermer(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.hidden) fermer(); });
+  cases.forEach(c => c.addEventListener('change', majCompteur));
+  recherche.addEventListener('input', filtrer);
+
+  document.getElementById('deleteAsk').addEventListener('click', () => { form.hidden = true; deleteForm.hidden = false; });
+  document.getElementById('deleteCancel').addEventListener('click', () => { deleteForm.hidden = true; form.hidden = false; });
+
+  // Ouverture directe depuis l'écran 5 (« Gérer les membres ») ou un lien ?nouvelle=1
+  const params = new URLSearchParams(location.search);
+  if (params.has('modifier')) {
+    const equipe = EQUIPES.find(e => e.id === Number(params.get('modifier')));
+    if (equipe) ouvrir(equipe);
+  } else if (params.has('nouvelle')) {
+    ouvrir(null);
+  }
+</script>
+{% endblock %}

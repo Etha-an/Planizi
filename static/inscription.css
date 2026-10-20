@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --bg-color: #FFF4E0;
+    --text-color: #1A0A2E;
+    --primary-color: #4E0B9A;
+    --secondary-color: #7B6A9A;
+    --card-bg: #FFFBF2;
+    --border-color: #EDE0FF;
+    --input-border: #DDD0FF;
+    --font-heading: 'Nunito', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-body);
+    color: var(--text-color);
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.center-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background: var(--card-bg);
+    border-bottom: 1.5px solid var(--border-color);
+}
+
+.navbar .logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--primary-color);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1.5px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 6px rgba(78, 11, 154, 0.02);
+}
+
+.card-title {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 22px;
+    margin-bottom: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--primary-color);
+}
+
+.form-group input,
+.form-group select {
+    background: var(--card-bg);
+    border: 1.5px solid var(--input-border);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 14px;
+    font-family: var(--font-body);
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--primary-color);
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 11px 0;
+    background: var(--primary-color);
+    color: var(--bg-color);
+    border: 1.5px solid var(--primary-color);
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    cursor: pointer;
+    transition: opacity 0.15s;
+}
+
+.btn-primary:hover {
+    opacity: 0.88;
+}
+
+.btn-success {
+    padding: 8px 16px;
+    background: #E7F6EC;
+    color: #0F5C2E;
+    border: 1.5px solid #0F5C2E;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    cursor: pointer;
+}
+
+.btn-danger {
+    padding: 8px 16px;
+    background: #FDECEA;
+    color: #9B1C1C;
+    border: 1.5px solid #9B1C1C;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    cursor: pointer;
+}
+
+.data-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+.data-list th,
+.data-list td {
+    padding: 16px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.data-list th {
+    color: var(--secondary-color);
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.data-list td {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-4 {
+    margin-top: 32px;
+}
+
+.mb-2 {
+    margin-bottom: 16px;
+}
+
+.flex {
+    display: flex;
+}
+
+.gap-4 {
+    gap: 24px;
+}
+
+.flex-1 {
+    flex: 1;
+}
