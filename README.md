@@ -55,7 +55,7 @@ Un utilisateur peut cumuler plusieurs rôles. Les rôles sont relus en base à *
 
 Le prototype a été réalisé avec **Figma Make** : [ouvrir le prototype sur Figma](https://www.figma.com/community/file/1691384090162897493).
 
-| Connexion | Inscription |
+| Écran 1 – Connexion | Écran 2 – Inscription |
 |---|---|
 | ![Connexion](maquettes/connexion.png) | ![Inscription](maquettes/inscription.png) |
 
