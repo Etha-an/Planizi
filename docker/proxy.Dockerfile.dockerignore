@@ -1,0 +1,6 @@
+# Fichier d'exclusion de l'image PROXY.
+# Le proxy n'a besoin que de deux choses : sa configuration et les fichiers du client.
+# On exclut donc tout, puis on re-autorise explicitement ces deux elements.
+*
+!docker/nginx.conf
+!static/

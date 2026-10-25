@@ -1,0 +1,97 @@
+# ---------------------------------------------------------------------------
+# Planizi - deploiement sur trois conteneurs (etapes 11 a 13)
+#
+#   navigateur --8080--> proxy --[frontal]--> metier --[interne]--> donnees
+#                                                                    |
+#                                                              volume pgdata
+#
+# Lancement (depuis ce dossier docker/) :  docker compose up -d --build
+# Configuration : fichier .env de ce dossier (modele : .env.example)
+# ---------------------------------------------------------------------------
+name: planizi
+
+services:
+
+  # ---------------- Couche DONNEES (etape 11) ----------------
+  donnees:
+    image: postgres:16.9-bookworm            # image officielle, version epinglee
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_NAME:?DB_NAME manquant dans .env}
+      POSTGRES_USER: ${DB_USER:?DB_USER manquant dans .env}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?DB_PASSWORD manquant dans .env}
+    volumes:
+      # Volume NOMME : seul element qui survit a la destruction des conteneurs
+      - pgdata:/var/lib/postgresql/data
+      # Scripts d'initialisation (ordre alphabetique), joues UNIQUEMENT si le
+      # volume est vide. Pour les rejouer : docker compose down -v
+      - ../schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ../donnees.sql:/docker-entrypoint-initdb.d/02-donnees.sql:ro
+    healthcheck:
+      # -h 127.0.0.1 : pendant l'initialisation, PostgreSQL tourne sur un
+      # serveur temporaire qui n'ecoute QUE sur le socket Unix. Interroger
+      # en TCP garantit qu'on ne declare la base prete qu'apres les scripts.
+      test: ["CMD-SHELL", "pg_isready -h 127.0.0.1 -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\""]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 30s
+      start_interval: 1s                     # sonde chaque seconde pendant le demarrage
+    networks: [interne]                      # aucun "ports:" -> injoignable depuis l'hote
+
+  # ---------------- Couche METIER (etape 12) ----------------
+  metier:
+    build:
+      context: ..                            # racine du depot : le code n'est pas deplace
+      dockerfile: docker/metier.Dockerfile
+    image: planizi-metier:1.0
+    restart: unless-stopped
+    environment:
+      # Memes variables qu'a l'etape 4, nouvelles valeurs. Aucun code modifie.
+      DB_HOST: donnees                       # NOM du service, resolu par le DNS de Docker
+      DB_PORT: "5432"
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      SECRET_KEY: ${SECRET_KEY:?SECRET_KEY manquant dans .env}
+    depends_on:
+      donnees:
+        condition: service_healthy           # attend une base REELLEMENT prete
+    healthcheck:
+      # Pas de curl dans python:slim : on utilise Python lui-meme
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8000/connexion', timeout=3).status == 200 else 1)"]
+      interval: 5s
+      timeout: 4s
+      retries: 12
+      start_period: 30s
+      start_interval: 1s
+    networks: [frontal, interne]             # seul service present sur les deux reseaux
+
+  # ---------------- Couche PRESENTATION (etape 13) ----------------
+  proxy:
+    build:
+      context: ..
+      dockerfile: docker/proxy.Dockerfile
+    image: planizi-proxy:1.0
+    restart: unless-stopped
+    ports:
+      - "8080:80"                            # LA SEULE publication de port du projet
+    depends_on:
+      metier:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "-o", "/dev/null", "http://127.0.0.1/static/app.css"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 30s
+      start_interval: 1s
+    networks: [frontal]                      # aucun reseau commun avec la base
+
+networks:
+  frontal: {}                                # proxy <-> metier
+  interne:                                   # metier <-> donnees
+    internal: true                           # pas de sortie vers l'exterieur non plus
+
+volumes:
+  pgdata: {}

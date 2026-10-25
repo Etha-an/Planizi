@@ -1,0 +1,33 @@
+# Fichier d'exclusion de l'image METIER.
+# BuildKit l'applique automatiquement a metier.Dockerfile (meme nom + .dockerignore).
+# Rien de ce qui suit n'entre dans le contexte envoye au moteur, ni dans l'image.
+
+# Environnement virtuel, fichiers temporaires et caches Python
+venv/
+.venv/
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+
+# Historique du depot et fichiers d'outillage
+.git/
+.gitignore
+.vscode/
+.idea/
+
+# Secrets locaux : la configuration arrive par variables d'environnement
+.env
+**/.env
+
+# Deploiement (conteneurs + VM), documentation, maquettes
+docker/
+docs/
+maquettes/
+README.md
+requetes.sh
+
+# Servi par le proxy, pas par le metier
+static/
+
+# Scripts SQL : montes dans le conteneur de donnees, inutiles ici
+*.sql
