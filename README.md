@@ -1,6 +1,6 @@
 # Planizi
 
-Application web de **gestion de plannings d'équipe**, développée en Python avec **Flask** et **MySQL**.
+Application web de **gestion de plannings d'équipe**, développée en Python avec **Flask** et **PostgreSQL**.
 
 Les employés consultent leur planning de la semaine, les managers organisent les horaires de leurs équipes et un superviseur valide les inscriptions et administre les comptes.
 
@@ -17,6 +17,7 @@ Les employés consultent leur planning de la semaine, les managers organisent le
 - [Configuration (.env)](#configuration-env)
 - [Base de données](#base-de-données)
 - [Lancer l'application](#lancer-lapplication)
+- [Déploiement avec Docker](#déploiement-avec-docker)
 - [Comptes de démonstration](#comptes-de-démonstration)
 - [Routes](#routes)
 - [Règles métier](#règles-métier)
@@ -72,11 +73,12 @@ Le prototype a été réalisé avec **Figma Make** : [ouvrir le prototype sur Fi
 ## Technologies
 
 - **Python 3** / **Flask 3.1**
-- **MySQL 8** via `mysql-connector-python`
+- **PostgreSQL** via `psycopg2`
 - **Jinja2** pour les templates HTML
 - **Werkzeug** pour le hachage des mots de passe
 - **python-dotenv** pour la configuration
 - HTML / CSS / JavaScript
+- **Docker** / **Docker Compose** pour le déploiement : **nginx** (proxy) et **gunicorn** (serveur d'application)
 
 ---
 
@@ -85,14 +87,24 @@ Le prototype a été réalisé avec **Figma Make** : [ouvrir le prototype sur Fi
 ```
 Planizi/
 ├── app.py              # Application Flask : routes, contrôles d'accès, gestion des erreurs
-├── database.py         # Connexion MySQL, comptes utilisateurs (inscription, connexion, validation…)
+├── database.py         # Connexion PostgreSQL, comptes utilisateurs (inscription, connexion, validation…)
 ├── planning_db.py      # Équipes, shifts, calcul des semaines, validation des plannings
 ├── migrer.py           # Migration du schéma (idempotente)
 ├── seed.py             # Réinitialisation de la base avec des données d'exemple
-├── data.sql            # Dump MySQL (structure + données)
+├── schema.sql          # Structure de la base (tables, clés, index)
+├── donnees.sql         # Données de démonstration
 ├── requirements.txt    # Dépendances Python
 ├── .env                # Configuration locale (non versionné)
 ├── maquettes/          # Captures du prototype Figma
+├── docker/             # Déploiement sur trois conteneurs (voir docker/PROCEDURE.md)
+│   ├── compose.yaml        # Services, réseaux, volume, publication du port
+│   ├── metier.Dockerfile   # Image de l'application (Flask + gunicorn)
+│   ├── proxy.Dockerfile    # Image du proxy (nginx + fichiers statiques)
+│   ├── nginx.conf          # Configuration du proxy
+│   ├── *.dockerignore      # Ce qui n'entre pas dans les images
+│   ├── .env.example        # Modèle de configuration
+│   └── *.ps1               # Vérification de l'isolation et mesures
+├── docs/               # Comparaison VM / conteneurs, matrice, relevés de mesures
 ├── static/             # Feuilles de style CSS
 │   ├── app.css
 │   ├── connexion.css
@@ -118,7 +130,7 @@ Planizi/
 ### Prérequis
 
 - Python 3.10 ou plus récent
-- Un serveur MySQL 8
+- Un serveur PostgreSQL (avec l'outil en ligne de commande `psql`)
 - Git
 
 ### Étapes
@@ -145,8 +157,8 @@ Créez un fichier `.env` à la racine du projet :
 
 ```env
 DB_HOST=localhost
-DB_PORT=3306
-DB_USER=root
+DB_PORT=5432
+DB_USER=postgres
 DB_PASSWORD=votre_mot_de_passe
 DB_NAME=planizi
 SECRET_KEY=une_longue_chaine_aleatoire
@@ -154,9 +166,9 @@ SECRET_KEY=une_longue_chaine_aleatoire
 
 | Variable | Rôle |
 |---|---|
-| `DB_HOST` | Adresse du serveur MySQL |
-| `DB_PORT` | Port MySQL (3306 par défaut) |
-| `DB_USER` / `DB_PASSWORD` | Identifiants MySQL |
+| `DB_HOST` | Adresse du serveur PostgreSQL |
+| `DB_PORT` | Port PostgreSQL (5432 par défaut) |
+| `DB_USER` / `DB_PASSWORD` | Identifiants PostgreSQL |
 | `DB_NAME` | Nom de la base de données |
 | `SECRET_KEY` | Clé de signature des cookies de session Flask |
 
@@ -194,23 +206,33 @@ user                         team
 
 Toutes les clés étrangères sont en `ON DELETE CASCADE` : supprimer un utilisateur supprime ses shifts et ses appartenances aux équipes.
 
+> `user` est un mot réservé en PostgreSQL : la table s'écrit toujours entre guillemets (`"user"`) dans les requêtes.
+
 ### Création de la base
 
 1. Créez la base :
 
-   ```sql
-   CREATE DATABASE planizi CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+   ```powershell
+   psql -U postgres -c "CREATE DATABASE planizi ENCODING 'UTF8';"
    ```
 
-2. Importez la structure et les données depuis `data.sql`.
-   Le fichier est encodé en **UTF-16** : convertissez-le d'abord en UTF-8 (par exemple avec Git Bash) :
+2. Créez les tables avec `schema.sql` :
 
-   ```bash
-   iconv -f UTF-16 -t UTF-8 data.sql > data_utf8.sql
-   mysql -u root -p planizi < data_utf8.sql
+   ```powershell
+   psql -U postgres -d planizi -f schema.sql
    ```
 
-3. *(Facultatif)* Repartez de données de démonstration propres, avec des shifts sur la semaine en cours et la suivante :
+   > ⚠️ `schema.sql` commence par supprimer les tables existantes (`DROP TABLE … CASCADE`).
+
+3. Importez les données de démonstration avec `donnees.sql` (comptes, équipes et shifts) :
+
+   ```powershell
+   psql -U postgres -d planizi -f donnees.sql
+   ```
+
+   Les shifts de ce fichier ont des dates fixes (semaines du 12 et du 19 octobre 2026).
+
+4. *(Facultatif)* Pour avoir des shifts sur la semaine **en cours** et la suivante, régénérez les données avec `seed.py` :
 
    ```powershell
    python seed.py         # demande confirmation
@@ -240,9 +262,46 @@ L'application est disponible sur **http://127.0.0.1:5000** (mode debug activé).
 
 ---
 
+## Déploiement avec Docker
+
+L'application peut aussi être déployée sur **trois conteneurs**, un par couche, sans rien installer d'autre que [Docker Desktop](https://www.docker.com/products/docker-desktop/) :
+
+```
+navigateur ──8080──▶ proxy (nginx) ──[frontal]──▶ metier (gunicorn) ──[interne]──▶ donnees (PostgreSQL 16)
+                                                                                     └─ volume pgdata
+```
+
+| Service | Image | Port interne | Publié | Réseaux |
+|---|---|---|---|---|
+| `proxy` | construite sur `nginx:1.27.5-bookworm` | 80 | **8080 → 80** | frontal |
+| `metier` | construite sur `python:3.12.8-slim-bookworm` | 8000 | non | frontal, interne |
+| `donnees` | `postgres:16.9-bookworm` | 5432 | non | interne |
+
+Seul le proxy est joignable depuis le poste ; la base n'a aucun réseau commun avec lui. Au premier démarrage, `schema.sql` et `donnees.sql` sont joués automatiquement pour remplir la base.
+
+```powershell
+cd docker
+Copy-Item .env.example .env      # puis renseigner DB_PASSWORD et SECRET_KEY
+docker compose up -d --build     # construit les images et démarre les trois services
+docker compose ps                # les trois services doivent être « healthy »
+```
+
+L'application est alors disponible sur **http://localhost:8080**.
+
+| Commande | Effet |
+|---|---|
+| `docker compose down` | supprime les conteneurs, **conserve les données** |
+| `docker compose down -v` | supprime aussi le volume : la base est recréée au prochain démarrage |
+| `docker compose logs -f metier` | journaux de l'application |
+| `docker compose exec donnees psql -U planizi -d planizi` | console SQL, sans publier le port de la base |
+
+La procédure détaillée (configuration de Docker Desktop, vérification de l'isolation, mesures) est dans [`docker/PROCEDURE.md`](docker/PROCEDURE.md), et la comparaison avec le déploiement sur machines virtuelles dans [`docs/comparaison.md`](docs/comparaison.md).
+
+---
+
 ## Comptes de démonstration
 
-Après `python seed.py`, tous les comptes ont le mot de passe **`planizi123`**.
+Après l'import de `donnees.sql` ou `python seed.py`, tous les comptes ont le mot de passe **`planizi123`**.
 
 | Rôle | Login(s) |
 |---|---|
@@ -311,4 +370,5 @@ Erreurs gérées : **400** (requête invalide), **403** (accès refusé), **404*
 - Requêtes SQL paramétrées (protection contre les injections SQL).
 - Contrôles d'accès par décorateurs (`login_requis`, `manager_requis`, `superviseur_requis`) et vérification qu'un manager gère bien l'équipe demandée.
 - Validations revérifiées côté serveur (le JavaScript du navigateur peut être contourné).
-- Secrets (identifiants MySQL, `SECRET_KEY`) stockés dans `.env`, hors du dépôt.
+- Secrets (identifiants PostgreSQL, `SECRET_KEY`) stockés dans `.env`, hors du dépôt.
+- En conteneurs : un seul port publié (le proxy), base isolée sur un réseau interne, application exécutée sous un compte sans privilèges.
