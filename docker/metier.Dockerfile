@@ -37,6 +37,10 @@ USER planizi
 # Port interne uniquement (aucune publication : voir compose.yaml)
 EXPOSE 8000
 
+# Nombre de workers gunicorn : lu dans WEB_CONCURRENCY (fixé dans compose.yaml).
+# Valeur par défaut alignée sur la VM métier : 2 workers pour 2 vCPU.
+ENV WEB_CONCURRENCY=2
+
 # Ecoute sur 0.0.0.0 : dans un conteneur c'est la bonne pratique, l'isolation
 # vient de la NON-publication du port, pas de l'adresse d'ecoute.
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--workers", "3", "--access-logfile", "-", "app:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--access-logfile", "-", "app:app"]

@@ -37,6 +37,9 @@ services:
       retries: 12
       start_period: 30s
       start_interval: 1s                     # sonde chaque seconde pendant le demarrage
+    # Memes ressources que vm-donnees (2 vCPU, 2 Go) : groupes de controle du noyau
+    cpus: 2
+    mem_limit: 2g
     networks: [interne]                      # aucun "ports:" -> injoignable depuis l'hote
 
   # ---------------- Couche METIER (etape 12) ----------------
@@ -54,6 +57,7 @@ services:
       DB_USER: ${DB_USER}
       DB_PASSWORD: ${DB_PASSWORD}
       SECRET_KEY: ${SECRET_KEY:?SECRET_KEY manquant dans .env}
+      WEB_CONCURRENCY: "2"                   # workers gunicorn, comme sur vm-metier
     depends_on:
       donnees:
         condition: service_healthy           # attend une base REELLEMENT prete
@@ -65,6 +69,9 @@ services:
       retries: 12
       start_period: 30s
       start_interval: 1s
+    # Memes ressources que vm-metier (2 vCPU, 2 Go)
+    cpus: 2
+    mem_limit: 2g
     networks: [frontal, interne]             # seul service present sur les deux reseaux
 
   # ---------------- Couche PRESENTATION (etape 13) ----------------
@@ -86,6 +93,9 @@ services:
       retries: 12
       start_period: 30s
       start_interval: 1s
+    # Memes ressources que vm-proxy (1 vCPU, 1 Go)
+    cpus: 1
+    mem_limit: 1g
     networks: [frontal]                      # aucun reseau commun avec la base
 
 networks:

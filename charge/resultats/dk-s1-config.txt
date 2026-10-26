@@ -1,0 +1,6 @@
+﻿Campagne dk / série s1 — 2026-10-26 10:55:55
+Cible : http://localhost:8080/connexion ; paliers : 1, 5, 10, 25, 50, 75, 100, 150, 200 ; montée 30 s ; plateau 90 s ; pause 20 s
+JMeter : C:\apache-jmeter-5.6.3\bin\jmeter.bat
+Java : java version "1.8.0_441"
+Poste : 12th Gen Intel(R) Core(TM) i7-1260P ; 15.7 Gio ; 16 cœurs logiques
+Docker : 29.9.1 ; VM en marche : 

@@ -123,6 +123,7 @@ Choix du `metier.Dockerfile` :
 - base légère **`python:3.12.8-slim-bookworm`** (version explicite) ;
 - `requirements.txt` copié et installé **avant** le code : tant qu'il ne change pas, la couche des dépendances vient du cache. Vérification : modifier un commentaire dans `app.py`, relancer `docker compose build metier` → l'étape `pip install` apparaît `CACHED`, seule la copie du code est refaite ;
 - `pip` sans cache (`PIP_NO_CACHE_DIR=1`), et fichier d'exclusion : pas de `venv/`, `__pycache__/`, `.git/`, `.env`, maquettes, CSS ni SQL dans l'image ;
+- 2 workers gunicorn (`WEB_CONCURRENCY=2`), et limites `cpus` / `mem_limit` identiques aux VM (proxy 1 CPU / 1 Go, métier et données 2 CPU / 2 Go) : même capacité des deux côtés pour que la comparaison mesure la technique d'isolation, pas un réglage ;
 - `gunicorn==23.0.0` ajouté dans le Dockerfile (pas dans `requirements.txt`) pour ne rien modifier au dépôt applicatif ;
 - exécution sous un compte système `planizi`, sans privilèges ;
 - `gunicorn --bind 0.0.0.0:8000` : **écouter sur toutes les interfaces est ici la bonne pratique**. En VM, c'était une faute (la machine avait des interfaces qui devaient rester privées) ; dans un conteneur, il n'y a qu'une interface par réseau raccordé, et l'isolation vient de la **non-publication du port**. Un service n'écoutant que sur `127.0.0.1` serait injoignable par le proxy.

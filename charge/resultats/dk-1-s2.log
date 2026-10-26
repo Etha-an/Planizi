@@ -1,0 +1,149 @@
+2026-10-26 13:03:46,355 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2026-10-26 13:03:46,364 INFO o.a.j.JMeter: Loading user properties from: C:\apache-jmeter-5.6.3\bin\user.properties
+2026-10-26 13:03:46,365 INFO o.a.j.JMeter: Loading system properties from: C:\apache-jmeter-5.6.3\bin\system.properties
+2026-10-26 13:03:46,365 INFO o.a.j.JMeter: Setting JMeter property: hote=localhost
+2026-10-26 13:03:46,365 INFO o.a.j.JMeter: Setting JMeter property: port=8080
+2026-10-26 13:03:46,365 INFO o.a.j.JMeter: Setting JMeter property: utilisateurs=1
+2026-10-26 13:03:46,365 INFO o.a.j.JMeter: Setting JMeter property: iterations=-1
+2026-10-26 13:03:46,365 INFO o.a.j.JMeter: Setting JMeter property: montee=30
+2026-10-26 13:03:46,365 INFO o.a.j.JMeter: Setting JMeter property: duree=120
+2026-10-26 13:03:46,366 INFO o.a.j.JMeter: Setting JMeter property: jmeter.save.saveservice.output_format=csv
+2026-10-26 13:03:46,366 INFO o.a.j.JMeter: Setting JMeter property: jmeter.save.saveservice.thread_counts=true
+2026-10-26 13:03:46,366 INFO o.a.j.JMeter: Setting JMeter property: jmeter.save.saveservice.assertion_results_failure_message=true
+2026-10-26 13:03:46,371 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2026-10-26 13:03:46,371 INFO o.a.j.JMeter: Version 5.6.3
+2026-10-26 13:03:46,371 INFO o.a.j.JMeter: java.version=1.8.0_441
+2026-10-26 13:03:46,371 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2026-10-26 13:03:46,371 INFO o.a.j.JMeter: os.name=Windows 11
+2026-10-26 13:03:46,371 INFO o.a.j.JMeter: os.arch=amd64
+2026-10-26 13:03:46,371 INFO o.a.j.JMeter: os.version=10.0
+2026-10-26 13:03:46,371 INFO o.a.j.JMeter: file.encoding=Cp1252
+2026-10-26 13:03:46,371 INFO o.a.j.JMeter: java.awt.headless=true
+2026-10-26 13:03:46,371 INFO o.a.j.JMeter: Max memory     =1073741824
+2026-10-26 13:03:46,371 INFO o.a.j.JMeter: Available Processors =16
+2026-10-26 13:03:46,375 INFO o.a.j.JMeter: Default Locale=English (EN)
+2026-10-26 13:03:46,375 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2026-10-26 13:03:46,375 INFO o.a.j.JMeter: JMeterHome=C:\apache-jmeter-5.6.3
+2026-10-26 13:03:46,375 INFO o.a.j.JMeter: user.dir  =C:\Users\renuc\Desktop\Polytech\INFO 4A\Virtu\Planizi\charge
+2026-10-26 13:03:46,376 INFO o.a.j.JMeter: PWD       =C:\Users\renuc\Desktop\Polytech\INFO 4A\Virtu\Planizi\charge
+2026-10-26 13:03:46,381 INFO o.a.j.JMeter: IP: 192.168.1.11 Name: Miaourdinateur FullName: Miaourdinateur.home
+2026-10-26 13:03:46,395 INFO o.a.j.s.FileServer: Default base='C:\Users\renuc\Desktop\Polytech\INFO 4A\Virtu\Planizi\charge'
+2026-10-26 13:03:46,396 INFO o.a.j.s.FileServer: Set new base='C:\Users\renuc\Desktop\Polytech\INFO 4A\Virtu\Planizi\charge'
+2026-10-26 13:03:46,493 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2026-10-26 13:03:46,518 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2026-10-26 13:03:46,522 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2026-10-26 13:03:46,528 INFO o.a.j.s.SaveService: Loading file: plan.jmx
+2026-10-26 13:03:46,567 INFO o.a.j.p.h.c.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_
+2026-10-26 13:03:46,585 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-10-26 13:03:46,586 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-10-26 13:03:46,586 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-10-26 13:03:46,586 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-10-26 13:03:46,586 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2026-10-26 13:03:46,586 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2026-10-26 13:03:46,794 INFO o.a.j.JMeter: Creating summariser <summary>
+2026-10-26 13:03:46,803 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2026-10-26 13:03:46,804 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-10-26 13:03:46,804 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-10-26 13:03:46,808 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2026-10-26 13:03:46,808 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2026-10-26 13:03:47,051 INFO o.a.j.JMeter: Running test (1793016227051)
+2026-10-26 13:03:47,094 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Utilisateurs
+2026-10-26 13:03:47,094 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Utilisateurs.
+2026-10-26 13:03:47,094 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-10-26 13:03:47,094 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=30 delayedStart=false
+2026-10-26 13:03:47,098 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2026-10-26 13:03:47,098 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2026-10-26 13:03:47,126 INFO o.a.j.t.JMeterThread: Thread started: Utilisateurs 1-1
+2026-10-26 13:03:47,127 INFO o.a.j.s.FileServer: Stored: comptes.csv
+2026-10-26 13:03:49,125 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = Miaourdinateur
+2026-10-26 13:03:49,131 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2026-10-26 13:03:49,132 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2026-10-26 13:03:49,132 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2026-10-26 13:03:49,132 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2026-10-26 13:03:49,132 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2026-10-26 13:03:51,429 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:03:52,628 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:03:54,203 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:03:56,085 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:03:57,160 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:03:59,263 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:00,465 INFO o.a.j.r.Summariser: summary +      8 in 00:00:13 =    0.6/s Avg:    96 Min:    29 Max:   199 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+2026-10-26 13:04:00,466 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:01,660 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:03,062 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:04,857 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:05,942 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:07,633 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:08,914 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:10,741 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:11,837 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:13,312 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:15,015 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:16,526 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:18,550 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:19,757 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:20,832 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:22,812 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:24,817 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:26,615 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:28,512 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:29,986 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:31,342 INFO o.a.j.r.Summariser: summary +     20 in 00:00:31 =    0.6/s Avg:    83 Min:    27 Max:   129 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+2026-10-26 13:04:31,343 INFO o.a.j.r.Summariser: summary =     28 in 00:00:44 =    0.6/s Avg:    86 Min:    27 Max:   199 Err:     0 (0.00%)
+2026-10-26 13:04:31,344 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:33,358 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:34,574 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:36,324 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:37,433 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:39,318 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:41,312 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:43,098 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:44,345 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:45,577 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:46,780 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:48,446 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:49,998 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:52,086 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:53,908 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:55,516 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:56,903 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:58,651 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:04:59,829 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:01,750 INFO o.a.j.r.Summariser: summary +     19 in 00:00:30 =    0.6/s Avg:    83 Min:    29 Max:   132 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+2026-10-26 13:05:01,750 INFO o.a.j.r.Summariser: summary =     47 in 00:01:15 =    0.6/s Avg:    85 Min:    27 Max:   199 Err:     0 (0.00%)
+2026-10-26 13:05:01,751 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:02,973 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:04,117 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:05,262 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:07,029 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:08,866 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:10,774 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:12,424 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:14,527 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:15,942 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:17,997 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:19,679 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:21,111 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:22,829 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:24,710 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:25,832 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:27,232 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:28,930 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:30,625 INFO o.a.j.r.Summariser: summary +     18 in 00:00:29 =    0.6/s Avg:    83 Min:    42 Max:   125 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+2026-10-26 13:05:30,627 INFO o.a.j.r.Summariser: summary =     65 in 00:01:44 =    0.6/s Avg:    84 Min:    27 Max:   199 Err:     0 (0.00%)
+2026-10-26 13:05:30,627 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:32,264 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:33,698 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:35,311 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:36,769 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:38,541 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:39,908 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:41,421 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:43,141 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:44,724 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:46,764 WARN o.a.j.p.h.s.HTTPSamplerBase: Existing CookieManager Cookies (session Flask) superseded by Cookies (session Flask)
+2026-10-26 13:05:46,764 INFO o.a.j.t.JMeterThread: Thread finished: Utilisateurs 1-1
+2026-10-26 13:05:46,765 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2026-10-26 13:05:46,765 INFO o.a.j.s.FileServer: Close: comptes.csv
+2026-10-26 13:05:46,766 INFO o.a.j.r.Summariser: summary +     10 in 00:00:16 =    0.6/s Avg:    82 Min:    27 Max:   141 Err:     0 (0.00%) Active: 0 Started: 1 Finished: 1
+2026-10-26 13:05:46,766 INFO o.a.j.r.Summariser: summary =     75 in 00:02:00 =    0.6/s Avg:    84 Min:    27 Max:   199 Err:     0 (0.00%)

@@ -1,0 +1,1222 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1793015351870,267,1 - Connexion,302,FOUND,Utilisateurs 1-1,text,true,,586,252,6,6,http://localhost:8080/connexion,266,0,23
+1793015351870,286,1 - Connexion,302,FOUND,Utilisateurs 1-3,text,true,,586,252,6,6,http://localhost:8080/connexion,286,0,23
+1793015352297,250,1 - Connexion,302,FOUND,Utilisateurs 1-2,text,true,,586,252,7,7,http://localhost:8080/connexion,250,0,2
+1793015352736,253,1 - Connexion,302,FOUND,Utilisateurs 1-4,text,true,,586,252,8,8,http://localhost:8080/connexion,253,0,1
+1793015353220,272,1 - Connexion,302,FOUND,Utilisateurs 1-5,text,true,,586,252,9,9,http://localhost:8080/connexion,272,0,2
+1793015353414,199,1 - Connexion,302,FOUND,Utilisateurs 1-6,text,true,,586,252,10,10,http://localhost:8080/connexion,199,0,1
+1793015353730,153,2 - Mon planning,200,OK,Utilisateurs 1-1,text,true,,6059,276,10,10,http://localhost:8080/planning,153,0,0
+1793015353756,255,2 - Mon planning,200,OK,Utilisateurs 1-2,text,true,,6059,276,11,11,http://localhost:8080/planning,255,0,0
+1793015353747,443,1 - Connexion,302,FOUND,Utilisateurs 1-7,text,true,,586,252,11,11,http://localhost:8080/connexion,443,0,2
+1793015354094,130,2 - Mon planning,200,OK,Utilisateurs 1-3,text,true,,6059,276,11,11,http://localhost:8080/planning,130,0,0
+1793015354439,277,2 - Mon planning,200,OK,Utilisateurs 1-4,text,true,,6059,276,12,12,http://localhost:8080/planning,277,0,0
+1793015354624,202,2 - Mon planning,200,OK,Utilisateurs 1-5,text,true,,6059,276,13,13,http://localhost:8080/planning,202,0,0
+1793015354657,325,1 - Connexion,302,FOUND,Utilisateurs 1-8,text,true,,586,252,13,13,http://localhost:8080/connexion,325,0,1
+1793015354887,243,1 - Connexion,302,FOUND,Utilisateurs 1-10,text,true,,586,252,13,13,http://localhost:8080/connexion,243,0,1
+1793015355247,113,2 - Mon planning,200,OK,Utilisateurs 1-6,text,true,,6059,276,14,14,http://localhost:8080/planning,113,0,0
+1793015355044,420,1 - Connexion,302,FOUND,Utilisateurs 1-9,text,true,,586,252,14,14,http://localhost:8080/connexion,420,0,1
+1793015355269,228,2 - Mon planning,200,OK,Utilisateurs 1-7,text,true,,6059,276,14,14,http://localhost:8080/planning,227,0,0
+1793015355338,381,1 - Connexion,302,FOUND,Utilisateurs 1-1,text,true,,586,252,15,15,http://localhost:8080/connexion,381,0,0
+1793015355731,243,1 - Connexion,302,FOUND,Utilisateurs 1-11,text,true,,586,252,16,16,http://localhost:8080/connexion,243,0,1
+1793015355867,236,1 - Connexion,302,FOUND,Utilisateurs 1-2,text,true,,586,252,16,16,http://localhost:8080/connexion,236,0,0
+1793015356000,306,1 - Connexion,302,FOUND,Utilisateurs 1-5,text,true,,586,252,16,16,http://localhost:8080/connexion,306,0,0
+1793015355937,542,1 - Connexion,302,FOUND,Utilisateurs 1-12,text,true,,586,252,17,17,http://localhost:8080/connexion,542,0,2
+1793015356008,490,1 - Connexion,302,FOUND,Utilisateurs 1-13,text,true,,586,252,17,17,http://localhost:8080/connexion,490,0,2
+1793015356265,344,2 - Mon planning,200,OK,Utilisateurs 1-10,text,true,,6059,276,17,17,http://localhost:8080/planning,344,0,0
+1793015356359,368,2 - Mon planning,200,OK,Utilisateurs 1-8,text,true,,6059,276,17,17,http://localhost:8080/planning,368,0,0
+1793015356071,759,1 - Connexion,302,FOUND,Utilisateurs 1-3,text,true,,586,252,18,18,http://localhost:8080/connexion,759,0,0
+1793015356475,443,1 - Connexion,302,FOUND,Utilisateurs 1-6,text,true,,586,252,18,18,http://localhost:8080/connexion,443,0,0
+1793015356482,593,1 - Connexion,302,FOUND,Utilisateurs 1-4,text,true,,586,252,18,18,http://localhost:8080/connexion,593,0,0
+1793015356946,199,1 - Connexion,302,FOUND,Utilisateurs 1-14,text,true,,586,252,18,18,http://localhost:8080/connexion,199,0,1
+1793015356968,212,2 - Mon planning,200,OK,Utilisateurs 1-1,text,true,,6059,276,19,19,http://localhost:8080/planning,212,0,0
+1793015357041,253,2 - Mon planning,200,OK,Utilisateurs 1-9,text,true,,6059,276,19,19,http://localhost:8080/planning,253,0,0
+1793015357123,175,2 - Mon planning,200,OK,Utilisateurs 1-11,text,true,,6059,276,19,19,http://localhost:8080/planning,175,0,0
+1793015357358,160,2 - Mon planning,200,OK,Utilisateurs 1-5,text,true,,6059,276,19,19,http://localhost:8080/planning,160,0,0
+1793015357310,270,1 - Connexion,302,FOUND,Utilisateurs 1-16,text,true,,586,252,20,20,http://localhost:8080/connexion,270,0,1
+1793015357506,266,1 - Connexion,302,FOUND,Utilisateurs 1-7,text,true,,586,252,20,20,http://localhost:8080/connexion,266,0,0
+1793015357440,344,1 - Connexion,302,FOUND,Utilisateurs 1-15,text,true,,586,252,20,20,http://localhost:8080/connexion,344,0,2
+1793015357791,110,2 - Mon planning,200,OK,Utilisateurs 1-12,text,true,,6059,276,20,20,http://localhost:8080/planning,110,0,0
+1793015357869,255,1 - Connexion,302,FOUND,Utilisateurs 1-17,text,true,,586,252,21,21,http://localhost:8080/connexion,255,0,1
+1793015358086,218,2 - Mon planning,200,OK,Utilisateurs 1-2,text,true,,6059,276,21,21,http://localhost:8080/planning,217,0,0
+1793015358191,246,1 - Connexion,302,FOUND,Utilisateurs 1-8,text,true,,586,252,22,22,http://localhost:8080/connexion,246,0,0
+1793015358252,279,2 - Mon planning,200,OK,Utilisateurs 1-6,text,true,,6059,276,22,22,http://localhost:8080/planning,279,0,0
+1793015358210,389,1 - Connexion,302,FOUND,Utilisateurs 1-18,text,true,,586,252,22,22,http://localhost:8080/connexion,389,0,1
+1793015358321,369,2 - Mon planning,200,OK,Utilisateurs 1-13,text,true,,6059,276,22,22,http://localhost:8080/planning,369,0,0
+1793015358288,424,1 - Connexion,302,FOUND,Utilisateurs 1-1,text,true,,586,252,22,22,http://localhost:8080/connexion,424,0,0
+1793015358327,471,2 - Mon planning,200,OK,Utilisateurs 1-3,text,true,,6059,276,23,23,http://localhost:8080/planning,471,0,0
+1793015358360,535,2 - Mon planning,200,OK,Utilisateurs 1-4,text,true,,6059,276,23,23,http://localhost:8080/planning,535,0,0
+1793015358334,565,1 - Connexion,302,FOUND,Utilisateurs 1-11,text,true,,586,252,23,23,http://localhost:8080/connexion,565,0,0
+1793015358460,538,2 - Mon planning,200,OK,Utilisateurs 1-14,text,true,,6059,276,23,23,http://localhost:8080/planning,538,0,0
+1793015358465,690,1 - Connexion,302,FOUND,Utilisateurs 1-10,text,true,,586,252,24,24,http://localhost:8080/connexion,690,0,0
+1793015358818,365,1 - Connexion,302,FOUND,Utilisateurs 1-19,text,true,,586,252,24,24,http://localhost:8080/connexion,365,0,1
+1793015358873,399,2 - Mon planning,200,OK,Utilisateurs 1-15,text,true,,6059,276,24,24,http://localhost:8080/planning,399,0,0
+1793015358927,443,1 - Connexion,302,FOUND,Utilisateurs 1-9,text,true,,586,252,24,24,http://localhost:8080/connexion,443,0,0
+1793015359206,302,1 - Connexion,302,FOUND,Utilisateurs 1-5,text,true,,586,252,24,24,http://localhost:8080/connexion,302,0,0
+1793015359403,208,1 - Connexion,302,FOUND,Utilisateurs 1-2,text,true,,586,252,25,25,http://localhost:8080/connexion,208,0,0
+1793015359536,185,2 - Mon planning,200,OK,Utilisateurs 1-16,text,true,,6059,276,25,25,http://localhost:8080/planning,185,0,0
+1793015359543,283,2 - Mon planning,200,OK,Utilisateurs 1-17,text,true,,6059,276,25,25,http://localhost:8080/planning,283,0,0
+1793015359428,400,1 - Connexion,302,FOUND,Utilisateurs 1-20,text,true,,586,252,25,25,http://localhost:8080/connexion,400,0,1
+1793015359751,208,2 - Mon planning,200,OK,Utilisateurs 1-7,text,true,,6059,276,26,26,http://localhost:8080/planning,208,0,0
+1793015359769,289,2 - Mon planning,200,OK,Utilisateurs 1-8,text,true,,6059,276,26,26,http://localhost:8080/planning,289,0,0
+1793015359752,438,1 - Connexion,302,FOUND,Utilisateurs 1-12,text,true,,586,252,26,26,http://localhost:8080/connexion,438,0,0
+1793015359790,455,1 - Connexion,302,FOUND,Utilisateurs 1-22,text,true,,586,252,26,26,http://localhost:8080/connexion,455,0,1
+1793015359965,406,2 - Mon planning,200,OK,Utilisateurs 1-18,text,true,,6059,276,27,27,http://localhost:8080/planning,406,0,0
+1793015359855,623,1 - Connexion,302,FOUND,Utilisateurs 1-21,text,true,,586,252,27,27,http://localhost:8080/connexion,623,0,1
+1793015360272,392,1 - Connexion,302,FOUND,Utilisateurs 1-13,text,true,,586,252,27,27,http://localhost:8080/connexion,392,0,0
+1793015360283,444,1 - Connexion,302,FOUND,Utilisateurs 1-15,text,true,,586,252,27,27,http://localhost:8080/connexion,444,0,0
+1793015360326,467,2 - Mon planning,200,OK,Utilisateurs 1-11,text,true,,6059,276,28,28,http://localhost:8080/planning,467,0,0
+1793015360368,505,2 - Mon planning,200,OK,Utilisateurs 1-1,text,true,,6059,276,28,28,http://localhost:8080/planning,505,0,0
+1793015360369,618,1 - Connexion,302,FOUND,Utilisateurs 1-14,text,true,,586,252,28,28,http://localhost:8080/connexion,618,0,0
+1793015360406,691,1 - Connexion,302,FOUND,Utilisateurs 1-3,text,true,,586,252,28,28,http://localhost:8080/connexion,691,0,0
+1793015360431,743,1 - Connexion,302,FOUND,Utilisateurs 1-6,text,true,,586,252,29,29,http://localhost:8080/connexion,743,0,0
+1793015360514,756,2 - Mon planning,200,OK,Utilisateurs 1-9,text,true,,6059,276,29,29,http://localhost:8080/planning,756,0,0
+1793015360540,848,2 - Mon planning,200,OK,Utilisateurs 1-10,text,true,,6059,276,29,29,http://localhost:8080/planning,848,0,0
+1793015360470,981,1 - Connexion,302,FOUND,Utilisateurs 1-4,text,true,,586,252,29,29,http://localhost:8080/connexion,981,0,0
+1793015360563,1049,1 - Connexion,302,FOUND,Utilisateurs 1-25,text,true,,586,252,30,30,http://localhost:8080/connexion,1048,0,1
+1793015360618,1109,2 - Mon planning,200,OK,Utilisateurs 1-19,text,true,,6059,276,30,30,http://localhost:8080/planning,1108,0,0
+1793015360584,1163,1 - Connexion,302,FOUND,Utilisateurs 1-23,text,true,,586,252,30,30,http://localhost:8080/connexion,1163,0,1
+1793015360656,1201,2 - Mon planning,200,OK,Utilisateurs 1-5,text,true,,6059,276,30,30,http://localhost:8080/planning,1201,0,0
+1793015360792,1235,1 - Connexion,302,FOUND,Utilisateurs 1-24,text,true,,586,252,31,31,http://localhost:8080/connexion,1235,0,1
+1793015360832,1236,1 - Connexion,302,FOUND,Utilisateurs 1-16,text,true,,586,252,31,31,http://localhost:8080/connexion,1236,0,0
+1793015361062,1187,1 - Connexion,302,FOUND,Utilisateurs 1-7,text,true,,586,252,31,31,http://localhost:8080/connexion,1187,0,0
+1793015361515,743,1 - Connexion,302,FOUND,Utilisateurs 1-17,text,true,,586,252,31,31,http://localhost:8080/connexion,743,0,0
+1793015361532,861,2 - Mon planning,200,OK,Utilisateurs 1-2,text,true,,6059,276,32,32,http://localhost:8080/planning,861,0,0
+1793015361523,932,2 - Mon planning,200,OK,Utilisateurs 1-20,text,true,,6059,276,32,32,http://localhost:8080/planning,932,0,0
+1793015361676,1005,1 - Connexion,302,FOUND,Utilisateurs 1-8,text,true,,586,252,32,32,http://localhost:8080/connexion,1005,0,0
+1793015361534,1200,2 - Mon planning,200,OK,Utilisateurs 1-21,text,true,,6059,276,32,32,http://localhost:8080/planning,1200,0,0
+1793015361803,1040,2 - Mon planning,200,OK,Utilisateurs 1-12,text,true,,6059,276,33,33,http://localhost:8080/planning,1040,0,0
+1793015361701,1162,1 - Connexion,302,FOUND,Utilisateurs 1-27,text,true,,586,252,33,33,http://localhost:8080/connexion,1162,0,1
+1793015361919,1154,1 - Connexion,302,FOUND,Utilisateurs 1-11,text,true,,586,252,33,33,http://localhost:8080/connexion,1154,0,0
+1793015361816,1346,2 - Mon planning,200,OK,Utilisateurs 1-13,text,true,,6059,276,34,34,http://localhost:8080/planning,1346,0,0
+1793015361925,1351,2 - Mon planning,200,OK,Utilisateurs 1-22,text,true,,6059,276,34,34,http://localhost:8080/planning,1351,0,0
+1793015361922,1519,1 - Connexion,302,FOUND,Utilisateurs 1-26,text,true,,586,252,34,34,http://localhost:8080/connexion,1519,0,1
+1793015361950,1519,1 - Connexion,302,FOUND,Utilisateurs 1-18,text,true,,586,252,34,34,http://localhost:8080/connexion,1519,0,0
+1793015362042,1526,2 - Mon planning,200,OK,Utilisateurs 1-15,text,true,,6059,276,35,35,http://localhost:8080/planning,1526,0,0
+1793015362129,1536,1 - Connexion,302,FOUND,Utilisateurs 1-1,text,true,,586,252,35,35,http://localhost:8080/connexion,1536,0,0
+1793015362326,1353,2 - Mon planning,200,OK,Utilisateurs 1-6,text,true,,6059,276,35,35,http://localhost:8080/planning,1353,0,0
+1793015362422,1395,2 - Mon planning,200,OK,Utilisateurs 1-14,text,true,,6059,276,35,35,http://localhost:8080/planning,1395,0,0
+1793015362378,1499,1 - Connexion,302,FOUND,Utilisateurs 1-28,text,true,,586,252,35,35,http://localhost:8080/connexion,1499,0,2
+1793015362806,1174,2 - Mon planning,200,OK,Utilisateurs 1-25,text,true,,6059,276,36,36,http://localhost:8080/planning,1174,0,0
+1793015362918,1189,2 - Mon planning,200,OK,Utilisateurs 1-3,text,true,,6059,276,36,36,http://localhost:8080/planning,1189,0,0
+1793015362578,1610,1 - Connexion,302,FOUND,Utilisateurs 1-9,text,true,,586,252,36,36,http://localhost:8080/connexion,1610,0,0
+1793015362928,1378,1 - Connexion,302,FOUND,Utilisateurs 1-10,text,true,,586,252,36,36,http://localhost:8080/connexion,1378,0,0
+1793015363040,1368,2 - Mon planning,200,OK,Utilisateurs 1-4,text,true,,6059,276,37,37,http://localhost:8080/planning,1368,0,0
+1793015362967,1509,1 - Connexion,302,FOUND,Utilisateurs 1-29,text,true,,586,252,37,37,http://localhost:8080/connexion,1509,0,1
+1793015363148,1366,2 - Mon planning,200,OK,Utilisateurs 1-24,text,true,,6059,276,37,37,http://localhost:8080/planning,1366,0,0
+1793015363154,1582,1 - Connexion,302,FOUND,Utilisateurs 1-19,text,true,,586,252,37,37,http://localhost:8080/connexion,1582,0,0
+1793015363162,1575,1 - Connexion,302,FOUND,Utilisateurs 1-30,text,true,,586,252,37,37,http://localhost:8080/connexion,1575,0,2
+1793015363359,1510,2 - Mon planning,200,OK,Utilisateurs 1-16,text,true,,6059,276,38,38,http://localhost:8080/planning,1510,0,0
+1793015363297,1746,1 - Connexion,302,FOUND,Utilisateurs 1-5,text,true,,586,252,38,38,http://localhost:8080/connexion,1746,0,0
+1793015363374,1699,1 - Connexion,302,FOUND,Utilisateurs 1-32,text,true,,586,252,38,38,http://localhost:8080/connexion,1699,0,1
+1793015363446,1768,2 - Mon planning,200,OK,Utilisateurs 1-7,text,true,,6059,276,39,39,http://localhost:8080/planning,1768,0,0
+1793015363475,1847,1 - Connexion,302,FOUND,Utilisateurs 1-20,text,true,,586,252,39,39,http://localhost:8080/connexion,1847,0,0
+1793015363700,1636,2 - Mon planning,200,OK,Utilisateurs 1-23,text,true,,6059,276,39,39,http://localhost:8080/planning,1636,0,0
+1793015363844,1702,1 - Connexion,302,FOUND,Utilisateurs 1-31,text,true,,586,252,39,39,http://localhost:8080/connexion,1702,0,1
+1793015363924,1662,1 - Connexion,302,FOUND,Utilisateurs 1-12,text,true,,586,252,40,40,http://localhost:8080/connexion,1662,0,0
+1793015364087,1709,1 - Connexion,302,FOUND,Utilisateurs 1-21,text,true,,586,252,40,40,http://localhost:8080/connexion,1709,0,0
+1793015363975,1904,2 - Mon planning,200,OK,Utilisateurs 1-17,text,true,,6059,276,40,40,http://localhost:8080/planning,1904,0,0
+1793015364149,1797,2 - Mon planning,200,OK,Utilisateurs 1-8,text,true,,6059,276,41,41,http://localhost:8080/planning,1797,0,0
+1793015364313,1851,1 - Connexion,302,FOUND,Utilisateurs 1-2,text,true,,586,252,41,41,http://localhost:8080/connexion,1851,0,0
+1793015364284,1946,2 - Mon planning,200,OK,Utilisateurs 1-27,text,true,,6059,276,41,41,http://localhost:8080/planning,1946,0,0
+1793015364433,1954,1 - Connexion,302,FOUND,Utilisateurs 1-33,text,true,,586,252,42,42,http://localhost:8080/connexion,1954,0,1
+1793015364444,2032,1 - Connexion,302,FOUND,Utilisateurs 1-22,text,true,,586,252,42,42,http://localhost:8080/connexion,2032,0,0
+1793015364615,1973,1 - Connexion,302,FOUND,Utilisateurs 1-34,text,true,,586,252,42,42,http://localhost:8080/connexion,1973,0,1
+1793015364861,1729,2 - Mon planning,200,OK,Utilisateurs 1-26,text,true,,6059,276,42,42,http://localhost:8080/planning,1729,0,0
+1793015364883,1911,1 - Connexion,302,FOUND,Utilisateurs 1-13,text,true,,586,252,43,43,http://localhost:8080/connexion,1911,0,0
+1793015364954,1912,1 - Connexion,302,FOUND,Utilisateurs 1-36,text,true,,586,252,43,43,http://localhost:8080/connexion,1912,0,2
+1793015364997,1938,2 - Mon planning,200,OK,Utilisateurs 1-11,text,true,,6059,276,43,43,http://localhost:8080/planning,1938,0,0
+1793015365002,2128,1 - Connexion,302,FOUND,Utilisateurs 1-25,text,true,,586,252,43,43,http://localhost:8080/connexion,2128,0,0
+1793015365136,2001,1 - Connexion,302,FOUND,Utilisateurs 1-35,text,true,,586,252,43,43,http://localhost:8080/connexion,2000,0,4
+1793015365164,2163,1 - Connexion,302,FOUND,Utilisateurs 1-15,text,true,,586,252,44,44,http://localhost:8080/connexion,2163,0,0
+1793015365162,2197,1 - Connexion,302,FOUND,Utilisateurs 1-6,text,true,,586,252,44,44,http://localhost:8080/connexion,2197,0,0
+1793015365268,2177,2 - Mon planning,200,OK,Utilisateurs 1-9,text,true,,6059,276,44,44,http://localhost:8080/planning,2177,0,0
+1793015365361,2209,2 - Mon planning,200,OK,Utilisateurs 1-18,text,true,,6059,276,45,45,http://localhost:8080/planning,2209,0,0
+1793015365408,2282,1 - Connexion,302,FOUND,Utilisateurs 1-4,text,true,,586,252,45,45,http://localhost:8080/connexion,2282,0,0
+1793015365596,2214,2 - Mon planning,200,OK,Utilisateurs 1-1,text,true,,6059,276,45,45,http://localhost:8080/planning,2214,0,0
+1793015365579,2298,1 - Connexion,302,FOUND,Utilisateurs 1-14,text,true,,586,252,45,45,http://localhost:8080/connexion,2298,0,0
+1793015365701,2225,2 - Mon planning,200,OK,Utilisateurs 1-28,text,true,,6059,276,45,45,http://localhost:8080/planning,2225,0,0
+1793015366014,2023,2 - Mon planning,200,OK,Utilisateurs 1-29,text,true,,6059,276,46,46,http://localhost:8080/planning,2023,0,0
+1793015365896,2144,2 - Mon planning,200,OK,Utilisateurs 1-10,text,true,,6059,276,46,46,http://localhost:8080/planning,2144,0,0
+1793015366015,2244,1 - Connexion,302,FOUND,Utilisateurs 1-3,text,true,,586,252,46,46,http://localhost:8080/connexion,2244,0,0
+1793015366149,2214,2 - Mon planning,200,OK,Utilisateurs 1-32,text,true,,6059,276,47,47,http://localhost:8080/planning,2214,0,0
+1793015366285,2174,2 - Mon planning,200,OK,Utilisateurs 1-19,text,true,,6059,276,47,47,http://localhost:8080/planning,2174,0,0
+1793015366240,2237,1 - Connexion,302,FOUND,Utilisateurs 1-37,text,true,,586,252,47,47,http://localhost:8080/connexion,2237,0,1
+1793015366343,2234,2 - Mon planning,200,OK,Utilisateurs 1-5,text,true,,6059,276,47,47,http://localhost:8080/planning,2234,0,0
+1793015366348,2315,1 - Connexion,302,FOUND,Utilisateurs 1-24,text,true,,586,252,47,47,http://localhost:8080/connexion,2315,0,0
+1793015366565,2234,2 - Mon planning,200,OK,Utilisateurs 1-31,text,true,,6059,276,48,48,http://localhost:8080/planning,2234,0,0
+1793015366565,2273,2 - Mon planning,200,OK,Utilisateurs 1-30,text,true,,6059,276,48,48,http://localhost:8080/planning,2273,0,0
+1793015366644,2397,1 - Connexion,302,FOUND,Utilisateurs 1-40,text,true,,586,252,48,48,http://localhost:8080/connexion,2397,0,2
+1793015366680,2407,1 - Connexion,302,FOUND,Utilisateurs 1-38,text,true,,586,252,48,48,http://localhost:8080/connexion,2407,0,2
+1793015366687,2550,1 - Connexion,302,FOUND,Utilisateurs 1-16,text,true,,586,252,49,49,http://localhost:8080/connexion,2550,0,0
+1793015366688,2604,2 - Mon planning,200,OK,Utilisateurs 1-20,text,true,,6059,276,49,49,http://localhost:8080/planning,2604,0,0
+1793015366708,2722,1 - Connexion,302,FOUND,Utilisateurs 1-7,text,true,,586,252,49,49,http://localhost:8080/connexion,2722,0,0
+1793015366957,2563,1 - Connexion,302,FOUND,Utilisateurs 1-8,text,true,,586,252,49,49,http://localhost:8080/connexion,2563,0,0
+1793015366995,2630,1 - Connexion,302,FOUND,Utilisateurs 1-23,text,true,,586,252,50,50,http://localhost:8080/connexion,2630,0,0
+1793015367169,2557,2 - Mon planning,200,OK,Utilisateurs 1-12,text,true,,6059,276,50,50,http://localhost:8080/planning,2557,0,0
+1793015367092,2703,1 - Connexion,302,FOUND,Utilisateurs 1-39,text,true,,586,252,50,50,http://localhost:8080/connexion,2703,0,1
+1793015367256,2642,2 - Mon planning,200,OK,Utilisateurs 1-21,text,true,,6059,276,50,50,http://localhost:8080/planning,2642,0,0
+1793015367193,2714,1 - Connexion,302,FOUND,Utilisateurs 1-17,text,true,,586,252,50,50,http://localhost:8080/connexion,2714,0,0
+1793015367762,2302,2 - Mon planning,200,OK,Utilisateurs 1-2,text,true,,6059,276,51,51,http://localhost:8080/planning,2302,0,0
+1793015367531,2682,1 - Connexion,302,FOUND,Utilisateurs 1-42,text,true,,586,252,51,51,http://localhost:8080/connexion,2682,0,1
+1793015367869,2480,2 - Mon planning,200,OK,Utilisateurs 1-36,text,true,,6059,276,52,52,http://localhost:8080/planning,2479,0,0
+1793015367786,2683,1 - Connexion,302,FOUND,Utilisateurs 1-41,text,true,,586,252,52,52,http://localhost:8080/connexion,2683,0,1
+1793015367945,2596,1 - Connexion,302,FOUND,Utilisateurs 1-26,text,true,,586,252,52,52,http://localhost:8080/connexion,2596,0,0
+1793015368073,2509,2 - Mon planning,200,OK,Utilisateurs 1-13,text,true,,6059,276,52,52,http://localhost:8080/planning,2509,0,0
+1793015368157,2524,2 - Mon planning,200,OK,Utilisateurs 1-22,text,true,,6059,276,52,52,http://localhost:8080/planning,2524,0,0
+1793015368104,2624,1 - Connexion,302,FOUND,Utilisateurs 1-27,text,true,,586,252,52,52,http://localhost:8080/connexion,2624,0,0
+1793015368327,2518,2 - Mon planning,200,OK,Utilisateurs 1-25,text,true,,6059,276,53,53,http://localhost:8080/planning,2517,0,0
+1793015368335,2621,2 - Mon planning,200,OK,Utilisateurs 1-33,text,true,,6059,276,53,53,http://localhost:8080/planning,2621,0,0
+1793015368299,2780,1 - Connexion,302,FOUND,Utilisateurs 1-11,text,true,,586,252,53,53,http://localhost:8080/connexion,2779,0,0
+1793015368364,2726,2 - Mon planning,200,OK,Utilisateurs 1-15,text,true,,6059,276,53,53,http://localhost:8080/planning,2726,0,0
+1793015368531,2704,2 - Mon planning,200,OK,Utilisateurs 1-34,text,true,,6059,276,54,54,http://localhost:8080/planning,2704,0,0
+1793015368463,2848,1 - Connexion,302,FOUND,Utilisateurs 1-43,text,true,,586,252,54,54,http://localhost:8080/connexion,2847,0,0
+1793015368561,2809,2 - Mon planning,200,OK,Utilisateurs 1-35,text,true,,6059,276,54,54,http://localhost:8080/planning,2809,0,0
+1793015368608,2836,2 - Mon planning,200,OK,Utilisateurs 1-6,text,true,,6059,276,54,54,http://localhost:8080/planning,2836,0,0
+1793015368635,2999,1 - Connexion,302,FOUND,Utilisateurs 1-44,text,true,,586,252,55,55,http://localhost:8080/connexion,2999,0,1
+1793015368777,2863,1 - Connexion,302,FOUND,Utilisateurs 1-18,text,true,,586,252,55,55,http://localhost:8080/connexion,2863,0,0
+1793015368931,2887,2 - Mon planning,200,OK,Utilisateurs 1-4,text,true,,6059,276,55,55,http://localhost:8080/planning,2887,0,0
+1793015368934,2909,1 - Connexion,302,FOUND,Utilisateurs 1-45,text,true,,586,252,55,55,http://localhost:8080/connexion,2909,0,1
+1793015369059,2915,2 - Mon planning,200,OK,Utilisateurs 1-14,text,true,,6059,276,56,56,http://localhost:8080/planning,2915,0,0
+1793015369030,3028,1 - Connexion,302,FOUND,Utilisateurs 1-28,text,true,,586,252,56,56,http://localhost:8080/connexion,3028,0,0
+1793015369260,2938,1 - Connexion,302,FOUND,Utilisateurs 1-9,text,true,,586,252,56,56,http://localhost:8080/connexion,2938,0,0
+1793015369399,2849,1 - Connexion,302,FOUND,Utilisateurs 1-46,text,true,,586,252,56,56,http://localhost:8080/connexion,2849,0,1
+1793015369485,2932,1 - Connexion,302,FOUND,Utilisateurs 1-47,text,true,,586,252,57,57,http://localhost:8080/connexion,2932,0,2
+1793015369709,2733,1 - Connexion,302,FOUND,Utilisateurs 1-1,text,true,,586,252,57,57,http://localhost:8080/connexion,2733,0,0
+1793015369875,2791,1 - Connexion,302,FOUND,Utilisateurs 1-31,text,true,,586,252,57,57,http://localhost:8080/connexion,2791,0,0
+1793015369898,2771,1 - Connexion,302,FOUND,Utilisateurs 1-29,text,true,,586,252,57,57,http://localhost:8080/connexion,2771,0,0
+1793015369962,2905,1 - Connexion,302,FOUND,Utilisateurs 1-19,text,true,,586,252,58,58,http://localhost:8080/connexion,2905,0,0
+1793015369948,2946,1 - Connexion,302,FOUND,Utilisateurs 1-10,text,true,,586,252,58,58,http://localhost:8080/connexion,2946,0,0
+1793015370016,2989,2 - Mon planning,200,OK,Utilisateurs 1-37,text,true,,6059,276,58,58,http://localhost:8080/planning,2989,0,0
+1793015370133,2925,2 - Mon planning,200,OK,Utilisateurs 1-3,text,true,,6059,276,58,58,http://localhost:8080/planning,2925,0,0
+1793015370201,3042,1 - Connexion,302,FOUND,Utilisateurs 1-30,text,true,,586,252,59,59,http://localhost:8080/connexion,3042,0,0
+1793015370435,3037,1 - Connexion,302,FOUND,Utilisateurs 1-49,text,true,,586,252,59,59,http://localhost:8080/connexion,3037,0,2
+1793015370246,3262,1 - Connexion,302,FOUND,Utilisateurs 1-32,text,true,,586,252,59,59,http://localhost:8080/connexion,3262,0,0
+1793015370498,3180,2 - Mon planning,200,OK,Utilisateurs 1-24,text,true,,6059,276,60,60,http://localhost:8080/planning,3180,0,0
+1793015370456,3227,2 - Mon planning,200,OK,Utilisateurs 1-40,text,true,,6059,276,60,60,http://localhost:8080/planning,3227,0,0
+1793015370530,3348,1 - Connexion,302,FOUND,Utilisateurs 1-5,text,true,,586,252,60,60,http://localhost:8080/connexion,3348,0,0
+1793015370572,3420,2 - Mon planning,200,OK,Utilisateurs 1-16,text,true,,6059,276,61,61,http://localhost:8080/planning,3420,0,0
+1793015370720,3433,2 - Mon planning,200,OK,Utilisateurs 1-38,text,true,,6059,276,61,61,http://localhost:8080/planning,3433,0,0
+1793015370557,3647,1 - Connexion,302,FOUND,Utilisateurs 1-48,text,true,,586,252,61,61,http://localhost:8080/connexion,3647,0,1
+1793015370735,3542,2 - Mon planning,200,OK,Utilisateurs 1-23,text,true,,6059,276,61,61,http://localhost:8080/planning,3542,0,0
+1793015370900,3576,1 - Connexion,302,FOUND,Utilisateurs 1-20,text,true,,586,252,62,62,http://localhost:8080/connexion,3576,0,0
+1793015371067,3424,1 - Connexion,302,FOUND,Utilisateurs 1-2,text,true,,586,252,62,62,http://localhost:8080/connexion,3424,0,0
+1793015371148,3477,2 - Mon planning,200,OK,Utilisateurs 1-7,text,true,,6059,276,62,62,http://localhost:8080/planning,3477,0,0
+1793015371237,3470,1 - Connexion,302,FOUND,Utilisateurs 1-50,text,true,,586,252,62,62,http://localhost:8080/connexion,3470,0,1
+1793015371362,3500,1 - Connexion,302,FOUND,Utilisateurs 1-12,text,true,,586,252,63,63,http://localhost:8080/connexion,3500,0,0
+1793015371374,3540,1 - Connexion,302,FOUND,Utilisateurs 1-51,text,true,,586,252,63,63,http://localhost:8080/connexion,3540,0,1
+1793015371470,3569,2 - Mon planning,200,OK,Utilisateurs 1-8,text,true,,6059,276,63,63,http://localhost:8080/planning,3569,0,0
+1793015371493,3669,2 - Mon planning,200,OK,Utilisateurs 1-17,text,true,,6059,276,64,64,http://localhost:8080/planning,3669,0,0
+1793015371602,3666,2 - Mon planning,200,OK,Utilisateurs 1-39,text,true,,6059,276,64,64,http://localhost:8080/planning,3666,0,0
+1793015371407,3883,1 - Connexion,302,FOUND,Utilisateurs 1-21,text,true,,586,252,64,64,http://localhost:8080/connexion,3883,0,0
+1793015371780,3631,2 - Mon planning,200,OK,Utilisateurs 1-27,text,true,,6059,276,64,64,http://localhost:8080/planning,3631,0,0
+1793015371737,3736,1 - Connexion,302,FOUND,Utilisateurs 1-52,text,true,,586,252,64,64,http://localhost:8080/connexion,3736,0,1
+1793015371895,3698,2 - Mon planning,200,OK,Utilisateurs 1-41,text,true,,6059,276,65,65,http://localhost:8080/planning,3697,0,0
+1793015371909,3801,2 - Mon planning,200,OK,Utilisateurs 1-26,text,true,,6059,276,65,65,http://localhost:8080/planning,3801,0,0
+1793015371858,3913,1 - Connexion,302,FOUND,Utilisateurs 1-22,text,true,,586,252,65,65,http://localhost:8080/connexion,3913,0,0
+1793015371946,3955,1 - Connexion,302,FOUND,Utilisateurs 1-36,text,true,,586,252,65,65,http://localhost:8080/connexion,3955,0,0
+1793015371974,4028,1 - Connexion,302,FOUND,Utilisateurs 1-13,text,true,,586,252,66,66,http://localhost:8080/connexion,4028,0,0
+1793015372128,3984,1 - Connexion,302,FOUND,Utilisateurs 1-53,text,true,,586,252,66,66,http://localhost:8080/connexion,3984,0,1
+1793015372186,4042,2 - Mon planning,200,OK,Utilisateurs 1-42,text,true,,6059,276,66,66,http://localhost:8080/planning,4042,0,0
+1793015372157,4124,1 - Connexion,302,FOUND,Utilisateurs 1-25,text,true,,586,252,66,66,http://localhost:8080/connexion,4124,0,0
+1793015372205,4207,1 - Connexion,302,FOUND,Utilisateurs 1-54,text,true,,586,252,67,67,http://localhost:8080/connexion,4207,0,1
+1793015372338,4244,2 - Mon planning,200,OK,Utilisateurs 1-43,text,true,,6059,276,67,67,http://localhost:8080/planning,4244,0,0
+1793015372535,4073,2 - Mon planning,200,OK,Utilisateurs 1-11,text,true,,6059,276,67,67,http://localhost:8080/planning,4073,0,0
+1793015372597,4220,1 - Connexion,302,FOUND,Utilisateurs 1-55,text,true,,586,252,68,68,http://localhost:8080/connexion,4220,0,1
+1793015372655,4221,1 - Connexion,302,FOUND,Utilisateurs 1-33,text,true,,586,252,68,68,http://localhost:8080/connexion,4221,0,0
+1793015372781,4239,1 - Connexion,302,FOUND,Utilisateurs 1-35,text,true,,586,252,68,68,http://localhost:8080/connexion,4239,0,0
+1793015372842,4263,1 - Connexion,302,FOUND,Utilisateurs 1-34,text,true,,586,252,68,68,http://localhost:8080/connexion,4263,0,0
+1793015372929,4272,2 - Mon planning,200,OK,Utilisateurs 1-18,text,true,,6059,276,69,69,http://localhost:8080/planning,4272,0,0
+1793015372866,4337,1 - Connexion,302,FOUND,Utilisateurs 1-15,text,true,,586,252,69,69,http://localhost:8080/connexion,4337,0,0
+1793015373060,4357,1 - Connexion,302,FOUND,Utilisateurs 1-6,text,true,,586,252,69,69,http://localhost:8080/connexion,4357,0,0
+1793015373156,4382,2 - Mon planning,200,OK,Utilisateurs 1-44,text,true,,6059,276,70,70,http://localhost:8080/planning,4382,0,0
+1793015373290,4377,2 - Mon planning,200,OK,Utilisateurs 1-45,text,true,,6059,276,70,70,http://localhost:8080/planning,4377,0,0
+1793015373253,4419,1 - Connexion,302,FOUND,Utilisateurs 1-4,text,true,,586,252,70,70,http://localhost:8080/connexion,4419,0,0
+1793015373305,4512,2 - Mon planning,200,OK,Utilisateurs 1-28,text,true,,6059,276,70,70,http://localhost:8080/planning,4512,0,0
+1793015373654,4237,1 - Connexion,302,FOUND,Utilisateurs 1-56,text,true,,586,252,70,70,http://localhost:8080/connexion,4237,0,1
+1793015373711,4295,2 - Mon planning,200,OK,Utilisateurs 1-9,text,true,,6059,276,71,71,http://localhost:8080/planning,4295,0,0
+1793015373731,4302,2 - Mon planning,200,OK,Utilisateurs 1-46,text,true,,6059,276,71,71,http://localhost:8080/planning,4302,0,0
+1793015373777,4348,2 - Mon planning,200,OK,Utilisateurs 1-31,text,true,,6059,276,71,71,http://localhost:8080/planning,4348,0,0
+1793015374122,4101,2 - Mon planning,200,OK,Utilisateurs 1-1,text,true,,6059,276,71,71,http://localhost:8080/planning,4101,0,0
+1793015373933,4452,1 - Connexion,302,FOUND,Utilisateurs 1-14,text,true,,586,252,72,72,http://localhost:8080/connexion,4452,0,0
+1793015374147,4270,2 - Mon planning,200,OK,Utilisateurs 1-47,text,true,,6059,276,72,72,http://localhost:8080/planning,4270,0,0
+1793015374204,4394,1 - Connexion,302,FOUND,Utilisateurs 1-57,text,true,,586,252,72,72,http://localhost:8080/connexion,4394,0,1
+1793015374449,4548,1 - Connexion,302,FOUND,Utilisateurs 1-3,text,true,,586,252,73,73,http://localhost:8080/connexion,4548,0,0
+1793015374267,4735,1 - Connexion,302,FOUND,Utilisateurs 1-37,text,true,,586,252,73,73,http://localhost:8080/connexion,4735,0,0
+1793015374580,4611,1 - Connexion,302,FOUND,Utilisateurs 1-60,text,true,,586,252,74,74,http://localhost:8080/connexion,4611,0,1
+1793015374590,4663,1 - Connexion,302,FOUND,Utilisateurs 1-58,text,true,,586,252,74,74,http://localhost:8080/connexion,4663,0,1
+1793015374621,4684,2 - Mon planning,200,OK,Utilisateurs 1-29,text,true,,6059,276,74,74,http://localhost:8080/planning,4684,0,0
+1793015374714,4747,2 - Mon planning,200,OK,Utilisateurs 1-49,text,true,,6059,276,74,74,http://localhost:8080/planning,4747,0,0
+1793015374699,4793,2 - Mon planning,200,OK,Utilisateurs 1-10,text,true,,6059,276,74,74,http://localhost:8080/planning,4793,0,0
+1793015374758,4907,2 - Mon planning,200,OK,Utilisateurs 1-19,text,true,,6059,276,75,75,http://localhost:8080/planning,4907,0,0
+1793015374770,5025,1 - Connexion,302,FOUND,Utilisateurs 1-40,text,true,,586,252,75,75,http://localhost:8080/connexion,5025,0,0
+1793015375193,4718,2 - Mon planning,200,OK,Utilisateurs 1-30,text,true,,6059,276,75,75,http://localhost:8080/planning,4718,0,0
+1793015375120,4893,1 - Connexion,302,FOUND,Utilisateurs 1-59,text,true,,586,252,75,75,http://localhost:8080/connexion,4893,0,1
+1793015375385,4655,2 - Mon planning,200,OK,Utilisateurs 1-5,text,true,,6059,276,75,75,http://localhost:8080/planning,4655,0,0
+1793015375385,4882,1 - Connexion,302,FOUND,Utilisateurs 1-38,text,true,,586,252,75,75,http://localhost:8080/connexion,4882,0,0
+1793015375395,4897,1 - Connexion,302,FOUND,Utilisateurs 1-24,text,true,,586,252,75,75,http://localhost:8080/connexion,4897,0,0
+1793015375439,4957,2 - Mon planning,200,OK,Utilisateurs 1-32,text,true,,6059,276,75,75,http://localhost:8080/planning,4957,0,0
+1793015375518,5065,1 - Connexion,302,FOUND,Utilisateurs 1-16,text,true,,586,252,75,75,http://localhost:8080/connexion,5065,0,0
+1793015375539,5056,1 - Connexion,302,FOUND,Utilisateurs 1-62,text,true,,586,252,75,75,http://localhost:8080/connexion,5056,0,1
+1793015375566,5147,2 - Mon planning,200,OK,Utilisateurs 1-48,text,true,,6059,276,75,75,http://localhost:8080/planning,5147,0,0
+1793015375688,5113,1 - Connexion,302,FOUND,Utilisateurs 1-23,text,true,,586,252,75,75,http://localhost:8080/connexion,5113,0,0
+1793015376139,4776,2 - Mon planning,200,OK,Utilisateurs 1-12,text,true,,6059,276,75,75,http://localhost:8080/planning,4775,0,0
+1793015376167,4863,2 - Mon planning,200,OK,Utilisateurs 1-51,text,true,,6059,276,75,75,http://localhost:8080/planning,4862,0,0
+1793015375689,5395,1 - Connexion,302,FOUND,Utilisateurs 1-61,text,true,,586,252,75,75,http://localhost:8080/connexion,5395,0,0
+1793015376257,4885,2 - Mon planning,200,OK,Utilisateurs 1-2,text,true,,6059,276,75,75,http://localhost:8080/planning,4885,0,0
+1793015376284,4984,2 - Mon planning,200,OK,Utilisateurs 1-20,text,true,,6059,276,75,75,http://localhost:8080/planning,4984,0,0
+1793015376443,4932,2 - Mon planning,200,OK,Utilisateurs 1-50,text,true,,6059,276,75,75,http://localhost:8080/planning,4932,0,0
+1793015376479,4994,2 - Mon planning,200,OK,Utilisateurs 1-21,text,true,,6059,276,75,75,http://localhost:8080/planning,4994,0,0
+1793015376267,5263,1 - Connexion,302,FOUND,Utilisateurs 1-7,text,true,,586,252,75,75,http://localhost:8080/connexion,5263,0,0
+1793015376497,5169,1 - Connexion,302,FOUND,Utilisateurs 1-64,text,true,,586,252,75,75,http://localhost:8080/connexion,5169,0,2
+1793015376646,5122,2 - Mon planning,200,OK,Utilisateurs 1-52,text,true,,6059,276,75,75,http://localhost:8080/planning,5122,0,0
+1793015376574,5222,1 - Connexion,302,FOUND,Utilisateurs 1-39,text,true,,586,252,75,75,http://localhost:8080/connexion,5221,0,0
+1793015376688,5270,1 - Connexion,302,FOUND,Utilisateurs 1-63,text,true,,586,252,75,75,http://localhost:8080/connexion,5270,0,2
+1793015376727,5305,1 - Connexion,302,FOUND,Utilisateurs 1-27,text,true,,586,252,75,75,http://localhost:8080/connexion,5305,0,0
+1793015376762,5403,1 - Connexion,302,FOUND,Utilisateurs 1-65,text,true,,586,252,75,75,http://localhost:8080/connexion,5403,0,1
+1793015376977,5323,1 - Connexion,302,FOUND,Utilisateurs 1-8,text,true,,586,252,75,75,http://localhost:8080/connexion,5323,0,0
+1793015377010,5373,1 - Connexion,302,FOUND,Utilisateurs 1-26,text,true,,586,252,75,75,http://localhost:8080/connexion,5373,0,0
+1793015377059,5441,1 - Connexion,302,FOUND,Utilisateurs 1-17,text,true,,586,252,75,75,http://localhost:8080/connexion,5441,0,0
+1793015377112,5508,1 - Connexion,302,FOUND,Utilisateurs 1-41,text,true,,586,252,75,75,http://localhost:8080/connexion,5508,0,0
+1793015377336,5362,1 - Connexion,302,FOUND,Utilisateurs 1-42,text,true,,586,252,75,75,http://localhost:8080/connexion,5362,0,0
+1793015377420,5321,2 - Mon planning,200,OK,Utilisateurs 1-22,text,true,,6059,276,75,75,http://localhost:8080/planning,5321,0,0
+1793015377670,5176,2 - Mon planning,200,OK,Utilisateurs 1-25,text,true,,6059,276,75,75,http://localhost:8080/planning,5176,0,0
+1793015377662,5240,1 - Connexion,302,FOUND,Utilisateurs 1-43,text,true,,586,252,75,75,http://localhost:8080/connexion,5240,0,0
+1793015377688,5372,1 - Connexion,302,FOUND,Utilisateurs 1-67,text,true,,586,252,75,75,http://localhost:8080/connexion,5372,0,1
+1793015377696,5389,1 - Connexion,302,FOUND,Utilisateurs 1-66,text,true,,586,252,75,75,http://localhost:8080/connexion,5389,0,1
+1793015377724,5473,2 - Mon planning,200,OK,Utilisateurs 1-36,text,true,,6059,276,75,75,http://localhost:8080/planning,5473,0,0
+1793015377714,5530,2 - Mon planning,200,OK,Utilisateurs 1-54,text,true,,6059,276,75,75,http://localhost:8080/planning,5530,0,0
+1793015377792,5576,2 - Mon planning,200,OK,Utilisateurs 1-13,text,true,,6059,276,75,75,http://localhost:8080/planning,5576,0,0
+1793015377878,5595,2 - Mon planning,200,OK,Utilisateurs 1-53,text,true,,6059,276,75,75,http://localhost:8080/planning,5595,0,0
+1793015377892,5711,2 - Mon planning,200,OK,Utilisateurs 1-55,text,true,,6059,276,75,75,http://localhost:8080/planning,5711,0,0
+1793015378037,5599,2 - Mon planning,200,OK,Utilisateurs 1-33,text,true,,6059,276,75,75,http://localhost:8080/planning,5599,0,0
+1793015378220,5625,1 - Connexion,302,FOUND,Utilisateurs 1-18,text,true,,586,252,75,75,http://localhost:8080/connexion,5625,0,0
+1793015378300,5583,1 - Connexion,302,FOUND,Utilisateurs 1-68,text,true,,586,252,75,75,http://localhost:8080/connexion,5582,0,1
+1793015378439,5572,2 - Mon planning,200,OK,Utilisateurs 1-34,text,true,,6059,276,75,75,http://localhost:8080/planning,5572,0,0
+1793015378423,5659,1 - Connexion,302,FOUND,Utilisateurs 1-11,text,true,,586,252,75,75,http://localhost:8080/connexion,5658,0,0
+1793015378641,5560,2 - Mon planning,200,OK,Utilisateurs 1-6,text,true,,6059,276,75,75,http://localhost:8080/planning,5560,0,0
+1793015378570,5799,1 - Connexion,302,FOUND,Utilisateurs 1-69,text,true,,586,252,75,75,http://localhost:8080/connexion,5799,0,1
+1793015378731,5689,1 - Connexion,302,FOUND,Utilisateurs 1-45,text,true,,586,252,75,75,http://localhost:8080/connexion,5689,0,0
+1793015378909,5616,2 - Mon planning,200,OK,Utilisateurs 1-15,text,true,,6059,276,75,75,http://localhost:8080/planning,5615,0,0
+1793015378969,5646,2 - Mon planning,200,OK,Utilisateurs 1-4,text,true,,6059,276,75,75,http://localhost:8080/planning,5646,0,0
+1793015378993,5776,1 - Connexion,302,FOUND,Utilisateurs 1-44,text,true,,586,252,75,75,http://localhost:8080/connexion,5776,0,0
+1793015379018,5755,2 - Mon planning,200,OK,Utilisateurs 1-35,text,true,,6059,276,75,75,http://localhost:8080/planning,5755,0,0
+1793015379039,5928,1 - Connexion,302,FOUND,Utilisateurs 1-70,text,true,,586,252,75,75,http://localhost:8080/connexion,5928,0,1
+1793015379076,5940,1 - Connexion,302,FOUND,Utilisateurs 1-46,text,true,,586,252,75,75,http://localhost:8080/connexion,5940,0,0
+1793015379388,5793,1 - Connexion,302,FOUND,Utilisateurs 1-72,text,true,,586,252,75,75,http://localhost:8080/connexion,5793,0,2
+1793015379679,5604,2 - Mon planning,200,OK,Utilisateurs 1-14,text,true,,6059,276,75,75,http://localhost:8080/planning,5604,0,0
+1793015379549,5873,1 - Connexion,302,FOUND,Utilisateurs 1-28,text,true,,586,252,75,75,http://localhost:8080/connexion,5873,0,0
+1793015379688,5788,1 - Connexion,302,FOUND,Utilisateurs 1-9,text,true,,586,252,75,75,http://localhost:8080/connexion,5788,0,0
+1793015379701,5883,2 - Mon planning,200,OK,Utilisateurs 1-56,text,true,,6059,276,75,75,http://localhost:8080/planning,5883,0,0
+1793015379732,5969,1 - Connexion,302,FOUND,Utilisateurs 1-1,text,true,,586,252,75,75,http://localhost:8080/connexion,5969,0,0
+1793015379750,6058,1 - Connexion,302,FOUND,Utilisateurs 1-31,text,true,,586,252,75,75,http://localhost:8080/connexion,6058,0,0
+1793015379779,6113,1 - Connexion,302,FOUND,Utilisateurs 1-71,text,true,,586,252,75,75,http://localhost:8080/connexion,6113,0,1
+1793015380017,6002,2 - Mon planning,200,OK,Utilisateurs 1-57,text,true,,6059,276,75,75,http://localhost:8080/planning,6002,0,0
+1793015379861,6250,1 - Connexion,302,FOUND,Utilisateurs 1-47,text,true,,586,252,75,75,http://localhost:8080/connexion,6250,0,0
+1793015380479,5738,1 - Connexion,302,FOUND,Utilisateurs 1-73,text,true,,586,252,75,75,http://localhost:8080/connexion,5737,0,1
+1793015380554,5676,2 - Mon planning,200,OK,Utilisateurs 1-60,text,true,,6059,276,75,75,http://localhost:8080/planning,5676,0,0
+1793015380591,5762,2 - Mon planning,200,OK,Utilisateurs 1-3,text,true,,6059,276,75,75,http://localhost:8080/planning,5762,0,0
+1793015380669,5750,2 - Mon planning,200,OK,Utilisateurs 1-58,text,true,,6059,276,75,75,http://localhost:8080/planning,5750,0,0
+1793015380779,5736,2 - Mon planning,200,OK,Utilisateurs 1-37,text,true,,6059,276,75,75,http://localhost:8080/planning,5736,0,0
+1793015380807,5850,1 - Connexion,302,FOUND,Utilisateurs 1-29,text,true,,586,252,75,75,http://localhost:8080/connexion,5849,0,0
+1793015380852,5878,1 - Connexion,302,FOUND,Utilisateurs 1-49,text,true,,586,252,75,75,http://localhost:8080/connexion,5878,0,0
+1793015380990,5856,1 - Connexion,302,FOUND,Utilisateurs 1-75,text,true,,586,252,75,75,http://localhost:8080/connexion,5856,0,1
+1793015381044,5903,1 - Connexion,302,FOUND,Utilisateurs 1-74,text,true,,586,252,75,75,http://localhost:8080/connexion,5903,0,1
+1793015381100,5929,1 - Connexion,302,FOUND,Utilisateurs 1-19,text,true,,586,252,75,75,http://localhost:8080/connexion,5929,0,0
+1793015381106,5948,2 - Mon planning,200,OK,Utilisateurs 1-40,text,true,,6059,276,75,75,http://localhost:8080/planning,5948,0,0
+1793015381310,5877,2 - Mon planning,200,OK,Utilisateurs 1-38,text,true,,6059,276,75,75,http://localhost:8080/planning,5877,0,0
+1793015381127,6213,1 - Connexion,302,FOUND,Utilisateurs 1-10,text,true,,586,252,75,75,http://localhost:8080/connexion,6213,0,0
+1793015381400,6020,1 - Connexion,302,FOUND,Utilisateurs 1-30,text,true,,586,252,75,75,http://localhost:8080/connexion,6020,0,0
+1793015381575,5889,2 - Mon planning,200,OK,Utilisateurs 1-59,text,true,,6059,276,75,75,http://localhost:8080/planning,5889,0,0
+1793015381761,5778,2 - Mon planning,200,OK,Utilisateurs 1-24,text,true,,6059,276,75,75,http://localhost:8080/planning,5778,0,0
+1793015381924,5736,2 - Mon planning,200,OK,Utilisateurs 1-62,text,true,,6059,276,75,75,http://localhost:8080/planning,5736,0,0
+1793015381767,6008,1 - Connexion,302,FOUND,Utilisateurs 1-32,text,true,,586,252,75,75,http://localhost:8080/connexion,6007,0,0
+1793015381999,5867,1 - Connexion,302,FOUND,Utilisateurs 1-5,text,true,,586,252,75,75,http://localhost:8080/connexion,5867,0,0
+1793015382143,5833,2 - Mon planning,200,OK,Utilisateurs 1-16,text,true,,6059,276,75,75,http://localhost:8080/planning,5833,0,0
+1793015382099,5981,1 - Connexion,302,FOUND,Utilisateurs 1-12,text,true,,586,252,75,75,http://localhost:8080/connexion,5980,0,0
+1793015382410,5769,2 - Mon planning,200,OK,Utilisateurs 1-23,text,true,,6059,276,75,75,http://localhost:8080/planning,5769,0,0
+1793015382448,5834,2 - Mon planning,200,OK,Utilisateurs 1-61,text,true,,6059,276,75,75,http://localhost:8080/planning,5833,0,0
+1793015382203,6143,1 - Connexion,302,FOUND,Utilisateurs 1-2,text,true,,586,252,75,75,http://localhost:8080/connexion,6143,0,0
+1793015382598,5870,1 - Connexion,302,FOUND,Utilisateurs 1-48,text,true,,586,252,75,75,http://localhost:8080/connexion,5870,0,0
+1793015382671,5886,1 - Connexion,302,FOUND,Utilisateurs 1-50,text,true,,586,252,75,75,http://localhost:8080/connexion,5886,0,0
+1793015382744,5908,1 - Connexion,302,FOUND,Utilisateurs 1-21,text,true,,586,252,75,75,http://localhost:8080/connexion,5908,0,0
+1793015382998,5853,1 - Connexion,302,FOUND,Utilisateurs 1-51,text,true,,586,252,75,75,http://localhost:8080/connexion,5852,0,0
+1793015382819,6060,1 - Connexion,302,FOUND,Utilisateurs 1-52,text,true,,586,252,75,75,http://localhost:8080/connexion,6060,0,0
+1793015383099,5865,2 - Mon planning,200,OK,Utilisateurs 1-7,text,true,,6059,276,75,75,http://localhost:8080/planning,5865,0,0
+1793015383239,5818,2 - Mon planning,200,OK,Utilisateurs 1-27,text,true,,6059,276,75,75,http://localhost:8080/planning,5818,0,0
+1793015383176,5926,1 - Connexion,302,FOUND,Utilisateurs 1-20,text,true,,586,252,75,75,http://localhost:8080/connexion,5926,0,0
+1793015383355,5826,2 - Mon planning,200,OK,Utilisateurs 1-64,text,true,,6059,276,75,75,http://localhost:8080/planning,5826,0,0
+1793015383360,5891,2 - Mon planning,200,OK,Utilisateurs 1-63,text,true,,6059,276,75,75,http://localhost:8080/planning,5891,0,0
+1793015383611,5838,2 - Mon planning,200,OK,Utilisateurs 1-26,text,true,,6059,276,75,75,http://localhost:8080/planning,5838,0,0
+1793015383458,6008,2 - Mon planning,200,OK,Utilisateurs 1-39,text,true,,6059,276,75,75,http://localhost:8080/planning,6007,0,0
+1793015383872,5798,2 - Mon planning,200,OK,Utilisateurs 1-41,text,true,,6059,276,75,75,http://localhost:8080/planning,5798,0,0
+1793015383939,5768,2 - Mon planning,200,OK,Utilisateurs 1-8,text,true,,6059,276,75,75,http://localhost:8080/planning,5768,0,0
+1793015384005,5832,2 - Mon planning,200,OK,Utilisateurs 1-65,text,true,,6059,276,75,75,http://localhost:8080/planning,5831,0,0
+1793015384181,5736,2 - Mon planning,200,OK,Utilisateurs 1-42,text,true,,6059,276,75,75,http://localhost:8080/planning,5735,0,0
+1793015384221,5812,2 - Mon planning,200,OK,Utilisateurs 1-17,text,true,,6059,276,75,75,http://localhost:8080/planning,5811,0,0
+1793015384226,5832,2 - Mon planning,200,OK,Utilisateurs 1-66,text,true,,6059,276,75,75,http://localhost:8080/planning,5832,0,0
+1793015384305,5875,2 - Mon planning,200,OK,Utilisateurs 1-43,text,true,,6059,276,75,75,http://localhost:8080/planning,5875,0,0
+1793015384564,5705,1 - Connexion,302,FOUND,Utilisateurs 1-53,text,true,,586,252,75,75,http://localhost:8080/connexion,5705,0,0
+1793015384593,5814,1 - Connexion,302,FOUND,Utilisateurs 1-25,text,true,,586,252,75,75,http://localhost:8080/connexion,5814,0,0
+1793015384603,5858,1 - Connexion,302,FOUND,Utilisateurs 1-13,text,true,,586,252,75,75,http://localhost:8080/connexion,5858,0,0
+1793015384676,5899,2 - Mon planning,200,OK,Utilisateurs 1-67,text,true,,6059,276,75,75,http://localhost:8080/planning,5899,0,0
+1793015384633,6057,1 - Connexion,302,FOUND,Utilisateurs 1-22,text,true,,586,252,75,75,http://localhost:8080/connexion,6057,0,0
+1793015384758,6005,1 - Connexion,302,FOUND,Utilisateurs 1-36,text,true,,586,252,75,75,http://localhost:8080/connexion,6005,0,0
+1793015385134,5728,2 - Mon planning,200,OK,Utilisateurs 1-18,text,true,,6059,276,75,75,http://localhost:8080/planning,5728,0,0
+1793015385146,5816,2 - Mon planning,200,OK,Utilisateurs 1-68,text,true,,6059,276,75,75,http://localhost:8080/planning,5816,0,0
+1793015385006,6003,1 - Connexion,302,FOUND,Utilisateurs 1-54,text,true,,586,252,75,75,http://localhost:8080/connexion,6003,0,0
+1793015385448,5774,1 - Connexion,302,FOUND,Utilisateurs 1-55,text,true,,586,252,75,75,http://localhost:8080/connexion,5773,0,0
+1793015385303,5942,1 - Connexion,302,FOUND,Utilisateurs 1-34,text,true,,586,252,75,75,http://localhost:8080/connexion,5942,0,0
+1793015385523,5828,2 - Mon planning,200,OK,Utilisateurs 1-45,text,true,,6059,276,75,75,http://localhost:8080/planning,5828,0,0
+1793015385579,5923,1 - Connexion,302,FOUND,Utilisateurs 1-33,text,true,,586,252,75,75,http://localhost:8080/connexion,5923,0,0
+1793015385611,5972,1 - Connexion,302,FOUND,Utilisateurs 1-15,text,true,,586,252,75,75,http://localhost:8080/connexion,5972,0,0
+1793015385848,5835,2 - Mon planning,200,OK,Utilisateurs 1-11,text,true,,6059,276,75,75,http://localhost:8080/planning,5835,0,0
+1793015385761,5933,1 - Connexion,302,FOUND,Utilisateurs 1-6,text,true,,586,252,75,75,http://localhost:8080/connexion,5933,0,0
+1793015385959,5850,2 - Mon planning,200,OK,Utilisateurs 1-44,text,true,,6059,276,75,75,http://localhost:8080/planning,5849,0,0
+1793015386081,5753,2 - Mon planning,200,OK,Utilisateurs 1-70,text,true,,6059,276,75,75,http://localhost:8080/planning,5753,0,0
+1793015386125,5880,1 - Connexion,302,FOUND,Utilisateurs 1-35,text,true,,586,252,75,75,http://localhost:8080/connexion,5880,0,0
+1793015386235,5992,1 - Connexion,302,FOUND,Utilisateurs 1-4,text,true,,586,252,75,75,http://localhost:8080/connexion,5992,0,0
+1793015386145,6164,2 - Mon planning,200,OK,Utilisateurs 1-69,text,true,,6059,276,75,75,http://localhost:8080/planning,6164,0,0
+1793015386502,5906,2 - Mon planning,200,OK,Utilisateurs 1-72,text,true,,6059,276,75,75,http://localhost:8080/planning,5906,0,0
+1793015386612,5847,2 - Mon planning,200,OK,Utilisateurs 1-28,text,true,,6059,276,75,75,http://localhost:8080/planning,5847,0,0
+1793015386722,5924,1 - Connexion,302,FOUND,Utilisateurs 1-14,text,true,,586,252,75,75,http://localhost:8080/connexion,5924,0,0
+1793015386734,6043,2 - Mon planning,200,OK,Utilisateurs 1-46,text,true,,6059,276,75,75,http://localhost:8080/planning,6042,0,0
+1793015386902,5897,2 - Mon planning,200,OK,Utilisateurs 1-71,text,true,,6059,276,75,75,http://localhost:8080/planning,5897,0,0
+1793015386991,5906,2 - Mon planning,200,OK,Utilisateurs 1-9,text,true,,6059,276,75,75,http://localhost:8080/planning,5906,0,0
+1793015387033,5960,2 - Mon planning,200,OK,Utilisateurs 1-31,text,true,,6059,276,75,75,http://localhost:8080/planning,5960,0,0
+1793015387422,5799,1 - Connexion,302,FOUND,Utilisateurs 1-57,text,true,,586,252,75,75,http://localhost:8080/connexion,5799,0,0
+1793015387269,5961,2 - Mon planning,200,OK,Utilisateurs 1-1,text,true,,6059,276,75,75,http://localhost:8080/planning,5960,0,0
+1793015387471,5947,1 - Connexion,302,FOUND,Utilisateurs 1-56,text,true,,586,252,75,75,http://localhost:8080/connexion,5947,0,0
+1793015387529,5993,2 - Mon planning,200,OK,Utilisateurs 1-73,text,true,,6059,276,75,75,http://localhost:8080/planning,5993,0,0
+1793015387793,5856,2 - Mon planning,200,OK,Utilisateurs 1-47,text,true,,6059,276,75,75,http://localhost:8080/planning,5856,0,0
+1793015387841,5892,1 - Connexion,302,FOUND,Utilisateurs 1-60,text,true,,586,252,75,75,http://localhost:8080/connexion,5892,0,0
+1793015387882,5952,2 - Mon planning,200,OK,Utilisateurs 1-49,text,true,,6059,276,75,75,http://localhost:8080/planning,5952,0,0
+1793015387843,6110,1 - Connexion,302,FOUND,Utilisateurs 1-37,text,true,,586,252,75,75,http://localhost:8080/connexion,6110,0,0
+1793015388142,5889,1 - Connexion,302,FOUND,Utilisateurs 1-3,text,true,,586,252,75,75,http://localhost:8080/connexion,5889,0,0
+1793015388157,6013,1 - Connexion,302,FOUND,Utilisateurs 1-40,text,true,,586,252,75,75,http://localhost:8080/connexion,6013,0,0
+1793015388399,5819,1 - Connexion,302,FOUND,Utilisateurs 1-58,text,true,,586,252,75,75,http://localhost:8080/connexion,5819,0,0
+1793015388439,5882,2 - Mon planning,200,OK,Utilisateurs 1-30,text,true,,6059,276,75,75,http://localhost:8080/planning,5882,0,0
+1793015388491,5921,2 - Mon planning,200,OK,Utilisateurs 1-29,text,true,,6059,276,75,75,http://localhost:8080/planning,5921,0,0
+1793015388518,5980,2 - Mon planning,200,OK,Utilisateurs 1-10,text,true,,6059,276,75,75,http://localhost:8080/planning,5980,0,0
+1793015388637,5989,2 - Mon planning,200,OK,Utilisateurs 1-74,text,true,,6059,276,75,75,http://localhost:8080/planning,5989,0,0
+1793015388728,5997,1 - Connexion,302,FOUND,Utilisateurs 1-38,text,true,,586,252,75,75,http://localhost:8080/connexion,5997,0,0
+1793015388763,6025,2 - Mon planning,200,OK,Utilisateurs 1-75,text,true,,6059,276,75,75,http://localhost:8080/planning,6025,0,0
+1793015388787,6131,1 - Connexion,302,FOUND,Utilisateurs 1-62,text,true,,586,252,75,75,http://localhost:8080/connexion,6131,0,0
+1793015388790,6216,1 - Connexion,302,FOUND,Utilisateurs 1-24,text,true,,586,252,75,75,http://localhost:8080/connexion,6216,0,0
+1793015388842,6256,2 - Mon planning,200,OK,Utilisateurs 1-19,text,true,,6059,276,75,75,http://localhost:8080/planning,6256,0,0
+1793015388813,6288,1 - Connexion,302,FOUND,Utilisateurs 1-59,text,true,,586,252,75,75,http://localhost:8080/connexion,6288,0,0
+1793015389397,5843,2 - Mon planning,200,OK,Utilisateurs 1-2,text,true,,6059,276,75,75,http://localhost:8080/planning,5843,0,0
+1793015389229,6055,2 - Mon planning,200,OK,Utilisateurs 1-32,text,true,,6059,276,75,75,http://localhost:8080/planning,6055,0,0
+1793015389607,5786,2 - Mon planning,200,OK,Utilisateurs 1-48,text,true,,6059,276,75,75,http://localhost:8080/planning,5786,0,0
+1793015389641,5851,2 - Mon planning,200,OK,Utilisateurs 1-5,text,true,,6059,276,75,75,http://localhost:8080/planning,5851,0,0
+1793015389774,5970,1 - Connexion,302,FOUND,Utilisateurs 1-23,text,true,,586,252,75,75,http://localhost:8080/connexion,5970,0,0
+1793015389745,6002,2 - Mon planning,200,OK,Utilisateurs 1-12,text,true,,6059,276,75,75,http://localhost:8080/planning,6002,0,0
+1793015389853,6111,1 - Connexion,302,FOUND,Utilisateurs 1-16,text,true,,586,252,75,75,http://localhost:8080/connexion,6111,0,0
+1793015389971,6190,1 - Connexion,302,FOUND,Utilisateurs 1-61,text,true,,586,252,75,75,http://localhost:8080/connexion,6190,0,0
+1793015389872,6338,2 - Mon planning,200,OK,Utilisateurs 1-51,text,true,,6059,276,75,75,http://localhost:8080/planning,6338,0,0
+1793015390278,6137,1 - Connexion,302,FOUND,Utilisateurs 1-64,text,true,,586,252,75,75,http://localhost:8080/connexion,6137,0,0
+1793015390304,6327,1 - Connexion,302,FOUND,Utilisateurs 1-7,text,true,,586,252,75,75,http://localhost:8080/connexion,6327,0,0
+1793015390175,6475,2 - Mon planning,200,OK,Utilisateurs 1-50,text,true,,6059,276,75,75,http://localhost:8080/planning,6475,0,0
+1793015390493,6276,2 - Mon planning,200,OK,Utilisateurs 1-20,text,true,,6059,276,75,75,http://localhost:8080/planning,6276,0,0
+1793015390439,6362,2 - Mon planning,200,OK,Utilisateurs 1-21,text,true,,6059,276,75,75,http://localhost:8080/planning,6362,0,0
+1793015390579,6497,1 - Connexion,302,FOUND,Utilisateurs 1-63,text,true,,586,252,75,75,http://localhost:8080/connexion,6497,0,0
+1793015390575,6740,2 - Mon planning,200,OK,Utilisateurs 1-52,text,true,,6059,276,75,75,http://localhost:8080/planning,6739,0,0
+1793015390814,6504,1 - Connexion,302,FOUND,Utilisateurs 1-41,text,true,,586,252,75,75,http://localhost:8080/connexion,6503,0,0
+1793015390833,6703,1 - Connexion,302,FOUND,Utilisateurs 1-27,text,true,,586,252,75,75,http://localhost:8080/connexion,6703,0,0
+1793015390946,6604,1 - Connexion,302,FOUND,Utilisateurs 1-65,text,true,,586,252,75,75,http://localhost:8080/connexion,6604,0,0
+1793015391118,6617,1 - Connexion,302,FOUND,Utilisateurs 1-26,text,true,,586,252,75,75,http://localhost:8080/connexion,6616,0,0
+1793015391238,6544,1 - Connexion,302,FOUND,Utilisateurs 1-8,text,true,,586,252,75,75,http://localhost:8080/connexion,6544,0,0
+1793015391321,6528,2 - Mon planning,200,OK,Utilisateurs 1-53,text,true,,6059,276,75,75,http://localhost:8080/planning,6528,0,0
+1793015391377,6660,1 - Connexion,302,FOUND,Utilisateurs 1-66,text,true,,586,252,75,75,http://localhost:8080/connexion,6660,0,0
+1793015391434,6618,1 - Connexion,302,FOUND,Utilisateurs 1-39,text,true,,586,252,75,75,http://localhost:8080/connexion,6618,0,0
+1793015391792,6451,1 - Connexion,302,FOUND,Utilisateurs 1-42,text,true,,586,252,75,75,http://localhost:8080/connexion,6451,0,0
+1793015391585,6688,1 - Connexion,302,FOUND,Utilisateurs 1-17,text,true,,586,252,75,75,http://localhost:8080/connexion,6688,0,0
+1793015391801,6638,1 - Connexion,302,FOUND,Utilisateurs 1-43,text,true,,586,252,75,75,http://localhost:8080/connexion,6638,0,0
+1793015392012,6518,1 - Connexion,302,FOUND,Utilisateurs 1-67,text,true,,586,252,75,75,http://localhost:8080/connexion,6518,0,0
+1793015392043,6488,2 - Mon planning,200,OK,Utilisateurs 1-13,text,true,,6059,276,75,75,http://localhost:8080/planning,6488,0,0
+1793015392169,6455,2 - Mon planning,200,OK,Utilisateurs 1-22,text,true,,6059,276,75,75,http://localhost:8080/planning,6455,0,0
+1793015392187,6541,2 - Mon planning,200,OK,Utilisateurs 1-54,text,true,,6059,276,75,75,http://localhost:8080/planning,6540,0,0
+1793015392223,6610,2 - Mon planning,200,OK,Utilisateurs 1-36,text,true,,6059,276,75,75,http://localhost:8080/planning,6610,0,0
+1793015392062,6870,1 - Connexion,302,FOUND,Utilisateurs 1-68,text,true,,586,252,75,75,http://localhost:8080/connexion,6870,0,0
+1793015392298,6689,2 - Mon planning,200,OK,Utilisateurs 1-25,text,true,,6059,276,75,75,http://localhost:8080/planning,6689,0,0
+1793015392495,6711,1 - Connexion,302,FOUND,Utilisateurs 1-45,text,true,,586,252,75,75,http://localhost:8080/connexion,6710,0,0
+1793015392723,6485,1 - Connexion,302,FOUND,Utilisateurs 1-18,text,true,,586,252,75,75,http://localhost:8080/connexion,6485,0,0
+1793015392816,6500,2 - Mon planning,200,OK,Utilisateurs 1-34,text,true,,6059,276,75,75,http://localhost:8080/planning,6500,0,0
+1793015392771,6599,2 - Mon planning,200,OK,Utilisateurs 1-6,text,true,,6059,276,75,75,http://localhost:8080/planning,6599,0,0
+1793015392886,6567,2 - Mon planning,200,OK,Utilisateurs 1-15,text,true,,6059,276,75,75,http://localhost:8080/planning,6567,0,0
+1793015392974,6573,2 - Mon planning,200,OK,Utilisateurs 1-55,text,true,,6059,276,75,75,http://localhost:8080/planning,6573,0,0
+1793015392929,6630,1 - Connexion,302,FOUND,Utilisateurs 1-11,text,true,,586,252,75,75,http://localhost:8080/connexion,6630,0,0
+1793015393366,6304,2 - Mon planning,200,OK,Utilisateurs 1-33,text,true,,6059,276,75,75,http://localhost:8080/planning,6304,0,0
+1793015393117,6715,1 - Connexion,302,FOUND,Utilisateurs 1-44,text,true,,586,252,75,75,http://localhost:8080/connexion,6715,0,0
+1793015393521,6345,1 - Connexion,302,FOUND,Utilisateurs 1-28,text,true,,586,252,75,75,http://localhost:8080/connexion,6345,0,0
+1793015393630,6352,2 - Mon planning,200,OK,Utilisateurs 1-4,text,true,,6059,276,75,75,http://localhost:8080/planning,6352,0,0
+1793015393622,6374,2 - Mon planning,200,OK,Utilisateurs 1-35,text,true,,6059,276,75,75,http://localhost:8080/planning,6374,0,0
+1793015393814,6369,1 - Connexion,302,FOUND,Utilisateurs 1-71,text,true,,586,252,75,75,http://localhost:8080/connexion,6369,0,0
+1793015393821,6418,1 - Connexion,302,FOUND,Utilisateurs 1-70,text,true,,586,252,75,75,http://localhost:8080/connexion,6418,0,0
+1793015394115,6255,1 - Connexion,302,FOUND,Utilisateurs 1-72,text,true,,586,252,75,75,http://localhost:8080/connexion,6255,0,0
+1793015394194,6258,1 - Connexion,302,FOUND,Utilisateurs 1-69,text,true,,586,252,75,75,http://localhost:8080/connexion,6258,0,0
+1793015394486,6068,1 - Connexion,302,FOUND,Utilisateurs 1-31,text,true,,586,252,75,75,http://localhost:8080/connexion,6068,0,0
+1793015394592,6070,2 - Mon planning,200,OK,Utilisateurs 1-14,text,true,,6059,276,75,75,http://localhost:8080/planning,6070,0,0
+1793015394560,6176,1 - Connexion,302,FOUND,Utilisateurs 1-73,text,true,,586,252,75,75,http://localhost:8080/connexion,6176,0,0
+1793015394608,6242,1 - Connexion,302,FOUND,Utilisateurs 1-1,text,true,,586,252,75,75,http://localhost:8080/connexion,6242,0,0
+1793015394682,6271,1 - Connexion,302,FOUND,Utilisateurs 1-46,text,true,,586,252,75,75,http://localhost:8080/connexion,6271,0,0
+1793015394751,6282,1 - Connexion,302,FOUND,Utilisateurs 1-9,text,true,,586,252,75,75,http://localhost:8080/connexion,6282,0,0
+1793015394848,6212,2 - Mon planning,200,OK,Utilisateurs 1-57,text,true,,6059,276,75,75,http://localhost:8080/planning,6212,0,0
+1793015395148,6079,1 - Connexion,302,FOUND,Utilisateurs 1-47,text,true,,586,252,75,75,http://localhost:8080/connexion,6079,0,0
+1793015395242,6106,2 - Mon planning,200,OK,Utilisateurs 1-3,text,true,,6059,276,75,75,http://localhost:8080/planning,6106,0,0
+1793015395263,6177,2 - Mon planning,200,OK,Utilisateurs 1-56,text,true,,6059,276,75,75,http://localhost:8080/planning,6177,0,0
+1793015395521,6065,1 - Connexion,302,FOUND,Utilisateurs 1-49,text,true,,586,252,75,75,http://localhost:8080/connexion,6065,0,0
+1793015395603,6088,2 - Mon planning,200,OK,Utilisateurs 1-60,text,true,,6059,276,75,75,http://localhost:8080/planning,6088,0,0
+1793015395546,6209,1 - Connexion,302,FOUND,Utilisateurs 1-29,text,true,,586,252,75,75,http://localhost:8080/connexion,6209,0,0
+1793015395750,6105,2 - Mon planning,200,OK,Utilisateurs 1-40,text,true,,6059,276,75,75,http://localhost:8080/planning,6104,0,0
+1793015395677,6199,1 - Connexion,302,FOUND,Utilisateurs 1-30,text,true,,586,252,75,75,http://localhost:8080/connexion,6199,0,0
+1793015395794,6186,2 - Mon planning,200,OK,Utilisateurs 1-37,text,true,,6059,276,75,75,http://localhost:8080/planning,6186,0,0
+1793015396027,6048,2 - Mon planning,200,OK,Utilisateurs 1-58,text,true,,6059,276,75,75,http://localhost:8080/planning,6048,0,0
+1793015395778,6398,1 - Connexion,302,FOUND,Utilisateurs 1-10,text,true,,586,252,75,75,http://localhost:8080/connexion,6398,0,0
+1793015396221,6146,2 - Mon planning,200,OK,Utilisateurs 1-62,text,true,,6059,276,75,75,http://localhost:8080/planning,6146,0,0
+1793015396262,6134,1 - Connexion,302,FOUND,Utilisateurs 1-74,text,true,,586,252,75,75,http://localhost:8080/connexion,6134,0,0
+1793015396348,6242,2 - Mon planning,200,OK,Utilisateurs 1-59,text,true,,6059,276,75,75,http://localhost:8080/planning,6242,0,0
+1793015396393,6208,2 - Mon planning,200,OK,Utilisateurs 1-38,text,true,,6059,276,75,75,http://localhost:8080/planning,6208,0,0
+1793015396520,6288,1 - Connexion,302,FOUND,Utilisateurs 1-32,text,true,,586,252,75,75,http://localhost:8080/connexion,6288,0,0
+1793015396401,6453,2 - Mon planning,200,OK,Utilisateurs 1-24,text,true,,6059,276,75,75,http://localhost:8080/planning,6453,0,0
+1793015396824,6123,2 - Mon planning,200,OK,Utilisateurs 1-23,text,true,,6059,276,75,75,http://localhost:8080/planning,6123,0,0
+1793015396653,6345,1 - Connexion,302,FOUND,Utilisateurs 1-75,text,true,,586,252,75,75,http://localhost:8080/connexion,6345,0,0
+1793015397022,6075,2 - Mon planning,200,OK,Utilisateurs 1-16,text,true,,6059,276,75,75,http://localhost:8080/planning,6075,0,0
+1793015396886,6331,1 - Connexion,302,FOUND,Utilisateurs 1-48,text,true,,586,252,75,75,http://localhost:8080/connexion,6331,0,0
+1793015397080,6202,1 - Connexion,302,FOUND,Utilisateurs 1-19,text,true,,586,252,75,75,http://localhost:8080/connexion,6202,0,0
+1793015397176,6253,1 - Connexion,302,FOUND,Utilisateurs 1-2,text,true,,586,252,75,75,http://localhost:8080/connexion,6253,0,0
+1793015397244,6224,1 - Connexion,302,FOUND,Utilisateurs 1-12,text,true,,586,252,75,75,http://localhost:8080/connexion,6224,0,0
+1793015397337,6307,1 - Connexion,302,FOUND,Utilisateurs 1-5,text,true,,586,252,75,75,http://localhost:8080/connexion,6306,0,0
+1793015397802,5918,1 - Connexion,302,FOUND,Utilisateurs 1-51,text,true,,586,252,75,75,http://localhost:8080/connexion,5918,0,0
+1793015397804,5947,2 - Mon planning,200,OK,Utilisateurs 1-64,text,true,,6059,276,75,75,http://localhost:8080/planning,5947,0,0
+1793015397879,6040,2 - Mon planning,200,OK,Utilisateurs 1-7,text,true,,6059,276,75,75,http://localhost:8080/planning,6040,0,0
+1793015397891,6042,2 - Mon planning,200,OK,Utilisateurs 1-61,text,true,,6059,276,75,75,http://localhost:8080/planning,6042,0,0
+1793015398112,6005,1 - Connexion,302,FOUND,Utilisateurs 1-20,text,true,,586,252,75,75,http://localhost:8080/connexion,6005,0,0
+1793015398189,6011,2 - Mon planning,200,OK,Utilisateurs 1-63,text,true,,6059,276,75,75,http://localhost:8080/planning,6011,0,0
+1793015398540,5790,2 - Mon planning,200,OK,Utilisateurs 1-27,text,true,,6059,276,75,75,http://localhost:8080/planning,5789,0,0
+1793015398194,6141,1 - Connexion,302,FOUND,Utilisateurs 1-21,text,true,,586,252,75,75,http://localhost:8080/connexion,6141,0,0
+1793015398585,5951,1 - Connexion,302,FOUND,Utilisateurs 1-50,text,true,,586,252,75,75,http://localhost:8080/connexion,5951,0,0
+1793015398900,5846,1 - Connexion,302,FOUND,Utilisateurs 1-52,text,true,,586,252,75,75,http://localhost:8080/connexion,5846,0,0
+1793015398610,6255,2 - Mon planning,200,OK,Utilisateurs 1-41,text,true,,6059,276,75,75,http://localhost:8080/planning,6255,0,0
+1793015399074,5842,2 - Mon planning,200,OK,Utilisateurs 1-65,text,true,,6059,276,75,75,http://localhost:8080/planning,5842,0,0
+1793015399124,5901,2 - Mon planning,200,OK,Utilisateurs 1-39,text,true,,6059,276,75,75,http://localhost:8080/planning,5901,0,0
+1793015399080,6035,1 - Connexion,302,FOUND,Utilisateurs 1-53,text,true,,586,252,75,75,http://localhost:8080/connexion,6035,0,0
+1793015399282,5860,2 - Mon planning,200,OK,Utilisateurs 1-66,text,true,,6059,276,75,75,http://localhost:8080/planning,5860,0,0
+1793015399482,5800,2 - Mon planning,200,OK,Utilisateurs 1-26,text,true,,6059,276,75,75,http://localhost:8080/planning,5800,0,0
+1793015399522,5820,2 - Mon planning,200,OK,Utilisateurs 1-8,text,true,,6059,276,75,75,http://localhost:8080/planning,5820,0,0
+1793015399591,5833,2 - Mon planning,200,OK,Utilisateurs 1-42,text,true,,6059,276,75,75,http://localhost:8080/planning,5833,0,0
+1793015400093,5432,2 - Mon planning,200,OK,Utilisateurs 1-43,text,true,,6059,276,75,75,http://localhost:8080/planning,5432,0,0
+1793015400159,5475,2 - Mon planning,200,OK,Utilisateurs 1-17,text,true,,6059,276,75,75,http://localhost:8080/planning,5475,0,0
+1793015400119,5647,1 - Connexion,302,FOUND,Utilisateurs 1-22,text,true,,586,252,75,75,http://localhost:8080/connexion,5647,0,0
+1793015400192,5637,1 - Connexion,302,FOUND,Utilisateurs 1-13,text,true,,586,252,75,75,http://localhost:8080/connexion,5637,0,0
+1793015400275,5618,2 - Mon planning,200,OK,Utilisateurs 1-67,text,true,,6059,276,75,75,http://localhost:8080/planning,5618,0,0
+1793015400295,5726,1 - Connexion,302,FOUND,Utilisateurs 1-36,text,true,,586,252,75,75,http://localhost:8080/connexion,5726,0,0
+1793015400458,5663,2 - Mon planning,200,OK,Utilisateurs 1-68,text,true,,6059,276,75,75,http://localhost:8080/planning,5662,0,0
+1793015400324,5901,1 - Connexion,302,FOUND,Utilisateurs 1-34,text,true,,586,252,75,75,http://localhost:8080/connexion,5901,0,0
+1793015400504,5783,2 - Mon planning,200,OK,Utilisateurs 1-45,text,true,,6059,276,75,75,http://localhost:8080/planning,5783,0,0
+1793015400570,5917,1 - Connexion,302,FOUND,Utilisateurs 1-54,text,true,,586,252,75,75,http://localhost:8080/connexion,5917,0,0
+1793015400677,5815,1 - Connexion,302,FOUND,Utilisateurs 1-25,text,true,,586,252,75,75,http://localhost:8080/connexion,5815,0,0
+1793015400776,5860,2 - Mon planning,200,OK,Utilisateurs 1-11,text,true,,6059,276,75,75,http://localhost:8080/planning,5860,0,0
+1793015400780,5902,1 - Connexion,302,FOUND,Utilisateurs 1-6,text,true,,586,252,75,75,http://localhost:8080/connexion,5902,0,0
+1793015400970,5810,2 - Mon planning,200,OK,Utilisateurs 1-28,text,true,,6059,276,75,75,http://localhost:8080/planning,5810,0,0
+1793015401042,5842,2 - Mon planning,200,OK,Utilisateurs 1-18,text,true,,6059,276,75,75,http://localhost:8080/planning,5842,0,0
+1793015400903,6076,1 - Connexion,302,FOUND,Utilisateurs 1-15,text,true,,586,252,75,75,http://localhost:8080/connexion,6076,0,0
+1793015401290,5794,1 - Connexion,302,FOUND,Utilisateurs 1-35,text,true,,586,252,75,75,http://localhost:8080/connexion,5794,0,0
+1793015401331,5872,1 - Connexion,302,FOUND,Utilisateurs 1-33,text,true,,586,252,75,75,http://localhost:8080/connexion,5872,0,0
+1793015401365,5930,1 - Connexion,302,FOUND,Utilisateurs 1-4,text,true,,586,252,75,75,http://localhost:8080/connexion,5930,0,0
+1793015401383,6040,2 - Mon planning,200,OK,Utilisateurs 1-44,text,true,,6059,276,75,75,http://localhost:8080/planning,6040,0,0
+1793015401381,6140,1 - Connexion,302,FOUND,Utilisateurs 1-55,text,true,,586,252,75,75,http://localhost:8080/connexion,6140,0,0
+1793015402060,5478,2 - Mon planning,200,OK,Utilisateurs 1-71,text,true,,6059,276,75,75,http://localhost:8080/planning,5478,0,0
+1793015402098,5580,2 - Mon planning,200,OK,Utilisateurs 1-70,text,true,,6059,276,75,75,http://localhost:8080/planning,5579,0,0
+1793015402090,5614,2 - Mon planning,200,OK,Utilisateurs 1-31,text,true,,6059,276,75,75,http://localhost:8080/planning,5614,0,0
+1793015402145,5675,2 - Mon planning,200,OK,Utilisateurs 1-1,text,true,,6059,276,75,75,http://localhost:8080/planning,5675,0,0
+1793015402304,5621,2 - Mon planning,200,OK,Utilisateurs 1-69,text,true,,6059,276,75,75,http://localhost:8080/planning,5621,0,0
+1793015402347,5797,1 - Connexion,302,FOUND,Utilisateurs 1-57,text,true,,586,252,75,75,http://localhost:8080/connexion,5797,0,0
+1793015402364,5889,2 - Mon planning,200,OK,Utilisateurs 1-72,text,true,,6059,276,75,75,http://localhost:8080/planning,5889,0,0
+1793015402302,6022,1 - Connexion,302,FOUND,Utilisateurs 1-14,text,true,,586,252,75,75,http://localhost:8080/connexion,6022,0,0
+1793015402368,6058,2 - Mon planning,200,OK,Utilisateurs 1-73,text,true,,6059,276,75,75,http://localhost:8080/planning,6058,0,0
+1793015402431,5998,2 - Mon planning,200,OK,Utilisateurs 1-9,text,true,,6059,276,75,75,http://localhost:8080/planning,5998,0,0
+1793015402468,6064,2 - Mon planning,200,OK,Utilisateurs 1-46,text,true,,6059,276,75,75,http://localhost:8080/planning,6064,0,0
+1793015402887,5735,1 - Connexion,302,FOUND,Utilisateurs 1-40,text,true,,586,252,75,75,http://localhost:8080/connexion,5735,0,0
+1793015402896,5745,2 - Mon planning,200,OK,Utilisateurs 1-30,text,true,,6059,276,75,75,http://localhost:8080/planning,5745,0,0
+1793015402920,5895,1 - Connexion,302,FOUND,Utilisateurs 1-3,text,true,,586,252,75,75,http://localhost:8080/connexion,5895,0,0
+1793015403031,5844,1 - Connexion,302,FOUND,Utilisateurs 1-56,text,true,,586,252,75,75,http://localhost:8080/connexion,5844,0,0
+1793015403040,5880,2 - Mon planning,200,OK,Utilisateurs 1-49,text,true,,6059,276,75,75,http://localhost:8080/planning,5880,0,0
+1793015403046,5958,2 - Mon planning,200,OK,Utilisateurs 1-47,text,true,,6059,276,75,75,http://localhost:8080/planning,5958,0,0
+1793015403342,5778,2 - Mon planning,200,OK,Utilisateurs 1-29,text,true,,6059,276,75,75,http://localhost:8080/planning,5778,0,0
+1793015403237,5892,1 - Connexion,302,FOUND,Utilisateurs 1-60,text,true,,586,252,75,75,http://localhost:8080/connexion,5892,0,0
+1793015403498,5829,1 - Connexion,302,FOUND,Utilisateurs 1-58,text,true,,586,252,75,75,http://localhost:8080/connexion,5829,0,0
+1793015403370,6031,2 - Mon planning,200,OK,Utilisateurs 1-10,text,true,,6059,276,75,75,http://localhost:8080/planning,6031,0,0
+1793015403623,5912,1 - Connexion,302,FOUND,Utilisateurs 1-62,text,true,,586,252,75,75,http://localhost:8080/connexion,5912,0,0
+1793015403653,5998,2 - Mon planning,200,OK,Utilisateurs 1-74,text,true,,6059,276,75,75,http://localhost:8080/planning,5998,0,0
+1793015403626,6056,1 - Connexion,302,FOUND,Utilisateurs 1-37,text,true,,586,252,75,75,http://localhost:8080/connexion,6056,0,0
+1793015403861,5902,2 - Mon planning,200,OK,Utilisateurs 1-32,text,true,,6059,276,75,75,http://localhost:8080/planning,5901,0,0
+1793015404110,5852,1 - Connexion,302,FOUND,Utilisateurs 1-38,text,true,,586,252,75,75,http://localhost:8080/connexion,5852,0,0
+1793015404213,5761,1 - Connexion,302,FOUND,Utilisateurs 1-59,text,true,,586,252,75,75,http://localhost:8080/connexion,5761,0,0
+1793015404287,5807,2 - Mon planning,200,OK,Utilisateurs 1-19,text,true,,6059,276,75,75,http://localhost:8080/planning,5807,0,0
+1793015404220,5932,2 - Mon planning,200,OK,Utilisateurs 1-75,text,true,,6059,276,75,75,http://localhost:8080/planning,5932,0,0
+1793015404296,6001,1 - Connexion,302,FOUND,Utilisateurs 1-16,text,true,,586,252,75,75,http://localhost:8080/connexion,6001,0,0
+1793015404360,6006,1 - Connexion,302,FOUND,Utilisateurs 1-24,text,true,,586,252,75,75,http://localhost:8080/connexion,6006,0,0
+1793015404757,5742,1 - Connexion,302,FOUND,Utilisateurs 1-23,text,true,,586,252,75,75,http://localhost:8080/connexion,5742,0,0
+1793015404777,5738,2 - Mon planning,200,OK,Utilisateurs 1-12,text,true,,6059,276,75,75,http://localhost:8080/planning,5738,0,0
+1793015404802,5831,2 - Mon planning,200,OK,Utilisateurs 1-48,text,true,,6059,276,75,75,http://localhost:8080/planning,5831,0,0
+1793015405180,5572,2 - Mon planning,200,OK,Utilisateurs 1-2,text,true,,6059,276,75,75,http://localhost:8080/planning,5572,0,0
+1793015405066,5806,1 - Connexion,302,FOUND,Utilisateurs 1-61,text,true,,586,252,75,75,http://localhost:8080/connexion,5806,0,0
+1793015405202,5743,1 - Connexion,302,FOUND,Utilisateurs 1-64,text,true,,586,252,75,75,http://localhost:8080/connexion,5743,0,0
+1793015405335,5652,2 - Mon planning,200,OK,Utilisateurs 1-20,text,true,,6059,276,75,75,http://localhost:8080/planning,5652,0,0
+1793015405402,5747,1 - Connexion,302,FOUND,Utilisateurs 1-63,text,true,,586,252,75,75,http://localhost:8080/connexion,5747,0,0
+1793015405464,5741,2 - Mon planning,200,OK,Utilisateurs 1-51,text,true,,6059,276,75,75,http://localhost:8080/planning,5741,0,0
+1793015405496,5767,2 - Mon planning,200,OK,Utilisateurs 1-21,text,true,,6059,276,75,75,http://localhost:8080/planning,5767,0,0
+1793015405606,5762,2 - Mon planning,200,OK,Utilisateurs 1-5,text,true,,6059,276,75,75,http://localhost:8080/planning,5762,0,0
+1793015405812,5665,1 - Connexion,302,FOUND,Utilisateurs 1-7,text,true,,586,252,75,75,http://localhost:8080/connexion,5665,0,0
+1793015405996,5523,2 - Mon planning,200,OK,Utilisateurs 1-50,text,true,,6059,276,75,75,http://localhost:8080/planning,5523,0,0
+1793015406062,5554,2 - Mon planning,200,OK,Utilisateurs 1-52,text,true,,6059,276,75,75,http://localhost:8080/planning,5554,0,0
+1793015406117,5624,1 - Connexion,302,FOUND,Utilisateurs 1-27,text,true,,586,252,75,75,http://localhost:8080/connexion,5624,0,0
+1793015406489,5356,1 - Connexion,302,FOUND,Utilisateurs 1-66,text,true,,586,252,75,75,http://localhost:8080/connexion,5356,0,0
+1793015406564,5375,1 - Connexion,302,FOUND,Utilisateurs 1-8,text,true,,586,252,75,75,http://localhost:8080/connexion,5375,0,0
+1793015406718,5346,2 - Mon planning,200,OK,Utilisateurs 1-53,text,true,,6059,276,75,75,http://localhost:8080/planning,5346,0,0
+1793015406567,5573,1 - Connexion,302,FOUND,Utilisateurs 1-42,text,true,,586,252,75,75,http://localhost:8080/connexion,5573,0,0
+1793015406778,5484,1 - Connexion,302,FOUND,Utilisateurs 1-41,text,true,,586,252,75,75,http://localhost:8080/connexion,5484,0,0
+1793015406873,5487,1 - Connexion,302,FOUND,Utilisateurs 1-65,text,true,,586,252,75,75,http://localhost:8080/connexion,5487,0,0
+1793015406875,5577,1 - Connexion,302,FOUND,Utilisateurs 1-39,text,true,,586,252,75,75,http://localhost:8080/connexion,5577,0,0
+1793015406881,5700,1 - Connexion,302,FOUND,Utilisateurs 1-43,text,true,,586,252,75,75,http://localhost:8080/connexion,5700,0,0
+1793015407130,5518,1 - Connexion,302,FOUND,Utilisateurs 1-68,text,true,,586,252,75,75,http://localhost:8080/connexion,5518,0,0
+1793015407198,5665,1 - Connexion,302,FOUND,Utilisateurs 1-67,text,true,,586,252,75,75,http://localhost:8080/connexion,5665,0,0
+1793015407225,5672,1 - Connexion,302,FOUND,Utilisateurs 1-26,text,true,,586,252,75,75,http://localhost:8080/connexion,5672,0,0
+1793015407230,5739,2 - Mon planning,200,OK,Utilisateurs 1-13,text,true,,6059,276,75,75,http://localhost:8080/planning,5739,0,0
+1793015407343,5705,2 - Mon planning,200,OK,Utilisateurs 1-22,text,true,,6059,276,75,75,http://localhost:8080/planning,5705,0,0
+1793015407416,5730,2 - Mon planning,200,OK,Utilisateurs 1-34,text,true,,6059,276,75,75,http://localhost:8080/planning,5730,0,0
+1793015407394,5759,1 - Connexion,302,FOUND,Utilisateurs 1-17,text,true,,586,252,75,75,http://localhost:8080/connexion,5759,0,0
+1793015407673,5626,2 - Mon planning,200,OK,Utilisateurs 1-25,text,true,,6059,276,75,75,http://localhost:8080/planning,5625,0,0
+1793015407579,5801,2 - Mon planning,200,OK,Utilisateurs 1-54,text,true,,6059,276,75,75,http://localhost:8080/planning,5801,0,0
+1793015407807,5735,2 - Mon planning,200,OK,Utilisateurs 1-36,text,true,,6059,276,75,75,http://localhost:8080/planning,5735,0,0
+1793015407957,5593,2 - Mon planning,200,OK,Utilisateurs 1-6,text,true,,6059,276,75,75,http://localhost:8080/planning,5593,0,0
+1793015408016,5723,1 - Connexion,302,FOUND,Utilisateurs 1-45,text,true,,586,252,75,75,http://localhost:8080/connexion,5723,0,0
+1793015408067,5721,1 - Connexion,302,FOUND,Utilisateurs 1-11,text,true,,586,252,75,75,http://localhost:8080/connexion,5721,0,0
+1793015408362,5482,2 - Mon planning,200,OK,Utilisateurs 1-35,text,true,,6059,276,75,75,http://localhost:8080/planning,5482,0,0
+1793015408433,5591,1 - Connexion,302,FOUND,Utilisateurs 1-18,text,true,,586,252,75,75,http://localhost:8080/connexion,5591,0,0
+1793015408463,5576,1 - Connexion,302,FOUND,Utilisateurs 1-28,text,true,,586,252,75,75,http://localhost:8080/connexion,5576,0,0
+1793015408702,5460,2 - Mon planning,200,OK,Utilisateurs 1-15,text,true,,6059,276,75,75,http://localhost:8080/planning,5460,0,0
+1793015408748,5543,2 - Mon planning,200,OK,Utilisateurs 1-4,text,true,,6059,276,75,75,http://localhost:8080/planning,5543,0,0
+1793015408846,5546,2 - Mon planning,200,OK,Utilisateurs 1-33,text,true,,6059,276,75,75,http://localhost:8080/planning,5546,0,0
+1793015408543,5927,1 - Connexion,302,FOUND,Utilisateurs 1-71,text,true,,586,252,75,75,http://localhost:8080/connexion,5927,0,0
+1793015408869,5711,1 - Connexion,302,FOUND,Utilisateurs 1-70,text,true,,586,252,75,75,http://localhost:8080/connexion,5711,0,0
+1793015408884,5795,1 - Connexion,302,FOUND,Utilisateurs 1-31,text,true,,586,252,75,75,http://localhost:8080/connexion,5795,0,0
+1793015409114,5657,1 - Connexion,302,FOUND,Utilisateurs 1-44,text,true,,586,252,75,75,http://localhost:8080/connexion,5657,0,0
+1793015409349,5436,2 - Mon planning,200,OK,Utilisateurs 1-55,text,true,,6059,276,75,75,http://localhost:8080/planning,5436,0,0
+1793015409438,5475,2 - Mon planning,200,OK,Utilisateurs 1-14,text,true,,6059,276,75,75,http://localhost:8080/planning,5475,0,0
+1793015409423,5554,1 - Connexion,302,FOUND,Utilisateurs 1-72,text,true,,586,252,75,75,http://localhost:8080/connexion,5554,0,0
+1793015409511,5643,1 - Connexion,302,FOUND,Utilisateurs 1-69,text,true,,586,252,75,75,http://localhost:8080/connexion,5643,0,0
+1793015409819,5345,1 - Connexion,302,FOUND,Utilisateurs 1-1,text,true,,586,252,75,75,http://localhost:8080/connexion,5345,0,0
+1793015409980,5377,1 - Connexion,302,FOUND,Utilisateurs 1-30,text,true,,586,252,75,75,http://localhost:8080/connexion,5377,0,0
+1793015409886,5499,1 - Connexion,302,FOUND,Utilisateurs 1-73,text,true,,586,252,75,75,http://localhost:8080/connexion,5499,0,0
+1793015410075,5430,2 - Mon planning,200,OK,Utilisateurs 1-56,text,true,,6059,276,75,75,http://localhost:8080/planning,5430,0,0
+1793015410043,5499,1 - Connexion,302,FOUND,Utilisateurs 1-46,text,true,,586,252,75,75,http://localhost:8080/connexion,5499,0,0
+1793015410095,5555,2 - Mon planning,200,OK,Utilisateurs 1-40,text,true,,6059,276,75,75,http://localhost:8080/planning,5555,0,0
+1793015410085,5577,2 - Mon planning,200,OK,Utilisateurs 1-57,text,true,,6059,276,75,75,http://localhost:8080/planning,5577,0,0
+1793015410199,5688,1 - Connexion,302,FOUND,Utilisateurs 1-9,text,true,,586,252,75,75,http://localhost:8080/connexion,5688,0,0
+1793015410260,5676,1 - Connexion,302,FOUND,Utilisateurs 1-49,text,true,,586,252,75,75,http://localhost:8080/connexion,5676,0,0
+1793015410386,5602,2 - Mon planning,200,OK,Utilisateurs 1-58,text,true,,6059,276,75,75,http://localhost:8080/planning,5602,0,0
+1793015410401,5728,2 - Mon planning,200,OK,Utilisateurs 1-60,text,true,,6059,276,75,75,http://localhost:8080/planning,5728,0,0
+1793015410530,5651,2 - Mon planning,200,OK,Utilisateurs 1-3,text,true,,6059,276,75,75,http://localhost:8080/planning,5650,0,0
+1793015410898,5404,2 - Mon planning,200,OK,Utilisateurs 1-37,text,true,,6059,276,75,75,http://localhost:8080/planning,5404,0,0
+1793015410580,5757,1 - Connexion,302,FOUND,Utilisateurs 1-29,text,true,,586,252,75,75,http://localhost:8080/connexion,5757,0,0
+1793015410908,5632,1 - Connexion,302,FOUND,Utilisateurs 1-47,text,true,,586,252,75,75,http://localhost:8080/connexion,5632,0,0
+1793015410908,5830,1 - Connexion,302,FOUND,Utilisateurs 1-74,text,true,,586,252,75,75,http://localhost:8080/connexion,5830,0,0
+1793015411021,5720,1 - Connexion,302,FOUND,Utilisateurs 1-10,text,true,,586,252,75,75,http://localhost:8080/connexion,5720,0,0
+1793015411372,5472,2 - Mon planning,200,OK,Utilisateurs 1-62,text,true,,6059,276,75,75,http://localhost:8080/planning,5472,0,0
+1793015411195,5712,2 - Mon planning,200,OK,Utilisateurs 1-59,text,true,,6059,276,75,75,http://localhost:8080/planning,5712,0,0
+1793015411462,5491,2 - Mon planning,200,OK,Utilisateurs 1-38,text,true,,6059,276,75,75,http://localhost:8080/planning,5491,0,0
+1793015411592,5445,2 - Mon planning,200,OK,Utilisateurs 1-24,text,true,,6059,276,75,75,http://localhost:8080/planning,5445,0,0
+1793015411703,5438,1 - Connexion,302,FOUND,Utilisateurs 1-32,text,true,,586,252,75,75,http://localhost:8080/connexion,5438,0,0
+1793015411765,5483,2 - Mon planning,200,OK,Utilisateurs 1-16,text,true,,6059,276,75,75,http://localhost:8080/planning,5482,0,0
+1793015411722,5645,1 - Connexion,302,FOUND,Utilisateurs 1-19,text,true,,586,252,75,75,http://localhost:8080/connexion,5645,0,0
+1793015411966,5470,1 - Connexion,302,FOUND,Utilisateurs 1-2,text,true,,586,252,75,75,http://localhost:8080/connexion,5470,0,0
+1793015412045,5492,2 - Mon planning,200,OK,Utilisateurs 1-23,text,true,,6059,276,75,75,http://localhost:8080/planning,5492,0,0
+1793015412016,5641,1 - Connexion,302,FOUND,Utilisateurs 1-12,text,true,,586,252,75,75,http://localhost:8080/connexion,5641,0,0
+1793015412067,5663,1 - Connexion,302,FOUND,Utilisateurs 1-75,text,true,,586,252,75,75,http://localhost:8080/connexion,5663,0,0
+1793015412232,5535,2 - Mon planning,200,OK,Utilisateurs 1-64,text,true,,6059,276,75,75,http://localhost:8080/planning,5535,0,0
+1793015412566,5310,2 - Mon planning,200,OK,Utilisateurs 1-61,text,true,,6059,276,75,75,http://localhost:8080/planning,5310,0,0
+1793015412239,5691,1 - Connexion,302,FOUND,Utilisateurs 1-48,text,true,,586,252,75,75,http://localhost:8080/connexion,5691,0,0
+1793015412568,5444,2 - Mon planning,200,OK,Utilisateurs 1-63,text,true,,6059,276,75,75,http://localhost:8080/planning,5444,0,0
+1793015412700,5425,1 - Connexion,302,FOUND,Utilisateurs 1-21,text,true,,586,252,75,75,http://localhost:8080/connexion,5425,0,0
+1793015412782,5425,2 - Mon planning,200,OK,Utilisateurs 1-27,text,true,,6059,276,75,75,http://localhost:8080/planning,5425,0,0
+1793015412941,5385,1 - Connexion,302,FOUND,Utilisateurs 1-20,text,true,,586,252,75,75,http://localhost:8080/connexion,5385,0,0
+1793015412973,5473,2 - Mon planning,200,OK,Utilisateurs 1-7,text,true,,6059,276,75,75,http://localhost:8080/planning,5473,0,0
+1793015412941,5534,1 - Connexion,302,FOUND,Utilisateurs 1-51,text,true,,586,252,75,75,http://localhost:8080/connexion,5534,0,0
+1793015413309,5271,2 - Mon planning,200,OK,Utilisateurs 1-41,text,true,,6059,276,75,75,http://localhost:8080/planning,5271,0,0
+1793015413027,5617,1 - Connexion,302,FOUND,Utilisateurs 1-5,text,true,,586,252,75,75,http://localhost:8080/connexion,5617,0,0
+1793015413488,5322,1 - Connexion,302,FOUND,Utilisateurs 1-52,text,true,,586,252,75,75,http://localhost:8080/connexion,5322,0,0
+1793015413499,5334,1 - Connexion,302,FOUND,Utilisateurs 1-53,text,true,,586,252,75,75,http://localhost:8080/connexion,5334,0,0
+1793015413607,5344,2 - Mon planning,200,OK,Utilisateurs 1-43,text,true,,6059,276,75,75,http://localhost:8080/planning,5344,0,0
+1793015413518,5598,1 - Connexion,302,FOUND,Utilisateurs 1-50,text,true,,586,252,75,75,http://localhost:8080/connexion,5598,0,0
+1793015413818,5390,2 - Mon planning,200,OK,Utilisateurs 1-39,text,true,,6059,276,75,75,http://localhost:8080/planning,5390,0,0
+1793015413840,5477,2 - Mon planning,200,OK,Utilisateurs 1-66,text,true,,6059,276,75,75,http://localhost:8080/planning,5477,0,0
+1793015413911,5468,2 - Mon planning,200,OK,Utilisateurs 1-65,text,true,,6059,276,75,75,http://localhost:8080/planning,5468,0,0
+1793015413912,5609,2 - Mon planning,200,OK,Utilisateurs 1-8,text,true,,6059,276,75,75,http://localhost:8080/planning,5609,0,0
+1793015414096,5473,2 - Mon planning,200,OK,Utilisateurs 1-42,text,true,,6059,276,75,75,http://localhost:8080/planning,5473,0,0
+1793015414422,5308,2 - Mon planning,200,OK,Utilisateurs 1-26,text,true,,6059,276,75,75,http://localhost:8080/planning,5308,0,0
+1793015414380,5376,2 - Mon planning,200,OK,Utilisateurs 1-68,text,true,,6059,276,75,75,http://localhost:8080/planning,5376,0,0
+1793015414435,5484,1 - Connexion,302,FOUND,Utilisateurs 1-22,text,true,,586,252,75,75,http://localhost:8080/connexion,5484,0,0
+1793015414648,5348,2 - Mon planning,200,OK,Utilisateurs 1-67,text,true,,6059,276,75,75,http://localhost:8080/planning,5348,0,0
+1793015414657,5457,1 - Connexion,302,FOUND,Utilisateurs 1-54,text,true,,586,252,75,75,http://localhost:8080/connexion,5457,0,0
+1793015414845,5401,2 - Mon planning,200,OK,Utilisateurs 1-45,text,true,,6059,276,75,75,http://localhost:8080/planning,5401,0,0
+1793015414673,5633,1 - Connexion,302,FOUND,Utilisateurs 1-34,text,true,,586,252,75,75,http://localhost:8080/connexion,5633,0,0
+1793015414858,5598,1 - Connexion,302,FOUND,Utilisateurs 1-13,text,true,,586,252,75,75,http://localhost:8080/connexion,5598,0,0
+1793015415061,5520,2 - Mon planning,200,OK,Utilisateurs 1-28,text,true,,6059,276,75,75,http://localhost:8080/planning,5520,0,0
+1793015415030,5570,1 - Connexion,302,FOUND,Utilisateurs 1-36,text,true,,586,252,75,75,http://localhost:8080/connexion,5570,0,0
+1793015415098,5644,2 - Mon planning,200,OK,Utilisateurs 1-17,text,true,,6059,276,75,75,http://localhost:8080/planning,5644,0,0
+1793015415152,5663,1 - Connexion,302,FOUND,Utilisateurs 1-25,text,true,,586,252,75,75,http://localhost:8080/connexion,5663,0,0
+1793015415180,5770,1 - Connexion,302,FOUND,Utilisateurs 1-6,text,true,,586,252,75,75,http://localhost:8080/connexion,5770,0,2
+1793015415277,5766,1 - Connexion,302,FOUND,Utilisateurs 1-15,text,true,,586,252,75,75,http://localhost:8080/connexion,5766,0,0
+1793015415308,5840,1 - Connexion,302,FOUND,Utilisateurs 1-35,text,true,,586,252,75,75,http://localhost:8080/connexion,5840,0,0
+1793015415397,5785,2 - Mon planning,200,OK,Utilisateurs 1-11,text,true,,6059,276,75,75,http://localhost:8080/planning,5785,0,0
+1793015415571,5775,2 - Mon planning,200,OK,Utilisateurs 1-18,text,true,,6059,276,75,75,http://localhost:8080/planning,5775,0,0
+1793015415420,5937,1 - Connexion,302,FOUND,Utilisateurs 1-4,text,true,,586,252,75,75,http://localhost:8080/connexion,5937,0,1
+1793015415942,5547,2 - Mon planning,200,OK,Utilisateurs 1-71,text,true,,6059,276,75,75,http://localhost:8080/planning,5547,0,0
+1793015415845,5727,1 - Connexion,302,FOUND,Utilisateurs 1-55,text,true,,586,252,75,75,http://localhost:8080/connexion,5727,0,0
+1793015415970,5630,2 - Mon planning,200,OK,Utilisateurs 1-70,text,true,,6059,276,75,75,http://localhost:8080/planning,5630,0,0
+1793015416353,5467,1 - Connexion,302,FOUND,Utilisateurs 1-33,text,true,,586,252,75,75,http://localhost:8080/connexion,5467,0,0
+1793015416300,5553,2 - Mon planning,200,OK,Utilisateurs 1-44,text,true,,6059,276,75,75,http://localhost:8080/planning,5553,0,0
+1793015416367,5607,2 - Mon planning,200,OK,Utilisateurs 1-31,text,true,,6059,276,75,75,http://localhost:8080/planning,5607,0,0
+1793015416406,5763,1 - Connexion,302,FOUND,Utilisateurs 1-14,text,true,,586,252,75,75,http://localhost:8080/connexion,5763,0,0
+1793015416484,5813,2 - Mon planning,200,OK,Utilisateurs 1-72,text,true,,6059,276,75,75,http://localhost:8080/planning,5813,0,0
+1793015416442,5861,2 - Mon planning,200,OK,Utilisateurs 1-1,text,true,,6059,276,75,75,http://localhost:8080/planning,5861,0,1
+1793015416516,5954,2 - Mon planning,200,OK,Utilisateurs 1-30,text,true,,6059,276,75,75,http://localhost:8080/planning,5954,0,0
+1793015416799,5759,1 - Connexion,302,FOUND,Utilisateurs 1-57,text,true,,586,252,75,75,http://localhost:8080/connexion,5759,0,0
+1793015416961,5660,2 - Mon planning,200,OK,Utilisateurs 1-69,text,true,,6059,276,75,75,http://localhost:8080/planning,5660,0,0
+1793015416962,5719,2 - Mon planning,200,OK,Utilisateurs 1-49,text,true,,6059,276,75,75,http://localhost:8080/planning,5719,0,0
+1793015416989,5792,2 - Mon planning,200,OK,Utilisateurs 1-73,text,true,,6059,276,75,75,http://localhost:8080/planning,5792,0,0
+1793015417089,5806,2 - Mon planning,200,OK,Utilisateurs 1-46,text,true,,6059,276,75,75,http://localhost:8080/planning,5806,0,0
+1793015417359,5551,2 - Mon planning,200,OK,Utilisateurs 1-29,text,true,,6059,276,75,75,http://localhost:8080/planning,5551,0,0
+1793015417478,5663,1 - Connexion,302,FOUND,Utilisateurs 1-40,text,true,,586,252,75,75,http://localhost:8080/connexion,5663,0,0
+1793015417464,5686,1 - Connexion,302,FOUND,Utilisateurs 1-56,text,true,,586,252,75,75,http://localhost:8080/connexion,5686,0,0
+1793015417540,5811,1 - Connexion,302,FOUND,Utilisateurs 1-3,text,true,,586,252,75,75,http://localhost:8080/connexion,5811,0,1
+1793015417564,5820,1 - Connexion,302,FOUND,Utilisateurs 1-58,text,true,,586,252,75,75,http://localhost:8080/connexion,5820,0,0
+1793015417649,5834,2 - Mon planning,200,OK,Utilisateurs 1-9,text,true,,6059,276,75,75,http://localhost:8080/planning,5834,0,1
+1793015417727,5923,1 - Connexion,302,FOUND,Utilisateurs 1-37,text,true,,586,252,75,75,http://localhost:8080/connexion,5923,0,0
+1793015417933,5750,1 - Connexion,302,FOUND,Utilisateurs 1-60,text,true,,586,252,75,75,http://localhost:8080/connexion,5750,0,0
+1793015418266,5529,2 - Mon planning,200,OK,Utilisateurs 1-47,text,true,,6059,276,75,75,http://localhost:8080/planning,5529,0,0
+1793015418280,5637,1 - Connexion,302,FOUND,Utilisateurs 1-62,text,true,,586,252,75,75,http://localhost:8080/connexion,5637,0,0
+1793015418493,5543,2 - Mon planning,200,OK,Utilisateurs 1-74,text,true,,6059,276,75,75,http://localhost:8080/planning,5543,0,0
+1793015418336,5799,1 - Connexion,302,FOUND,Utilisateurs 1-24,text,true,,586,252,75,75,http://localhost:8080/connexion,5799,0,0
+1793015418537,5615,2 - Mon planning,200,OK,Utilisateurs 1-10,text,true,,6059,276,75,75,http://localhost:8080/planning,5615,0,1
+1793015418660,5620,2 - Mon planning,200,OK,Utilisateurs 1-32,text,true,,6059,276,75,75,http://localhost:8080/planning,5620,0,0
+1793015418562,5790,1 - Connexion,302,FOUND,Utilisateurs 1-38,text,true,,586,252,75,75,http://localhost:8080/connexion,5790,0,0
+1793015418683,5710,2 - Mon planning,200,OK,Utilisateurs 1-19,text,true,,6059,276,75,75,http://localhost:8080/planning,5710,0,0
+1793015418685,5866,1 - Connexion,302,FOUND,Utilisateurs 1-16,text,true,,586,252,75,75,http://localhost:8080/connexion,5866,0,1
+1793015418692,5921,2 - Mon planning,200,OK,Utilisateurs 1-2,text,true,,6059,276,75,75,http://localhost:8080/planning,5921,0,1
+1793015419165,5586,2 - Mon planning,200,OK,Utilisateurs 1-12,text,true,,6059,276,75,75,http://localhost:8080/planning,5586,0,2
+1793015418739,6067,1 - Connexion,302,FOUND,Utilisateurs 1-59,text,true,,586,252,75,75,http://localhost:8080/connexion,6067,0,0
+1793015419285,5621,2 - Mon planning,200,OK,Utilisateurs 1-75,text,true,,6059,276,75,75,http://localhost:8080/planning,5621,0,0
+1793015419420,5592,1 - Connexion,302,FOUND,Utilisateurs 1-64,text,true,,586,252,75,75,http://localhost:8080/connexion,5592,0,0
+1793015419471,5655,1 - Connexion,302,FOUND,Utilisateurs 1-27,text,true,,586,252,75,75,http://localhost:8080/connexion,5655,0,0
+1793015419480,5722,1 - Connexion,302,FOUND,Utilisateurs 1-23,text,true,,586,252,75,75,http://localhost:8080/connexion,5722,0,0
+1793015419504,5845,1 - Connexion,302,FOUND,Utilisateurs 1-63,text,true,,586,252,75,75,http://localhost:8080/connexion,5845,0,0
+1793015419556,5887,2 - Mon planning,200,OK,Utilisateurs 1-20,text,true,,6059,276,75,75,http://localhost:8080/planning,5887,0,1
+1793015419574,5988,1 - Connexion,302,FOUND,Utilisateurs 1-61,text,true,,586,252,75,75,http://localhost:8080/connexion,5988,0,0
+1793015419714,5849,2 - Mon planning,200,OK,Utilisateurs 1-48,text,true,,6059,276,75,75,http://localhost:8080/planning,5849,0,0
+1793015420002,5670,2 - Mon planning,200,OK,Utilisateurs 1-5,text,true,,6059,276,75,75,http://localhost:8080/planning,5670,0,2
+1793015420079,5693,2 - Mon planning,200,OK,Utilisateurs 1-21,text,true,,6059,276,75,75,http://localhost:8080/planning,5693,0,2
+1793015420166,5707,2 - Mon planning,200,OK,Utilisateurs 1-51,text,true,,6059,276,75,75,http://localhost:8080/planning,5707,0,0
+1793015419733,6221,1 - Connexion,302,FOUND,Utilisateurs 1-7,text,true,,586,252,75,75,http://localhost:8080/connexion,6221,0,1
+1793015420432,5618,2 - Mon planning,200,OK,Utilisateurs 1-53,text,true,,6059,276,75,75,http://localhost:8080/planning,5618,0,0
+1793015420359,5705,1 - Connexion,302,FOUND,Utilisateurs 1-41,text,true,,586,252,75,75,http://localhost:8080/connexion,5705,0,0
+1793015420485,5697,2 - Mon planning,200,OK,Utilisateurs 1-52,text,true,,6059,276,75,75,http://localhost:8080/planning,5697,0,0
+1793015420632,5644,1 - Connexion,302,FOUND,Utilisateurs 1-39,text,true,,586,252,75,75,http://localhost:8080/connexion,5644,0,0
+1793015420668,5760,1 - Connexion,302,FOUND,Utilisateurs 1-8,text,true,,586,252,75,75,http://localhost:8080/connexion,5760,0,0
+1793015420716,5781,1 - Connexion,302,FOUND,Utilisateurs 1-65,text,true,,586,252,75,75,http://localhost:8080/connexion,5781,0,0
+1793015420806,5746,2 - Mon planning,200,OK,Utilisateurs 1-50,text,true,,6059,276,75,75,http://localhost:8080/planning,5746,0,0
+1793015420806,5891,1 - Connexion,302,FOUND,Utilisateurs 1-26,text,true,,586,252,75,75,http://localhost:8080/connexion,5891,0,0
+1793015420895,5975,1 - Connexion,302,FOUND,Utilisateurs 1-43,text,true,,586,252,75,75,http://localhost:8080/connexion,5975,0,0
+1793015421029,5859,1 - Connexion,302,FOUND,Utilisateurs 1-66,text,true,,586,252,75,75,http://localhost:8080/connexion,5859,0,0
+1793015421250,5853,1 - Connexion,302,FOUND,Utilisateurs 1-42,text,true,,586,252,75,75,http://localhost:8080/connexion,5853,0,0
+1793015421134,5974,1 - Connexion,302,FOUND,Utilisateurs 1-67,text,true,,586,252,75,75,http://localhost:8080/connexion,5974,0,0
+1793015421465,5829,1 - Connexion,302,FOUND,Utilisateurs 1-45,text,true,,586,252,75,75,http://localhost:8080/connexion,5829,0,0
+1793015421482,5824,2 - Mon planning,200,OK,Utilisateurs 1-13,text,true,,6059,276,75,75,http://localhost:8080/planning,5824,0,1
+1793015421632,5772,2 - Mon planning,200,OK,Utilisateurs 1-22,text,true,,6059,276,75,75,http://localhost:8080/planning,5772,0,1
+1793015421818,5682,2 - Mon planning,200,OK,Utilisateurs 1-34,text,true,,6059,276,75,75,http://localhost:8080/planning,5682,0,0
+1793015421900,5732,2 - Mon planning,200,OK,Utilisateurs 1-36,text,true,,6059,276,75,75,http://localhost:8080/planning,5732,0,0
+1793015421706,6022,1 - Connexion,302,FOUND,Utilisateurs 1-68,text,true,,586,252,75,75,http://localhost:8080/connexion,6022,0,0
+1793015421922,5848,2 - Mon planning,200,OK,Utilisateurs 1-25,text,true,,6059,276,75,75,http://localhost:8080/planning,5848,0,2
+1793015421990,5881,2 - Mon planning,200,OK,Utilisateurs 1-54,text,true,,6059,276,75,75,http://localhost:8080/planning,5881,0,0
+1793015421993,5995,1 - Connexion,302,FOUND,Utilisateurs 1-17,text,true,,586,252,75,75,http://localhost:8080/connexion,5995,0,1
+1793015422524,5569,2 - Mon planning,200,OK,Utilisateurs 1-6,text,true,,6059,276,75,75,http://localhost:8080/planning,5569,0,0
+1793015422326,5867,1 - Connexion,302,FOUND,Utilisateurs 1-28,text,true,,586,252,75,75,http://localhost:8080/connexion,5867,0,0
+1793015422525,5684,2 - Mon planning,200,OK,Utilisateurs 1-35,text,true,,6059,276,75,75,http://localhost:8080/planning,5684,0,0
+1793015422566,5747,2 - Mon planning,200,OK,Utilisateurs 1-15,text,true,,6059,276,75,75,http://localhost:8080/planning,5747,0,1
+1793015422526,5958,1 - Connexion,302,FOUND,Utilisateurs 1-11,text,true,,586,252,75,75,http://localhost:8080/connexion,5958,0,1
+1793015422735,5783,1 - Connexion,302,FOUND,Utilisateurs 1-18,text,true,,586,252,75,75,http://localhost:8080/connexion,5783,0,1
+1793015422836,5787,2 - Mon planning,200,OK,Utilisateurs 1-4,text,true,,6059,276,75,75,http://localhost:8080/planning,5787,0,0
+1793015422891,5830,1 - Connexion,302,FOUND,Utilisateurs 1-70,text,true,,586,252,75,75,http://localhost:8080/connexion,5830,0,0
+1793015423014,5820,2 - Mon planning,200,OK,Utilisateurs 1-33,text,true,,6059,276,75,75,http://localhost:8080/planning,5820,0,0
+1793015422989,5911,1 - Connexion,302,FOUND,Utilisateurs 1-71,text,true,,586,252,75,75,http://localhost:8080/connexion,5911,0,0
+1793015423291,5713,2 - Mon planning,200,OK,Utilisateurs 1-55,text,true,,6059,276,75,75,http://localhost:8080/planning,5712,0,0
+1793015423026,6016,1 - Connexion,302,FOUND,Utilisateurs 1-31,text,true,,586,252,75,75,http://localhost:8080/connexion,6016,0,0
+1793015423357,5908,1 - Connexion,302,FOUND,Utilisateurs 1-72,text,true,,586,252,75,75,http://localhost:8080/connexion,5908,0,0
+1793015423389,5885,1 - Connexion,302,FOUND,Utilisateurs 1-1,text,true,,586,252,75,75,http://localhost:8080/connexion,5885,0,0
+1793015423433,5998,2 - Mon planning,200,OK,Utilisateurs 1-14,text,true,,6059,276,75,75,http://localhost:8080/planning,5998,0,1
+1793015423399,6156,1 - Connexion,302,FOUND,Utilisateurs 1-44,text,true,,586,252,75,75,http://localhost:8080/connexion,6156,0,0
+1793015423593,6031,1 - Connexion,302,FOUND,Utilisateurs 1-30,text,true,,586,252,75,75,http://localhost:8080/connexion,6031,0,1
+1793015423805,5993,1 - Connexion,302,FOUND,Utilisateurs 1-73,text,true,,586,252,75,75,http://localhost:8080/connexion,5993,0,0
+1793015424010,5826,1 - Connexion,302,FOUND,Utilisateurs 1-69,text,true,,586,252,75,75,http://localhost:8080/connexion,5826,0,0
+1793015424024,5955,2 - Mon planning,200,OK,Utilisateurs 1-57,text,true,,6059,276,75,75,http://localhost:8080/planning,5955,0,0
+1793015424221,5855,2 - Mon planning,200,OK,Utilisateurs 1-40,text,true,,6059,276,75,75,http://localhost:8080/planning,5854,0,0
+1793015424431,5901,1 - Connexion,302,FOUND,Utilisateurs 1-49,text,true,,586,252,75,75,http://localhost:8080/connexion,5901,0,0
+1793015424358,6007,2 - Mon planning,200,OK,Utilisateurs 1-3,text,true,,6059,276,75,75,http://localhost:8080/planning,6007,0,0
+1793015424776,5784,1 - Connexion,302,FOUND,Utilisateurs 1-29,text,true,,586,252,75,75,http://localhost:8080/connexion,5784,0,1
+1793015424879,5714,1 - Connexion,302,FOUND,Utilisateurs 1-46,text,true,,586,252,75,75,http://localhost:8080/connexion,5714,0,0
+1793015425070,5621,2 - Mon planning,200,OK,Utilisateurs 1-56,text,true,,6059,276,75,75,http://localhost:8080/planning,5621,0,0
+1793015425241,5585,2 - Mon planning,200,OK,Utilisateurs 1-58,text,true,,6059,276,75,75,http://localhost:8080/planning,5585,0,0
+1793015425274,5689,2 - Mon planning,200,OK,Utilisateurs 1-60,text,true,,6059,276,75,75,http://localhost:8080/planning,5689,0,0
+1793015424914,6114,1 - Connexion,302,FOUND,Utilisateurs 1-47,text,true,,586,252,75,75,http://localhost:8080/connexion,6114,0,0
+1793015425288,5790,2 - Mon planning,200,OK,Utilisateurs 1-37,text,true,,6059,276,75,75,http://localhost:8080/planning,5790,0,0
+1793015425316,5976,1 - Connexion,302,FOUND,Utilisateurs 1-9,text,true,,586,252,75,75,http://localhost:8080/connexion,5975,0,0
+1793015425423,5872,1 - Connexion,302,FOUND,Utilisateurs 1-74,text,true,,586,252,75,75,http://localhost:8080/connexion,5872,0,0
+1793015425602,5825,2 - Mon planning,200,OK,Utilisateurs 1-24,text,true,,6059,276,75,75,http://localhost:8080/planning,5825,0,1
+1793015425513,5978,2 - Mon planning,200,OK,Utilisateurs 1-62,text,true,,6059,276,75,75,http://localhost:8080/planning,5978,0,0
+1793015425855,5759,2 - Mon planning,200,OK,Utilisateurs 1-38,text,true,,6059,276,75,75,http://localhost:8080/planning,5759,0,0
+1793015425805,5840,1 - Connexion,302,FOUND,Utilisateurs 1-2,text,true,,586,252,75,75,http://localhost:8080/connexion,5840,0,0
+1793015426182,5596,2 - Mon planning,200,OK,Utilisateurs 1-16,text,true,,6059,276,75,75,http://localhost:8080/planning,5596,0,0
+1793015425944,5978,1 - Connexion,302,FOUND,Utilisateurs 1-10,text,true,,586,252,75,75,http://localhost:8080/connexion,5978,0,0
+1793015426281,5690,1 - Connexion,302,FOUND,Utilisateurs 1-32,text,true,,586,252,75,75,http://localhost:8080/connexion,5690,0,1
+1793015426285,5856,1 - Connexion,302,FOUND,Utilisateurs 1-19,text,true,,586,252,75,75,http://localhost:8080/connexion,5856,0,1
+1793015426531,5704,1 - Connexion,302,FOUND,Utilisateurs 1-75,text,true,,586,252,75,75,http://localhost:8080/connexion,5704,0,0
+1793015426609,5639,2 - Mon planning,200,OK,Utilisateurs 1-27,text,true,,6059,276,75,75,http://localhost:8080/planning,5639,0,1
+1793015426706,5655,2 - Mon planning,200,OK,Utilisateurs 1-59,text,true,,6059,276,75,75,http://localhost:8080/planning,5655,0,0
+1793015426645,5758,2 - Mon planning,200,OK,Utilisateurs 1-64,text,true,,6059,276,75,75,http://localhost:8080/planning,5758,0,0
+1793015426733,5869,1 - Connexion,302,FOUND,Utilisateurs 1-12,text,true,,586,252,75,75,http://localhost:8080/connexion,5869,0,0
+1793015426807,5807,1 - Connexion,302,FOUND,Utilisateurs 1-21,text,true,,586,252,75,75,http://localhost:8080/connexion,5807,0,0
+1793015427031,5696,2 - Mon planning,200,OK,Utilisateurs 1-63,text,true,,6059,276,75,75,http://localhost:8080/planning,5696,0,0
+1793015427004,5888,1 - Connexion,302,FOUND,Utilisateurs 1-51,text,true,,586,252,75,75,http://localhost:8080/connexion,5888,0,0
+1793015427090,5840,1 - Connexion,302,FOUND,Utilisateurs 1-53,text,true,,586,252,75,75,http://localhost:8080/connexion,5840,0,0
+1793015427138,5900,2 - Mon planning,200,OK,Utilisateurs 1-61,text,true,,6059,276,75,75,http://localhost:8080/planning,5900,0,0
+1793015427138,6002,2 - Mon planning,200,OK,Utilisateurs 1-23,text,true,,6059,276,75,75,http://localhost:8080/planning,6002,0,1
+1793015427252,5994,2 - Mon planning,200,OK,Utilisateurs 1-41,text,true,,6059,276,75,75,http://localhost:8080/planning,5994,0,0
+1793015427114,6179,1 - Connexion,302,FOUND,Utilisateurs 1-48,text,true,,586,252,75,75,http://localhost:8080/connexion,6179,0,0
+1793015427256,6178,1 - Connexion,302,FOUND,Utilisateurs 1-5,text,true,,586,252,75,75,http://localhost:8080/connexion,6178,0,0
+1793015427442,6087,2 - Mon planning,200,OK,Utilisateurs 1-8,text,true,,6059,276,75,75,http://localhost:8080/planning,6087,0,0
+1793015427274,6301,1 - Connexion,302,FOUND,Utilisateurs 1-20,text,true,,586,252,75,75,http://localhost:8080/connexion,6301,0,0
+1793015427852,5818,2 - Mon planning,200,OK,Utilisateurs 1-7,text,true,,6059,276,75,75,http://localhost:8080/planning,5818,0,0
+1793015427679,6034,1 - Connexion,302,FOUND,Utilisateurs 1-52,text,true,,586,252,75,75,http://localhost:8080/connexion,6034,0,0
+1793015428113,5679,2 - Mon planning,200,OK,Utilisateurs 1-65,text,true,,6059,276,75,75,http://localhost:8080/planning,5679,0,0
+1793015428187,5662,2 - Mon planning,200,OK,Utilisateurs 1-39,text,true,,6059,276,75,75,http://localhost:8080/planning,5662,0,1
+1793015428320,5638,2 - Mon planning,200,OK,Utilisateurs 1-26,text,true,,6059,276,75,75,http://localhost:8080/planning,5638,0,1
+1793015428329,5672,2 - Mon planning,200,OK,Utilisateurs 1-45,text,true,,6059,276,75,75,http://localhost:8080/planning,5672,0,0
+1793015428493,5766,1 - Connexion,302,FOUND,Utilisateurs 1-22,text,true,,586,252,75,75,http://localhost:8080/connexion,5766,0,0
+1793015428378,5939,2 - Mon planning,200,OK,Utilisateurs 1-42,text,true,,6059,276,75,75,http://localhost:8080/planning,5939,0,1
+1793015428541,5938,1 - Connexion,302,FOUND,Utilisateurs 1-50,text,true,,586,252,75,75,http://localhost:8080/connexion,5938,0,0
+1793015428621,6068,1 - Connexion,302,FOUND,Utilisateurs 1-13,text,true,,586,252,75,75,http://localhost:8080/connexion,6068,0,0
+1793015428731,6112,2 - Mon planning,200,OK,Utilisateurs 1-67,text,true,,6059,276,75,75,http://localhost:8080/planning,6112,0,0
+1793015428803,6089,2 - Mon planning,200,OK,Utilisateurs 1-66,text,true,,6059,276,75,75,http://localhost:8080/planning,6088,0,0
+1793015428919,6206,1 - Connexion,302,FOUND,Utilisateurs 1-25,text,true,,586,252,75,75,http://localhost:8080/connexion,6206,0,0
+1793015428805,6341,2 - Mon planning,200,OK,Utilisateurs 1-43,text,true,,6059,276,75,75,http://localhost:8080/planning,6341,0,1
+1793015428927,6406,1 - Connexion,302,FOUND,Utilisateurs 1-34,text,true,,586,252,75,75,http://localhost:8080/connexion,6406,0,1
+1793015429068,6322,1 - Connexion,302,FOUND,Utilisateurs 1-54,text,true,,586,252,75,75,http://localhost:8080/connexion,6322,0,0
+1793015429224,6261,2 - Mon planning,200,OK,Utilisateurs 1-68,text,true,,6059,276,75,75,http://localhost:8080/planning,6261,0,0
+1793015429122,6403,1 - Connexion,302,FOUND,Utilisateurs 1-6,text,true,,586,252,75,75,http://localhost:8080/connexion,6403,0,0
+1793015429506,6097,2 - Mon planning,200,OK,Utilisateurs 1-28,text,true,,6059,276,75,75,http://localhost:8080/planning,6097,0,1
+1793015429768,5931,2 - Mon planning,200,OK,Utilisateurs 1-18,text,true,,6059,276,75,75,http://localhost:8080/planning,5931,0,0
+1793015429548,6167,1 - Connexion,302,FOUND,Utilisateurs 1-36,text,true,,586,252,75,75,http://localhost:8080/connexion,6167,0,2
+1793015429781,6034,2 - Mon planning,200,OK,Utilisateurs 1-17,text,true,,6059,276,75,75,http://localhost:8080/planning,6034,0,0
+1793015429840,6065,1 - Connexion,302,FOUND,Utilisateurs 1-35,text,true,,586,252,75,75,http://localhost:8080/connexion,6065,0,1
+1793015430093,5923,2 - Mon planning,200,OK,Utilisateurs 1-70,text,true,,6059,276,75,75,http://localhost:8080/planning,5923,0,0
+1793015429860,6235,1 - Connexion,302,FOUND,Utilisateurs 1-4,text,true,,586,252,75,75,http://localhost:8080/connexion,6235,0,0
+1793015430120,6071,2 - Mon planning,200,OK,Utilisateurs 1-31,text,true,,6059,276,75,75,http://localhost:8080/planning,6071,0,1
+1793015430109,6206,1 - Connexion,302,FOUND,Utilisateurs 1-55,text,true,,586,252,75,75,http://localhost:8080/connexion,6206,0,0
+1793015430151,6232,1 - Connexion,302,FOUND,Utilisateurs 1-15,text,true,,586,252,75,75,http://localhost:8080/connexion,6232,0,0
+1793015430337,6097,2 - Mon planning,200,OK,Utilisateurs 1-11,text,true,,6059,276,75,75,http://localhost:8080/planning,6097,0,0
+1793015430550,5987,2 - Mon planning,200,OK,Utilisateurs 1-1,text,true,,6059,276,75,75,http://localhost:8080/planning,5987,0,0
+1793015430501,6215,1 - Connexion,302,FOUND,Utilisateurs 1-14,text,true,,586,252,75,75,http://localhost:8080/connexion,6215,0,0
+1793015430552,6169,2 - Mon planning,200,OK,Utilisateurs 1-71,text,true,,6059,276,75,75,http://localhost:8080/planning,6169,0,0
+1793015430750,6177,1 - Connexion,302,FOUND,Utilisateurs 1-33,text,true,,586,252,75,75,http://localhost:8080/connexion,6177,0,1
+1793015430650,6357,2 - Mon planning,200,OK,Utilisateurs 1-72,text,true,,6059,276,75,75,http://localhost:8080/planning,6357,0,0
+1793015431184,6049,1 - Connexion,302,FOUND,Utilisateurs 1-40,text,true,,586,252,75,75,http://localhost:8080/connexion,6049,0,1
+1793015431103,6202,2 - Mon planning,200,OK,Utilisateurs 1-69,text,true,,6059,276,75,75,http://localhost:8080/planning,6202,0,0
+1793015431412,5964,2 - Mon planning,200,OK,Utilisateurs 1-73,text,true,,6059,276,75,75,http://localhost:8080/planning,5964,0,0
+1793015431420,6063,2 - Mon planning,200,OK,Utilisateurs 1-44,text,true,,6059,276,75,75,http://localhost:8080/planning,6063,0,1
+1793015431443,6057,2 - Mon planning,200,OK,Utilisateurs 1-49,text,true,,6059,276,75,75,http://localhost:8080/planning,6057,0,0
+1793015431477,6154,2 - Mon planning,200,OK,Utilisateurs 1-30,text,true,,6059,276,75,75,http://localhost:8080/planning,6154,0,0
+1793015431549,6162,1 - Connexion,302,FOUND,Utilisateurs 1-3,text,true,,586,252,75,75,http://localhost:8080/connexion,6162,0,0
+1793015431724,6083,2 - Mon planning,200,OK,Utilisateurs 1-46,text,true,,6059,276,75,75,http://localhost:8080/planning,6083,0,2
+1793015432265,5639,2 - Mon planning,200,OK,Utilisateurs 1-29,text,true,,6059,276,75,75,http://localhost:8080/planning,5639,0,0
+1793015431595,6375,1 - Connexion,302,FOUND,Utilisateurs 1-57,text,true,,586,252,75,75,http://localhost:8080/connexion,6375,0,0
+1793015432402,5686,1 - Connexion,302,FOUND,Utilisateurs 1-58,text,true,,586,252,75,75,http://localhost:8080/connexion,5686,0,0
+1793015432457,5724,1 - Connexion,302,FOUND,Utilisateurs 1-60,text,true,,586,252,75,75,http://localhost:8080/connexion,5724,0,0
+1793015432544,5747,1 - Connexion,302,FOUND,Utilisateurs 1-37,text,true,,586,252,75,75,http://localhost:8080/connexion,5747,0,2
+1793015432735,5705,2 - Mon planning,200,OK,Utilisateurs 1-47,text,true,,6059,276,75,75,http://localhost:8080/planning,5705,0,1
+1793015432684,5806,1 - Connexion,302,FOUND,Utilisateurs 1-56,text,true,,586,252,75,75,http://localhost:8080/connexion,5806,0,0
+1793015432839,5753,2 - Mon planning,200,OK,Utilisateurs 1-74,text,true,,6059,276,75,75,http://localhost:8080/planning,5753,0,0
+1793015432822,5812,1 - Connexion,302,FOUND,Utilisateurs 1-24,text,true,,586,252,75,75,http://localhost:8080/connexion,5812,0,0
+1793015432899,5916,1 - Connexion,302,FOUND,Utilisateurs 1-62,text,true,,586,252,75,75,http://localhost:8080/connexion,5916,0,0
+1793015432951,5872,1 - Connexion,302,FOUND,Utilisateurs 1-16,text,true,,586,252,75,75,http://localhost:8080/connexion,5872,0,0
+1793015433094,5858,2 - Mon planning,200,OK,Utilisateurs 1-2,text,true,,6059,276,75,75,http://localhost:8080/planning,5858,0,0
+1793015432961,6051,2 - Mon planning,200,OK,Utilisateurs 1-9,text,true,,6059,276,75,75,http://localhost:8080/planning,6050,0,0
+1793015433098,6067,1 - Connexion,302,FOUND,Utilisateurs 1-38,text,true,,586,252,75,75,http://localhost:8080/connexion,6067,0,1
+1793015433268,5963,1 - Connexion,302,FOUND,Utilisateurs 1-27,text,true,,586,252,75,75,http://localhost:8080/connexion,5963,0,0
+1793015433346,6004,2 - Mon planning,200,OK,Utilisateurs 1-10,text,true,,6059,276,75,75,http://localhost:8080/planning,6004,0,0
+1793015433552,5952,2 - Mon planning,200,OK,Utilisateurs 1-75,text,true,,6059,276,75,75,http://localhost:8080/planning,5952,0,0
+1793015433377,6143,1 - Connexion,302,FOUND,Utilisateurs 1-59,text,true,,586,252,75,75,http://localhost:8080/connexion,6143,0,0
+1793015433695,5982,2 - Mon planning,200,OK,Utilisateurs 1-32,text,true,,6059,276,75,75,http://localhost:8080/planning,5982,0,0
+1793015433642,6058,2 - Mon planning,200,OK,Utilisateurs 1-19,text,true,,6059,276,75,75,http://localhost:8080/planning,6058,0,0
+1793015433807,6068,1 - Connexion,302,FOUND,Utilisateurs 1-63,text,true,,586,252,75,75,http://localhost:8080/connexion,6068,0,0
+1793015433831,6150,2 - Mon planning,200,OK,Utilisateurs 1-12,text,true,,6059,276,75,75,http://localhost:8080/planning,6150,0,0
+1793015434055,6015,2 - Mon planning,200,OK,Utilisateurs 1-21,text,true,,6059,276,75,75,http://localhost:8080/planning,6015,0,0
+1793015434234,5955,1 - Connexion,302,FOUND,Utilisateurs 1-64,text,true,,586,252,75,75,http://localhost:8080/connexion,5955,0,0
+1793015434516,5774,2 - Mon planning,200,OK,Utilisateurs 1-53,text,true,,6059,276,75,75,http://localhost:8080/planning,5774,0,1
+1793015434506,5857,1 - Connexion,302,FOUND,Utilisateurs 1-23,text,true,,586,252,75,75,http://localhost:8080/connexion,5857,0,0
+1793015434533,5877,2 - Mon planning,200,OK,Utilisateurs 1-51,text,true,,6059,276,75,75,http://localhost:8080/planning,5877,0,1
+1793015434553,5947,2 - Mon planning,200,OK,Utilisateurs 1-5,text,true,,6059,276,75,75,http://localhost:8080/planning,5947,0,0
+1793015434616,5987,1 - Connexion,302,FOUND,Utilisateurs 1-61,text,true,,586,252,75,75,http://localhost:8080/connexion,5987,0,0
+1793015434684,5998,2 - Mon planning,200,OK,Utilisateurs 1-48,text,true,,6059,276,75,75,http://localhost:8080/planning,5998,0,2
+1793015434958,5840,1 - Connexion,302,FOUND,Utilisateurs 1-65,text,true,,586,252,75,75,http://localhost:8080/connexion,5840,0,0
+1793015435109,5785,1 - Connexion,302,FOUND,Utilisateurs 1-39,text,true,,586,252,75,75,http://localhost:8080/connexion,5785,0,0
+1793015435107,5879,1 - Connexion,302,FOUND,Utilisateurs 1-41,text,true,,586,252,75,75,http://localhost:8080/connexion,5879,0,1
+1793015435423,5774,1 - Connexion,302,FOUND,Utilisateurs 1-7,text,true,,586,252,75,75,http://localhost:8080/connexion,5774,0,0
+1793015435257,5941,2 - Mon planning,200,OK,Utilisateurs 1-20,text,true,,6059,276,75,75,http://localhost:8080/planning,5941,0,0
+1793015435481,5871,2 - Mon planning,200,OK,Utilisateurs 1-52,text,true,,6059,276,75,75,http://localhost:8080/planning,5871,0,1
+1793015435497,5894,1 - Connexion,302,FOUND,Utilisateurs 1-8,text,true,,586,252,75,75,http://localhost:8080/connexion,5894,0,0
+1793015435741,5845,1 - Connexion,302,FOUND,Utilisateurs 1-26,text,true,,586,252,75,75,http://localhost:8080/connexion,5845,0,0
+1793015435776,5825,1 - Connexion,302,FOUND,Utilisateurs 1-45,text,true,,586,252,75,75,http://localhost:8080/connexion,5825,0,0
+1793015435897,5839,2 - Mon planning,200,OK,Utilisateurs 1-22,text,true,,6059,276,75,75,http://localhost:8080/planning,5838,0,0
+1793015435998,5854,2 - Mon planning,200,OK,Utilisateurs 1-13,text,true,,6059,276,75,75,http://localhost:8080/planning,5854,0,0
+1793015436435,5522,2 - Mon planning,200,OK,Utilisateurs 1-50,text,true,,6059,276,75,75,http://localhost:8080/planning,5522,0,8
+1793015436557,5504,2 - Mon planning,200,OK,Utilisateurs 1-54,text,true,,6059,276,75,75,http://localhost:8080/planning,5504,0,1
+1793015435893,6187,1 - Connexion,302,FOUND,Utilisateurs 1-42,text,true,,586,252,75,75,http://localhost:8080/connexion,6187,0,0
+1793015436662,5590,1 - Connexion,302,FOUND,Utilisateurs 1-67,text,true,,586,252,75,75,http://localhost:8080/connexion,5590,0,0
+1793015436664,5638,1 - Connexion,302,FOUND,Utilisateurs 1-66,text,true,,586,252,75,75,http://localhost:8080/connexion,5638,0,0
+1793015436702,5738,1 - Connexion,302,FOUND,Utilisateurs 1-43,text,true,,586,252,75,75,http://localhost:8080/connexion,5738,0,0
+1793015436818,5708,1 - Connexion,302,FOUND,Utilisateurs 1-28,text,true,,586,252,75,75,http://localhost:8080/connexion,5708,0,0
+1793015436957,5682,1 - Connexion,302,FOUND,Utilisateurs 1-18,text,true,,586,252,75,75,http://localhost:8080/connexion,5682,0,0
+1793015437050,5602,2 - Mon planning,200,OK,Utilisateurs 1-25,text,true,,6059,276,75,75,http://localhost:8080/planning,5602,0,0
+1793015437260,5513,2 - Mon planning,200,OK,Utilisateurs 1-6,text,true,,6059,276,75,75,http://localhost:8080/planning,5513,0,0
+1793015437078,5753,1 - Connexion,302,FOUND,Utilisateurs 1-68,text,true,,586,252,75,75,http://localhost:8080/connexion,5753,0,0
+1793015437273,5665,2 - Mon planning,200,OK,Utilisateurs 1-34,text,true,,6059,276,75,75,http://localhost:8080/planning,5665,0,0
+1793015437277,5683,2 - Mon planning,200,OK,Utilisateurs 1-36,text,true,,6059,276,75,75,http://localhost:8080/planning,5682,0,0
+1793015437284,5789,2 - Mon planning,200,OK,Utilisateurs 1-35,text,true,,6059,276,75,75,http://localhost:8080/planning,5789,0,0
+1793015437454,5709,1 - Connexion,302,FOUND,Utilisateurs 1-17,text,true,,586,252,75,75,http://localhost:8080/connexion,5709,0,0
+1793015437730,5571,1 - Connexion,302,FOUND,Utilisateurs 1-1,text,true,,586,252,75,75,http://localhost:8080/connexion,5571,0,0
+1793015437908,5575,2 - Mon planning,200,OK,Utilisateurs 1-4,text,true,,6059,276,75,75,http://localhost:8080/planning,5575,0,0
+1793015437814,5678,2 - Mon planning,200,OK,Utilisateurs 1-15,text,true,,6059,276,75,75,http://localhost:8080/planning,5678,0,0
+1793015438018,5602,2 - Mon planning,200,OK,Utilisateurs 1-14,text,true,,6059,276,75,75,http://localhost:8080/planning,5601,0,0
+1793015437936,5763,1 - Connexion,302,FOUND,Utilisateurs 1-70,text,true,,586,252,75,75,http://localhost:8080/connexion,5763,0,0
+1793015438119,5742,1 - Connexion,302,FOUND,Utilisateurs 1-31,text,true,,586,252,75,75,http://localhost:8080/connexion,5742,0,0
+1793015438163,5794,2 - Mon planning,200,OK,Utilisateurs 1-55,text,true,,6059,276,75,75,http://localhost:8080/planning,5793,0,1
+1793015438242,5839,2 - Mon planning,200,OK,Utilisateurs 1-33,text,true,,6059,276,75,75,http://localhost:8080/planning,5839,0,0
+1793015438218,5901,1 - Connexion,302,FOUND,Utilisateurs 1-11,text,true,,586,252,75,75,http://localhost:8080/connexion,5901,0,0
+1793015438347,5981,1 - Connexion,302,FOUND,Utilisateurs 1-72,text,true,,586,252,75,75,http://localhost:8080/connexion,5981,0,0
+1793015438590,5809,1 - Connexion,302,FOUND,Utilisateurs 1-71,text,true,,586,252,75,75,http://localhost:8080/connexion,5809,0,0
+1793015438622,5814,2 - Mon planning,200,OK,Utilisateurs 1-40,text,true,,6059,276,75,75,http://localhost:8080/planning,5814,0,0
+1793015438620,6035,1 - Connexion,302,FOUND,Utilisateurs 1-69,text,true,,586,252,75,75,http://localhost:8080/connexion,6035,0,2
+1793015438670,6015,1 - Connexion,302,FOUND,Utilisateurs 1-44,text,true,,586,252,75,75,http://localhost:8080/connexion,6015,0,0
+1793015438941,5839,2 - Mon planning,200,OK,Utilisateurs 1-3,text,true,,6059,276,75,75,http://localhost:8080/planning,5839,0,0
+1793015439213,5714,2 - Mon planning,200,OK,Utilisateurs 1-57,text,true,,6059,276,75,75,http://localhost:8080/planning,5714,0,1
+1793015439120,5915,1 - Connexion,302,FOUND,Utilisateurs 1-73,text,true,,586,252,75,75,http://localhost:8080/connexion,5915,0,0
+1793015439289,5862,1 - Connexion,302,FOUND,Utilisateurs 1-29,text,true,,586,252,75,75,http://localhost:8080/connexion,5862,0,0
+1793015439317,5905,1 - Connexion,302,FOUND,Utilisateurs 1-46,text,true,,586,252,75,75,http://localhost:8080/connexion,5905,0,0
+1793015439322,6012,2 - Mon planning,200,OK,Utilisateurs 1-60,text,true,,6059,276,75,75,http://localhost:8080/planning,6012,0,1
+1793015439382,6033,1 - Connexion,302,FOUND,Utilisateurs 1-30,text,true,,586,252,75,75,http://localhost:8080/connexion,6033,0,0
+1793015439488,6044,2 - Mon planning,200,OK,Utilisateurs 1-58,text,true,,6059,276,75,75,http://localhost:8080/planning,6044,0,1
+1793015439406,6216,1 - Connexion,302,FOUND,Utilisateurs 1-49,text,true,,586,252,75,75,http://localhost:8080/connexion,6216,0,0
+1793015439603,6171,2 - Mon planning,200,OK,Utilisateurs 1-37,text,true,,6059,276,75,75,http://localhost:8080/planning,6171,0,0
+1793015439758,6096,1 - Connexion,302,FOUND,Utilisateurs 1-74,text,true,,586,252,75,75,http://localhost:8080/connexion,6096,0,0
+1793015439883,6072,2 - Mon planning,200,OK,Utilisateurs 1-24,text,true,,6059,276,75,75,http://localhost:8080/planning,6072,0,0
+1793015440058,6017,2 - Mon planning,200,OK,Utilisateurs 1-16,text,true,,6059,276,75,75,http://localhost:8080/planning,6017,0,0
+1793015439835,6325,1 - Connexion,302,FOUND,Utilisateurs 1-47,text,true,,586,252,75,75,http://localhost:8080/connexion,6325,0,0
+1793015440267,5962,2 - Mon planning,200,OK,Utilisateurs 1-56,text,true,,6059,276,75,75,http://localhost:8080/planning,5962,0,1
+1793015440402,6006,2 - Mon planning,200,OK,Utilisateurs 1-38,text,true,,6059,276,75,75,http://localhost:8080/planning,6006,0,0
+1793015440363,6050,1 - Connexion,302,FOUND,Utilisateurs 1-9,text,true,,586,252,75,75,http://localhost:8080/connexion,6050,0,0
+1793015440456,6162,1 - Connexion,302,FOUND,Utilisateurs 1-10,text,true,,586,252,75,75,http://localhost:8080/connexion,6162,0,0
+1793015440461,6192,1 - Connexion,302,FOUND,Utilisateurs 1-2,text,true,,586,252,75,75,http://localhost:8080/connexion,6192,0,0
+1793015440537,6257,2 - Mon planning,200,OK,Utilisateurs 1-59,text,true,,6059,276,75,75,http://localhost:8080/planning,6256,0,1
+1793015440606,6208,2 - Mon planning,200,OK,Utilisateurs 1-62,text,true,,6059,276,75,75,http://localhost:8080/planning,6208,0,1
+1793015440961,5959,2 - Mon planning,200,OK,Utilisateurs 1-27,text,true,,6059,276,75,75,http://localhost:8080/planning,5959,0,0
+1793015441083,5919,1 - Connexion,302,FOUND,Utilisateurs 1-75,text,true,,586,252,75,75,http://localhost:8080/connexion,5919,0,1
+1793015441101,6035,1 - Connexion,302,FOUND,Utilisateurs 1-32,text,true,,586,252,75,75,http://localhost:8080/connexion,6035,0,0
+1793015441143,6044,1 - Connexion,302,FOUND,Utilisateurs 1-19,text,true,,586,252,75,75,http://localhost:8080/connexion,6044,0,0
+1793015441323,5964,2 - Mon planning,200,OK,Utilisateurs 1-64,text,true,,6059,276,75,75,http://localhost:8080/planning,5964,0,1
+1793015441282,6082,1 - Connexion,302,FOUND,Utilisateurs 1-21,text,true,,586,252,75,75,http://localhost:8080/connexion,6082,0,0
+1793015441557,5970,1 - Connexion,302,FOUND,Utilisateurs 1-53,text,true,,586,252,75,75,http://localhost:8080/connexion,5970,0,0
+1793015441639,5945,1 - Connexion,302,FOUND,Utilisateurs 1-51,text,true,,586,252,75,75,http://localhost:8080/connexion,5945,0,0
+1793015441665,5989,2 - Mon planning,200,OK,Utilisateurs 1-63,text,true,,6059,276,75,75,http://localhost:8080/planning,5989,0,1
+1793015441797,5979,1 - Connexion,302,FOUND,Utilisateurs 1-12,text,true,,586,252,75,75,http://localhost:8080/connexion,5979,0,0
+1793015442022,5864,2 - Mon planning,200,OK,Utilisateurs 1-65,text,true,,6059,276,75,75,http://localhost:8080/planning,5864,0,1
+1793015441934,5975,1 - Connexion,302,FOUND,Utilisateurs 1-48,text,true,,586,252,75,75,http://localhost:8080/connexion,5975,0,0
+1793015442207,5798,2 - Mon planning,200,OK,Utilisateurs 1-61,text,true,,6059,276,75,75,http://localhost:8080/planning,5798,0,1
+1793015442136,5930,1 - Connexion,302,FOUND,Utilisateurs 1-5,text,true,,586,252,75,75,http://localhost:8080/connexion,5930,0,0
+1793015442222,5912,2 - Mon planning,200,OK,Utilisateurs 1-41,text,true,,6059,276,75,75,http://localhost:8080/planning,5912,0,0
+1793015442351,5824,2 - Mon planning,200,OK,Utilisateurs 1-23,text,true,,6059,276,75,75,http://localhost:8080/planning,5824,0,0
+1793015442560,5878,1 - Connexion,302,FOUND,Utilisateurs 1-20,text,true,,586,252,75,75,http://localhost:8080/connexion,5878,0,0
+1793015442367,6111,2 - Mon planning,200,OK,Utilisateurs 1-39,text,true,,6059,276,75,75,http://localhost:8080/planning,6111,0,0
+1793015442600,6020,2 - Mon planning,200,OK,Utilisateurs 1-26,text,true,,6059,276,75,75,http://localhost:8080/planning,6020,0,0
+1793015442565,6121,1 - Connexion,302,FOUND,Utilisateurs 1-52,text,true,,586,252,75,75,http://localhost:8080/connexion,6121,0,0
+1793015442663,6067,2 - Mon planning,200,OK,Utilisateurs 1-8,text,true,,6059,276,75,75,http://localhost:8080/planning,6067,0,0
+1793015443153,5811,1 - Connexion,302,FOUND,Utilisateurs 1-50,text,true,,586,252,75,75,http://localhost:8080/connexion,5811,0,0
+1793015443041,5993,2 - Mon planning,200,OK,Utilisateurs 1-45,text,true,,6059,276,75,75,http://localhost:8080/planning,5993,0,0
+1793015443372,5920,1 - Connexion,302,FOUND,Utilisateurs 1-13,text,true,,586,252,75,75,http://localhost:8080/connexion,5920,0,0
+1793015443186,6145,2 - Mon planning,200,OK,Utilisateurs 1-7,text,true,,6059,276,75,75,http://localhost:8080/planning,6145,0,0
+1793015443550,5952,1 - Connexion,302,FOUND,Utilisateurs 1-22,text,true,,586,252,75,75,http://localhost:8080/connexion,5952,0,0
+1793015443661,5938,1 - Connexion,302,FOUND,Utilisateurs 1-54,text,true,,586,252,75,75,http://localhost:8080/connexion,5938,0,0
+1793015443669,5961,2 - Mon planning,200,OK,Utilisateurs 1-42,text,true,,6059,276,75,75,http://localhost:8080/planning,5961,0,0
+1793015443707,6074,2 - Mon planning,200,OK,Utilisateurs 1-67,text,true,,6059,276,75,75,http://localhost:8080/planning,6074,0,1
+1793015443889,5963,1 - Connexion,302,FOUND,Utilisateurs 1-25,text,true,,586,252,75,75,http://localhost:8080/connexion,5963,0,0
+1793015443940,6023,2 - Mon planning,200,OK,Utilisateurs 1-18,text,true,,6059,276,75,75,http://localhost:8080/planning,6023,0,0
+1793015443963,6044,2 - Mon planning,200,OK,Utilisateurs 1-43,text,true,,6059,276,75,75,http://localhost:8080/planning,6044,0,0
+1793015444089,6040,2 - Mon planning,200,OK,Utilisateurs 1-66,text,true,,6059,276,75,75,http://localhost:8080/planning,6040,0,1
+1793015444098,6098,2 - Mon planning,200,OK,Utilisateurs 1-68,text,true,,6059,276,75,75,http://localhost:8080/planning,6097,0,1
+1793015444265,6100,1 - Connexion,302,FOUND,Utilisateurs 1-34,text,true,,586,252,75,75,http://localhost:8080/connexion,6100,0,0
+1793015444457,6048,2 - Mon planning,200,OK,Utilisateurs 1-28,text,true,,6059,276,75,75,http://localhost:8080/planning,6048,0,0
+1793015444518,6056,1 - Connexion,302,FOUND,Utilisateurs 1-6,text,true,,586,252,75,75,http://localhost:8080/connexion,6056,0,0
+1793015444549,6109,2 - Mon planning,200,OK,Utilisateurs 1-17,text,true,,6059,276,75,75,http://localhost:8080/planning,6109,0,0
+1793015444708,6066,2 - Mon planning,200,OK,Utilisateurs 1-1,text,true,,6059,276,75,75,http://localhost:8080/planning,6066,0,0
+1793015444606,6186,1 - Connexion,302,FOUND,Utilisateurs 1-15,text,true,,586,252,75,75,http://localhost:8080/connexion,6186,0,0
+1793015444717,6270,1 - Connexion,302,FOUND,Utilisateurs 1-4,text,true,,586,252,75,75,http://localhost:8080/connexion,6270,0,0
+1793015444784,6205,1 - Connexion,302,FOUND,Utilisateurs 1-35,text,true,,586,252,75,75,http://localhost:8080/connexion,6205,0,0
+1793015445318,5863,1 - Connexion,302,FOUND,Utilisateurs 1-14,text,true,,586,252,75,75,http://localhost:8080/connexion,5863,0,0
+1793015444939,6260,1 - Connexion,302,FOUND,Utilisateurs 1-36,text,true,,586,252,75,75,http://localhost:8080/connexion,6260,0,0
+1793015445505,5779,2 - Mon planning,200,OK,Utilisateurs 1-70,text,true,,6059,276,75,75,http://localhost:8080/planning,5779,0,2
+1793015445676,5707,2 - Mon planning,200,OK,Utilisateurs 1-31,text,true,,6059,276,75,75,http://localhost:8080/planning,5707,0,0
+1793015445790,5699,2 - Mon planning,200,OK,Utilisateurs 1-11,text,true,,6059,276,75,75,http://localhost:8080/planning,5699,0,0
+1793015445601,5974,1 - Connexion,302,FOUND,Utilisateurs 1-33,text,true,,586,252,75,75,http://localhost:8080/connexion,5974,0,0
+1793015445815,5865,1 - Connexion,302,FOUND,Utilisateurs 1-40,text,true,,586,252,75,75,http://localhost:8080/connexion,5865,0,0
+1793015445963,5818,2 - Mon planning,200,OK,Utilisateurs 1-44,text,true,,6059,276,75,75,http://localhost:8080/planning,5818,0,0
+1793015446140,5737,2 - Mon planning,200,OK,Utilisateurs 1-72,text,true,,6059,276,75,75,http://localhost:8080/planning,5737,0,1
+1793015445893,6071,1 - Connexion,302,FOUND,Utilisateurs 1-55,text,true,,586,252,75,75,http://localhost:8080/connexion,6071,0,0
+1793015446193,5877,1 - Connexion,302,FOUND,Utilisateurs 1-3,text,true,,586,252,75,75,http://localhost:8080/connexion,5877,0,0
+1793015446216,5997,1 - Connexion,302,FOUND,Utilisateurs 1-57,text,true,,586,252,75,75,http://localhost:8080/connexion,5996,0,0
+1793015446257,5973,2 - Mon planning,200,OK,Utilisateurs 1-71,text,true,,6059,276,75,75,http://localhost:8080/planning,5973,0,1
+1793015446518,5876,2 - Mon planning,200,OK,Utilisateurs 1-29,text,true,,6059,276,75,75,http://localhost:8080/planning,5876,0,0
+1793015446321,6091,2 - Mon planning,200,OK,Utilisateurs 1-69,text,true,,6059,276,75,75,http://localhost:8080/planning,6091,0,0
+1793015446586,6027,1 - Connexion,302,FOUND,Utilisateurs 1-58,text,true,,586,252,75,75,http://localhost:8080/connexion,6027,0,0
+1793015446607,6145,2 - Mon planning,200,OK,Utilisateurs 1-73,text,true,,6059,276,75,75,http://localhost:8080/planning,6145,0,1
+1793015446671,6083,2 - Mon planning,200,OK,Utilisateurs 1-30,text,true,,6059,276,75,75,http://localhost:8080/planning,6083,0,0
+1793015446742,6154,2 - Mon planning,200,OK,Utilisateurs 1-49,text,true,,6059,276,75,75,http://localhost:8080/planning,6153,0,0
+1793015446701,6268,1 - Connexion,302,FOUND,Utilisateurs 1-60,text,true,,586,252,75,75,http://localhost:8080/connexion,6268,0,0
+1793015446885,6161,2 - Mon planning,200,OK,Utilisateurs 1-46,text,true,,6059,276,75,75,http://localhost:8080/planning,6161,0,0
+1793015447379,5747,2 - Mon planning,200,OK,Utilisateurs 1-74,text,true,,6059,276,75,75,http://localhost:8080/planning,5747,0,0
+1793015447404,5895,1 - Connexion,302,FOUND,Utilisateurs 1-37,text,true,,586,252,75,75,http://localhost:8080/connexion,5895,0,0
+1793015447425,5963,1 - Connexion,302,FOUND,Utilisateurs 1-56,text,true,,586,252,75,75,http://localhost:8080/connexion,5963,0,0
+1793015447699,5793,2 - Mon planning,200,OK,Utilisateurs 1-2,text,true,,6059,276,75,75,http://localhost:8080/planning,5793,0,0
+1793015447621,5880,1 - Connexion,302,FOUND,Utilisateurs 1-24,text,true,,586,252,75,75,http://localhost:8080/connexion,5880,0,0
+1793015448026,5576,2 - Mon planning,200,OK,Utilisateurs 1-47,text,true,,6059,276,75,75,http://localhost:8080/planning,5576,0,0
+1793015447945,5742,1 - Connexion,302,FOUND,Utilisateurs 1-16,text,true,,586,252,75,75,http://localhost:8080/connexion,5742,0,0
+1793015448124,5668,2 - Mon planning,200,OK,Utilisateurs 1-10,text,true,,6059,276,75,75,http://localhost:8080/planning,5668,0,0
+1793015448068,5811,1 - Connexion,302,FOUND,Utilisateurs 1-38,text,true,,586,252,75,75,http://localhost:8080/connexion,5811,0,0
+1793015448143,5834,1 - Connexion,302,FOUND,Utilisateurs 1-27,text,true,,586,252,75,75,http://localhost:8080/connexion,5834,0,0
+1793015448224,5767,2 - Mon planning,200,OK,Utilisateurs 1-19,text,true,,6059,276,75,75,http://localhost:8080/planning,5767,0,0
+1793015448366,5859,1 - Connexion,302,FOUND,Utilisateurs 1-62,text,true,,586,252,75,75,http://localhost:8080/connexion,5859,0,0
+1793015448291,5993,2 - Mon planning,200,OK,Utilisateurs 1-9,text,true,,6059,276,75,75,http://localhost:8080/planning,5993,0,0
+1793015448585,5829,2 - Mon planning,200,OK,Utilisateurs 1-21,text,true,,6059,276,75,75,http://localhost:8080/planning,5829,0,0
+1793015448615,5896,2 - Mon planning,200,OK,Utilisateurs 1-32,text,true,,6059,276,75,75,http://localhost:8080/planning,5896,0,0
+1793015448642,5971,2 - Mon planning,200,OK,Utilisateurs 1-53,text,true,,6059,276,75,75,http://localhost:8080/planning,5971,0,0
+1793015448595,6078,1 - Connexion,302,FOUND,Utilisateurs 1-59,text,true,,586,252,75,75,http://localhost:8080/connexion,6078,0,0
+1793015448692,6033,2 - Mon planning,200,OK,Utilisateurs 1-75,text,true,,6059,276,75,75,http://localhost:8080/planning,6033,0,0
+1793015449097,5752,2 - Mon planning,200,OK,Utilisateurs 1-51,text,true,,6059,276,75,75,http://localhost:8080/planning,5752,0,0
+1793015449069,5824,2 - Mon planning,200,OK,Utilisateurs 1-5,text,true,,6059,276,75,75,http://localhost:8080/planning,5824,0,0
+1793015449233,5757,2 - Mon planning,200,OK,Utilisateurs 1-48,text,true,,6059,276,75,75,http://localhost:8080/planning,5757,0,0
+1793015449182,5875,1 - Connexion,302,FOUND,Utilisateurs 1-64,text,true,,586,252,75,75,http://localhost:8080/connexion,5875,0,0
+1793015449458,5731,2 - Mon planning,200,OK,Utilisateurs 1-12,text,true,,6059,276,75,75,http://localhost:8080/planning,5730,0,0
+1793015449317,5990,1 - Connexion,302,FOUND,Utilisateurs 1-63,text,true,,586,252,75,75,http://localhost:8080/connexion,5990,0,0
+1793015449752,5644,1 - Connexion,302,FOUND,Utilisateurs 1-26,text,true,,586,252,75,75,http://localhost:8080/connexion,5644,0,0
+1793015449798,5823,1 - Connexion,302,FOUND,Utilisateurs 1-61,text,true,,586,252,75,75,http://localhost:8080/connexion,5823,0,0
+1793015449855,5771,1 - Connexion,302,FOUND,Utilisateurs 1-65,text,true,,586,252,75,75,http://localhost:8080/connexion,5771,0,0
+1793015449979,5906,1 - Connexion,302,FOUND,Utilisateurs 1-23,text,true,,586,252,75,75,http://localhost:8080/connexion,5906,0,0
+1793015449976,5964,2 - Mon planning,200,OK,Utilisateurs 1-50,text,true,,6059,276,75,75,http://localhost:8080/planning,5964,0,0
+1793015450078,5995,2 - Mon planning,200,OK,Utilisateurs 1-52,text,true,,6059,276,75,75,http://localhost:8080/planning,5995,0,0
+1793015450053,6067,1 - Connexion,302,FOUND,Utilisateurs 1-39,text,true,,586,252,75,75,http://localhost:8080/connexion,6067,0,0
+1793015450092,6212,1 - Connexion,302,FOUND,Utilisateurs 1-8,text,true,,586,252,75,75,http://localhost:8080/connexion,6212,0,0
+1793015450129,6179,1 - Connexion,302,FOUND,Utilisateurs 1-41,text,true,,586,252,75,75,http://localhost:8080/connexion,6179,0,0
+1793015450294,6264,1 - Connexion,302,FOUND,Utilisateurs 1-45,text,true,,586,252,75,75,http://localhost:8080/connexion,6264,0,0
+1793015450374,6225,2 - Mon planning,200,OK,Utilisateurs 1-20,text,true,,6059,276,75,75,http://localhost:8080/planning,6225,0,0
+1793015450611,6054,2 - Mon planning,200,OK,Utilisateurs 1-13,text,true,,6059,276,75,75,http://localhost:8080/planning,6054,0,0
+1793015450723,6018,2 - Mon planning,200,OK,Utilisateurs 1-22,text,true,,6059,276,75,75,http://localhost:8080/planning,6018,0,0
+1793015450968,5866,2 - Mon planning,200,OK,Utilisateurs 1-54,text,true,,6059,276,75,75,http://localhost:8080/planning,5866,0,0
+1793015450875,5981,1 - Connexion,302,FOUND,Utilisateurs 1-67,text,true,,586,252,75,75,http://localhost:8080/connexion,5981,0,0
+1793015451024,6022,1 - Connexion,302,FOUND,Utilisateurs 1-42,text,true,,586,252,75,75,http://localhost:8080/connexion,6022,0,0
+1793015450989,6079,1 - Connexion,302,FOUND,Utilisateurs 1-7,text,true,,586,252,75,75,http://localhost:8080/connexion,6079,0,0
+1793015451507,5674,2 - Mon planning,200,OK,Utilisateurs 1-25,text,true,,6059,276,75,75,http://localhost:8080/planning,5674,0,0
+1793015451300,5957,1 - Connexion,302,FOUND,Utilisateurs 1-18,text,true,,586,252,75,75,http://localhost:8080/connexion,5957,0,0
+1793015451515,6007,1 - Connexion,302,FOUND,Utilisateurs 1-68,text,true,,586,252,75,75,http://localhost:8080/connexion,6007,0,0
+1793015451560,6157,1 - Connexion,302,FOUND,Utilisateurs 1-43,text,true,,586,252,75,75,http://localhost:8080/connexion,6156,0,0
+1793015451641,6084,1 - Connexion,302,FOUND,Utilisateurs 1-66,text,true,,586,252,75,75,http://localhost:8080/connexion,6084,0,0
+1793015451975,5871,2 - Mon planning,200,OK,Utilisateurs 1-34,text,true,,6059,276,75,75,http://localhost:8080/planning,5871,0,0
+1793015452046,5878,1 - Connexion,302,FOUND,Utilisateurs 1-28,text,true,,586,252,75,75,http://localhost:8080/connexion,5878,0,0
+1793015452151,5807,2 - Mon planning,200,OK,Utilisateurs 1-4,text,true,,6059,276,75,75,http://localhost:8080/planning,5807,0,0
+1793015452352,5738,2 - Mon planning,200,OK,Utilisateurs 1-14,text,true,,6059,276,75,75,http://localhost:8080/planning,5738,0,0
+1793015452276,5840,2 - Mon planning,200,OK,Utilisateurs 1-6,text,true,,6059,276,75,75,http://localhost:8080/planning,5840,0,0
+1793015452401,5886,1 - Connexion,302,FOUND,Utilisateurs 1-17,text,true,,586,252,75,75,http://localhost:8080/connexion,5886,0,0
+1793015452401,5943,1 - Connexion,302,FOUND,Utilisateurs 1-31,text,true,,586,252,75,75,http://localhost:8080/connexion,5943,0,0
+1793015452672,5792,2 - Mon planning,200,OK,Utilisateurs 1-35,text,true,,6059,276,75,75,http://localhost:8080/planning,5792,0,0
+1793015452677,5954,1 - Connexion,302,FOUND,Utilisateurs 1-11,text,true,,586,252,75,75,http://localhost:8080/connexion,5954,0,0
+1793015452742,5924,1 - Connexion,302,FOUND,Utilisateurs 1-1,text,true,,586,252,75,75,http://localhost:8080/connexion,5924,0,0
+1793015453018,5779,2 - Mon planning,200,OK,Utilisateurs 1-36,text,true,,6059,276,75,75,http://localhost:8080/planning,5779,0,0
+1793015452748,6089,2 - Mon planning,200,OK,Utilisateurs 1-15,text,true,,6059,276,75,75,http://localhost:8080/planning,6089,0,0
+1793015453218,5761,2 - Mon planning,200,OK,Utilisateurs 1-57,text,true,,6059,276,75,75,http://localhost:8080/planning,5760,0,0
+1793015453027,6007,1 - Connexion,302,FOUND,Utilisateurs 1-70,text,true,,586,252,75,75,http://localhost:8080/connexion,6007,0,0
+1793015453278,5858,2 - Mon planning,200,OK,Utilisateurs 1-40,text,true,,6059,276,75,75,http://localhost:8080/planning,5858,0,0
+1793015453328,5927,2 - Mon planning,200,OK,Utilisateurs 1-3,text,true,,6059,276,75,75,http://localhost:8080/planning,5927,0,0
+1793015453340,6026,2 - Mon planning,200,OK,Utilisateurs 1-55,text,true,,6059,276,75,75,http://localhost:8080/planning,6026,0,0
+1793015453255,6164,1 - Connexion,302,FOUND,Utilisateurs 1-44,text,true,,586,252,75,75,http://localhost:8080/connexion,6164,0,0
+1793015453506,5989,2 - Mon planning,200,OK,Utilisateurs 1-33,text,true,,6059,276,75,75,http://localhost:8080/planning,5989,0,0
+1793015453598,6083,1 - Connexion,302,FOUND,Utilisateurs 1-69,text,true,,586,252,75,75,http://localhost:8080/connexion,6083,0,0
+1793015453660,6033,1 - Connexion,302,FOUND,Utilisateurs 1-29,text,true,,586,252,75,75,http://localhost:8080/connexion,6033,0,0
+1793015453761,6138,1 - Connexion,302,FOUND,Utilisateurs 1-72,text,true,,586,252,75,75,http://localhost:8080/connexion,6138,0,0
+1793015453834,6093,1 - Connexion,302,FOUND,Utilisateurs 1-71,text,true,,586,252,75,75,http://localhost:8080/connexion,6093,0,0
+1793015453896,6123,2 - Mon planning,200,OK,Utilisateurs 1-58,text,true,,6059,276,75,75,http://localhost:8080/planning,6123,0,0
+1793015454367,5819,1 - Connexion,302,FOUND,Utilisateurs 1-73,text,true,,586,252,75,75,http://localhost:8080/connexion,5819,0,0
+1793015454449,5929,1 - Connexion,302,FOUND,Utilisateurs 1-49,text,true,,586,252,75,75,http://localhost:8080/connexion,5929,0,0
+1793015454504,5876,1 - Connexion,302,FOUND,Utilisateurs 1-30,text,true,,586,252,75,75,http://localhost:8080/connexion,5876,0,0
+1793015454729,5843,2 - Mon planning,200,OK,Utilisateurs 1-24,text,true,,6059,276,75,75,http://localhost:8080/planning,5843,0,0
+1793015454611,6015,1 - Connexion,302,FOUND,Utilisateurs 1-46,text,true,,586,252,75,75,http://localhost:8080/connexion,6015,0,0
+1793015454879,5966,1 - Connexion,302,FOUND,Utilisateurs 1-74,text,true,,586,252,75,75,http://localhost:8080/connexion,5966,0,0
+1793015454826,6117,2 - Mon planning,200,OK,Utilisateurs 1-37,text,true,,6059,276,75,75,http://localhost:8080/planning,6117,0,0
+1793015454889,6170,1 - Connexion,302,FOUND,Utilisateurs 1-10,text,true,,586,252,75,75,http://localhost:8080/connexion,6170,0,0
+1793015454892,6272,1 - Connexion,302,FOUND,Utilisateurs 1-47,text,true,,586,252,75,75,http://localhost:8080/connexion,6272,0,0
+1793015454896,6336,2 - Mon planning,200,OK,Utilisateurs 1-60,text,true,,6059,276,75,75,http://localhost:8080/planning,6336,0,0
+1793015454955,6367,2 - Mon planning,200,OK,Utilisateurs 1-38,text,true,,6059,276,75,75,http://localhost:8080/planning,6367,0,0
+1793015454964,6458,1 - Connexion,302,FOUND,Utilisateurs 1-2,text,true,,586,252,75,75,http://localhost:8080/connexion,6458,0,0
+1793015454980,6462,2 - Mon planning,200,OK,Utilisateurs 1-16,text,true,,6059,276,75,75,http://localhost:8080/planning,6462,0,0
+1793015455324,6209,2 - Mon planning,200,OK,Utilisateurs 1-56,text,true,,6059,276,75,75,http://localhost:8080/planning,6209,0,0
+1793015455555,6077,2 - Mon planning,200,OK,Utilisateurs 1-27,text,true,,6059,276,75,75,http://localhost:8080/planning,6077,0,0
+1793015455432,6329,1 - Connexion,302,FOUND,Utilisateurs 1-19,text,true,,586,252,75,75,http://localhost:8080/connexion,6329,0,0
+1793015455749,6075,1 - Connexion,302,FOUND,Utilisateurs 1-53,text,true,,586,252,75,75,http://localhost:8080/connexion,6075,0,0
+1793015455960,5962,2 - Mon planning,200,OK,Utilisateurs 1-62,text,true,,6059,276,75,75,http://localhost:8080/planning,5962,0,0
+1793015455961,6060,2 - Mon planning,200,OK,Utilisateurs 1-59,text,true,,6059,276,75,75,http://localhost:8080/planning,6060,0,0
+1793015455956,6173,1 - Connexion,302,FOUND,Utilisateurs 1-9,text,true,,586,252,75,75,http://localhost:8080/connexion,6173,0,0
+1793015455973,6266,1 - Connexion,302,FOUND,Utilisateurs 1-32,text,true,,586,252,75,75,http://localhost:8080/connexion,6266,0,0
+1793015456040,6308,1 - Connexion,302,FOUND,Utilisateurs 1-21,text,true,,586,252,75,75,http://localhost:8080/connexion,6308,0,0
+1793015456335,6092,1 - Connexion,302,FOUND,Utilisateurs 1-75,text,true,,586,252,75,75,http://localhost:8080/connexion,6092,0,0
+1793015456540,6027,2 - Mon planning,200,OK,Utilisateurs 1-64,text,true,,6059,276,75,75,http://localhost:8080/planning,6027,0,0
+1793015456433,6223,1 - Connexion,302,FOUND,Utilisateurs 1-51,text,true,,586,252,75,75,http://localhost:8080/connexion,6222,0,0
+1793015456540,6236,1 - Connexion,302,FOUND,Utilisateurs 1-5,text,true,,586,252,75,75,http://localhost:8080/connexion,6236,0,0
+1793015456542,6341,1 - Connexion,302,FOUND,Utilisateurs 1-48,text,true,,586,252,75,75,http://localhost:8080/connexion,6341,0,0
+1793015456619,6350,1 - Connexion,302,FOUND,Utilisateurs 1-12,text,true,,586,252,75,75,http://localhost:8080/connexion,6350,0,0
+1793015456904,6166,2 - Mon planning,200,OK,Utilisateurs 1-63,text,true,,6059,276,75,75,http://localhost:8080/planning,6166,0,0
+1793015456980,6114,2 - Mon planning,200,OK,Utilisateurs 1-23,text,true,,6059,276,75,75,http://localhost:8080/planning,6114,0,0
+1793015457058,6118,2 - Mon planning,200,OK,Utilisateurs 1-61,text,true,,6059,276,75,75,http://localhost:8080/planning,6118,0,0
+1793015457167,6103,2 - Mon planning,200,OK,Utilisateurs 1-26,text,true,,6059,276,75,75,http://localhost:8080/planning,6103,0,0
+1793015457181,6105,2 - Mon planning,200,OK,Utilisateurs 1-39,text,true,,6059,276,75,75,http://localhost:8080/planning,6105,0,0
+1793015457313,6073,2 - Mon planning,200,OK,Utilisateurs 1-65,text,true,,6059,276,75,75,http://localhost:8080/planning,6073,0,0
+1793015457334,6141,1 - Connexion,302,FOUND,Utilisateurs 1-52,text,true,,586,252,75,75,http://localhost:8080/connexion,6141,0,0
+1793015457436,6058,2 - Mon planning,200,OK,Utilisateurs 1-8,text,true,,6059,276,75,75,http://localhost:8080/planning,6058,0,0
+1793015457591,6088,1 - Connexion,302,FOUND,Utilisateurs 1-50,text,true,,586,252,75,75,http://localhost:8080/connexion,6088,0,0
+1793015457828,5954,1 - Connexion,302,FOUND,Utilisateurs 1-13,text,true,,586,252,75,75,http://localhost:8080/connexion,5954,0,0
+1793015457931,5925,2 - Mon planning,200,OK,Utilisateurs 1-67,text,true,,6059,276,75,75,http://localhost:8080/planning,5925,0,0
+1793015457934,6020,2 - Mon planning,200,OK,Utilisateurs 1-45,text,true,,6059,276,75,75,http://localhost:8080/planning,6020,0,0
+1793015458125,5920,2 - Mon planning,200,OK,Utilisateurs 1-41,text,true,,6059,276,75,75,http://localhost:8080/planning,5920,0,0
+1793015458201,5970,1 - Connexion,302,FOUND,Utilisateurs 1-20,text,true,,586,252,75,75,http://localhost:8080/connexion,5970,0,0
+1793015458221,6038,1 - Connexion,302,FOUND,Utilisateurs 1-54,text,true,,586,252,75,75,http://localhost:8080/connexion,6038,0,0
+1793015458222,6135,1 - Connexion,302,FOUND,Utilisateurs 1-22,text,true,,586,252,75,75,http://localhost:8080/connexion,6135,0,0
+1793015458427,6035,2 - Mon planning,200,OK,Utilisateurs 1-7,text,true,,6059,276,75,75,http://localhost:8080/planning,6035,0,0
+1793015458529,6065,2 - Mon planning,200,OK,Utilisateurs 1-18,text,true,,6059,276,75,75,http://localhost:8080/planning,6065,0,0
+1793015458614,6049,2 - Mon planning,200,OK,Utilisateurs 1-68,text,true,,6059,276,75,75,http://localhost:8080/planning,6049,0,0
+1793015458937,5884,2 - Mon planning,200,OK,Utilisateurs 1-42,text,true,,6059,276,75,75,http://localhost:8080/planning,5884,0,0
+1793015459008,5881,2 - Mon planning,200,OK,Utilisateurs 1-66,text,true,,6059,276,75,75,http://localhost:8080/planning,5881,0,0
+1793015459117,5923,1 - Connexion,302,FOUND,Utilisateurs 1-25,text,true,,586,252,75,75,http://localhost:8080/connexion,5923,0,0
+1793015459201,5918,1 - Connexion,302,FOUND,Utilisateurs 1-6,text,true,,586,252,75,75,http://localhost:8080/connexion,5918,0,0
+1793015459315,5901,2 - Mon planning,200,OK,Utilisateurs 1-43,text,true,,6059,276,75,75,http://localhost:8080/planning,5900,0,0
+1793015459293,5937,1 - Connexion,302,FOUND,Utilisateurs 1-14,text,true,,586,252,75,75,http://localhost:8080/connexion,5937,0,0
+1793015459486,5857,2 - Mon planning,200,OK,Utilisateurs 1-28,text,true,,6059,276,75,75,http://localhost:8080/planning,5857,0,0
+1793015459649,5791,2 - Mon planning,200,OK,Utilisateurs 1-31,text,true,,6059,276,75,75,http://localhost:8080/planning,5791,0,0
+1793015459407,6133,1 - Connexion,302,FOUND,Utilisateurs 1-4,text,true,,586,252,75,75,http://localhost:8080/connexion,6133,0,0
+1793015459770,5965,1 - Connexion,302,FOUND,Utilisateurs 1-35,text,true,,586,252,75,75,http://localhost:8080/connexion,5965,0,0
+1793015459744,5996,1 - Connexion,302,FOUND,Utilisateurs 1-34,text,true,,586,252,75,75,http://localhost:8080/connexion,5996,0,0
+1793015459923,5967,2 - Mon planning,200,OK,Utilisateurs 1-11,text,true,,6059,276,75,75,http://localhost:8080/planning,5967,0,0
+1793015459991,5912,2 - Mon planning,200,OK,Utilisateurs 1-17,text,true,,6059,276,75,75,http://localhost:8080/planning,5912,0,0
+1793015460300,5816,1 - Connexion,302,FOUND,Utilisateurs 1-15,text,true,,586,252,75,75,http://localhost:8080/connexion,5816,0,0
+1793015460344,5849,2 - Mon planning,200,OK,Utilisateurs 1-1,text,true,,6059,276,75,75,http://localhost:8080/planning,5849,0,0
+1793015460357,5971,1 - Connexion,302,FOUND,Utilisateurs 1-36,text,true,,586,252,75,75,http://localhost:8080/connexion,5971,0,0
+1793015460548,5865,1 - Connexion,302,FOUND,Utilisateurs 1-57,text,true,,586,252,75,75,http://localhost:8080/connexion,5865,0,0
+1793015460575,5945,1 - Connexion,302,FOUND,Utilisateurs 1-40,text,true,,586,252,75,75,http://localhost:8080/connexion,5945,0,0
+1793015460661,5912,2 - Mon planning,200,OK,Utilisateurs 1-70,text,true,,6059,276,75,75,http://localhost:8080/planning,5912,0,0
+1793015460692,5930,2 - Mon planning,200,OK,Utilisateurs 1-69,text,true,,6059,276,75,75,http://localhost:8080/planning,5930,0,0
+1793015460815,6144,1 - Connexion,302,FOUND,Utilisateurs 1-33,text,true,,586,252,75,75,http://localhost:8080/connexion,6144,0,0
+1793015460852,6108,1 - Connexion,302,FOUND,Utilisateurs 1-3,text,true,,586,252,75,75,http://localhost:8080/connexion,6108,0,0
+1793015460953,6117,2 - Mon planning,200,OK,Utilisateurs 1-44,text,true,,6059,276,75,75,http://localhost:8080/planning,6117,0,0
+1793015460966,6189,2 - Mon planning,200,OK,Utilisateurs 1-72,text,true,,6059,276,75,75,http://localhost:8080/planning,6189,0,0
+1793015461211,5969,2 - Mon planning,200,OK,Utilisateurs 1-71,text,true,,6059,276,75,75,http://localhost:8080/planning,5969,0,0
+1793015461363,6061,1 - Connexion,302,FOUND,Utilisateurs 1-55,text,true,,586,252,75,75,http://localhost:8080/connexion,6061,0,0
+1793015461529,5983,2 - Mon planning,200,OK,Utilisateurs 1-29,text,true,,6059,276,75,75,http://localhost:8080/planning,5983,0,0
+1793015461767,5879,1 - Connexion,302,FOUND,Utilisateurs 1-58,text,true,,586,252,75,75,http://localhost:8080/connexion,5879,0,0
+1793015462074,5693,2 - Mon planning,200,OK,Utilisateurs 1-73,text,true,,6059,276,75,75,http://localhost:8080/planning,5693,0,0
+1793015462070,5747,1 - Connexion,302,FOUND,Utilisateurs 1-24,text,true,,586,252,75,75,http://localhost:8080/connexion,5747,0,0
+1793015462075,5815,2 - Mon planning,200,OK,Utilisateurs 1-74,text,true,,6059,276,75,75,http://localhost:8080/planning,5815,0,0
+1793015462170,5861,2 - Mon planning,200,OK,Utilisateurs 1-49,text,true,,6059,276,75,75,http://localhost:8080/planning,5861,0,0
+1793015462191,5847,2 - Mon planning,200,OK,Utilisateurs 1-30,text,true,,6059,276,75,75,http://localhost:8080/planning,5847,0,0
+1793015462286,5875,2 - Mon planning,200,OK,Utilisateurs 1-46,text,true,,6059,276,75,75,http://localhost:8080/planning,5875,0,0
+1793015462539,5663,2 - Mon planning,200,OK,Utilisateurs 1-2,text,true,,6059,276,75,75,http://localhost:8080/planning,5663,0,0
+1793015462612,5643,2 - Mon planning,200,OK,Utilisateurs 1-10,text,true,,6059,276,75,75,http://localhost:8080/planning,5643,0,0
+1793015462731,5730,1 - Connexion,302,FOUND,Utilisateurs 1-37,text,true,,586,252,74,74,http://localhost:8080/connexion,5730,0,0
+1793015462821,5647,1 - Connexion,302,FOUND,Utilisateurs 1-16,text,true,,586,252,73,73,http://localhost:8080/connexion,5647,0,0
+1793015462908,5685,2 - Mon planning,200,OK,Utilisateurs 1-19,text,true,,6059,276,72,72,http://localhost:8080/planning,5685,0,0
+1793015462837,5897,1 - Connexion,302,FOUND,Utilisateurs 1-60,text,true,,586,252,71,71,http://localhost:8080/connexion,5897,0,0
+1793015463024,5768,1 - Connexion,302,FOUND,Utilisateurs 1-62,text,true,,586,252,71,71,http://localhost:8080/connexion,5768,0,0
+1793015463132,5869,1 - Connexion,302,FOUND,Utilisateurs 1-38,text,true,,586,252,70,70,http://localhost:8080/connexion,5869,0,0
+1793015463096,5975,2 - Mon planning,200,OK,Utilisateurs 1-47,text,true,,6059,276,69,69,http://localhost:8080/planning,5975,0,0
+1793015463360,5833,2 - Mon planning,200,OK,Utilisateurs 1-53,text,true,,6059,276,68,68,http://localhost:8080/planning,5833,0,0
+1793015463147,6083,1 - Connexion,302,FOUND,Utilisateurs 1-59,text,true,,586,252,67,67,http://localhost:8080/connexion,6083,0,0
+1793015463401,6029,1 - Connexion,302,FOUND,Utilisateurs 1-27,text,true,,586,252,66,66,http://localhost:8080/connexion,6029,0,0
+1793015463496,5937,1 - Connexion,302,FOUND,Utilisateurs 1-56,text,true,,586,252,65,65,http://localhost:8080/connexion,5937,0,0
+1793015463674,5955,2 - Mon planning,200,OK,Utilisateurs 1-9,text,true,,6059,276,64,64,http://localhost:8080/planning,5955,0,0
+1793015463532,6148,2 - Mon planning,200,OK,Utilisateurs 1-75,text,true,,6059,276,63,63,http://localhost:8080/planning,6148,0,0
+1793015464097,5828,2 - Mon planning,200,OK,Utilisateurs 1-32,text,true,,6059,276,62,62,http://localhost:8080/planning,5828,0,0
+1793015463902,6027,2 - Mon planning,200,OK,Utilisateurs 1-21,text,true,,6059,276,61,61,http://localhost:8080/planning,6027,0,0
+1793015464299,5783,2 - Mon planning,200,OK,Utilisateurs 1-48,text,true,,6059,276,60,60,http://localhost:8080/planning,5783,0,0
+1793015464488,5700,1 - Connexion,302,FOUND,Utilisateurs 1-63,text,true,,586,252,59,59,http://localhost:8080/connexion,5700,0,0
+1793015464564,5725,2 - Mon planning,200,OK,Utilisateurs 1-51,text,true,,6059,276,58,58,http://localhost:8080/planning,5725,0,0
+1793015464673,5746,2 - Mon planning,200,OK,Utilisateurs 1-5,text,true,,6059,276,57,57,http://localhost:8080/planning,5746,0,0
+1793015464495,5949,1 - Connexion,302,FOUND,Utilisateurs 1-64,text,true,,586,252,56,56,http://localhost:8080/connexion,5949,0,0
+1793015464776,5841,1 - Connexion,302,FOUND,Utilisateurs 1-26,text,true,,586,252,55,55,http://localhost:8080/connexion,5841,0,0
+1793015464796,5884,1 - Connexion,302,FOUND,Utilisateurs 1-61,text,true,,586,252,54,54,http://localhost:8080/connexion,5884,0,0
+1793015464876,5896,2 - Mon planning,200,OK,Utilisateurs 1-12,text,true,,6059,276,53,53,http://localhost:8080/planning,5896,0,0
+1793015464961,6008,1 - Connexion,302,FOUND,Utilisateurs 1-23,text,true,,586,252,52,52,http://localhost:8080/connexion,6008,0,0
+1793015465022,5961,1 - Connexion,302,FOUND,Utilisateurs 1-67,text,true,,586,252,51,51,http://localhost:8080/connexion,5961,0,0
+1793015465205,5893,2 - Mon planning,200,OK,Utilisateurs 1-20,text,true,,6059,276,50,50,http://localhost:8080/planning,5893,0,0
+1793015465116,6126,1 - Connexion,302,FOUND,Utilisateurs 1-8,text,true,,586,252,49,49,http://localhost:8080/connexion,6126,0,0
+1793015465274,6020,1 - Connexion,302,FOUND,Utilisateurs 1-39,text,true,,586,252,48,48,http://localhost:8080/connexion,6020,0,0
+1793015465303,6110,2 - Mon planning,200,OK,Utilisateurs 1-13,text,true,,6059,276,47,47,http://localhost:8080/planning,6110,0,0
+1793015465322,6118,2 - Mon planning,200,OK,Utilisateurs 1-50,text,true,,6059,276,46,46,http://localhost:8080/planning,6118,0,0
+1793015465405,6137,2 - Mon planning,200,OK,Utilisateurs 1-52,text,true,,6059,276,45,45,http://localhost:8080/planning,6137,0,0
+1793015465576,6068,2 - Mon planning,200,OK,Utilisateurs 1-54,text,true,,6059,276,44,44,http://localhost:8080/planning,6068,0,0
+1793015465619,6153,2 - Mon planning,200,OK,Utilisateurs 1-22,text,true,,6059,276,43,43,http://localhost:8080/planning,6153,0,0
+1793015465380,6451,1 - Connexion,302,FOUND,Utilisateurs 1-65,text,true,,586,252,42,42,http://localhost:8080/connexion,6451,0,0
+1793015465680,6297,1 - Connexion,302,FOUND,Utilisateurs 1-41,text,true,,586,252,41,41,http://localhost:8080/connexion,6297,0,0
+1793015465809,6242,1 - Connexion,302,FOUND,Utilisateurs 1-45,text,true,,586,252,40,40,http://localhost:8080/connexion,6242,0,0
+1793015465826,6340,1 - Connexion,302,FOUND,Utilisateurs 1-42,text,true,,586,252,39,39,http://localhost:8080/connexion,6340,0,0
+1793015466143,6117,1 - Connexion,302,FOUND,Utilisateurs 1-7,text,true,,586,252,38,38,http://localhost:8080/connexion,6117,0,0
+1793015466370,5990,1 - Connexion,302,FOUND,Utilisateurs 1-66,text,true,,586,252,37,37,http://localhost:8080/connexion,5990,0,0
+1793015466455,6013,1 - Connexion,302,FOUND,Utilisateurs 1-43,text,true,,586,252,36,36,http://localhost:8080/connexion,6013,0,0
+1793015466539,6011,1 - Connexion,302,FOUND,Utilisateurs 1-18,text,true,,586,252,35,35,http://localhost:8080/connexion,6011,0,0
+1793015466643,6109,1 - Connexion,302,FOUND,Utilisateurs 1-68,text,true,,586,252,34,34,http://localhost:8080/connexion,6109,0,0
+1793015466820,5935,1 - Connexion,302,FOUND,Utilisateurs 1-28,text,true,,586,252,33,33,http://localhost:8080/connexion,5935,0,0
+1793015466938,5958,2 - Mon planning,200,OK,Utilisateurs 1-34,text,true,,6059,276,32,32,http://localhost:8080/planning,5958,0,0
+1793015466859,6084,2 - Mon planning,200,OK,Utilisateurs 1-35,text,true,,6059,276,31,31,http://localhost:8080/planning,6084,0,0
+1793015466987,6051,2 - Mon planning,200,OK,Utilisateurs 1-25,text,true,,6059,276,30,30,http://localhost:8080/planning,6051,0,0
+1793015467027,6048,2 - Mon planning,200,OK,Utilisateurs 1-6,text,true,,6059,276,29,29,http://localhost:8080/planning,6048,0,0
+1793015467203,5985,2 - Mon planning,200,OK,Utilisateurs 1-4,text,true,,6059,276,28,28,http://localhost:8080/planning,5985,0,0
+1793015467214,6007,2 - Mon planning,200,OK,Utilisateurs 1-15,text,true,,6059,276,27,27,http://localhost:8080/planning,6007,0,0
+1793015467274,6185,1 - Connexion,302,FOUND,Utilisateurs 1-31,text,true,,586,252,26,26,http://localhost:8080/connexion,6185,0,0
+1793015467216,6322,2 - Mon planning,200,OK,Utilisateurs 1-14,text,true,,6059,276,25,25,http://localhost:8080/planning,6322,0,0
+1793015467429,6254,1 - Connexion,302,FOUND,Utilisateurs 1-11,text,true,,586,252,24,24,http://localhost:8080/connexion,6254,0,0
+1793015467933,5859,2 - Mon planning,200,OK,Utilisateurs 1-57,text,true,,6059,276,23,23,http://localhost:8080/planning,5859,0,0
+1793015467771,6053,1 - Connexion,302,FOUND,Utilisateurs 1-17,text,true,,586,252,22,22,http://localhost:8080/connexion,6053,0,0
+1793015467943,5957,2 - Mon planning,200,OK,Utilisateurs 1-36,text,true,,6059,276,21,21,http://localhost:8080/planning,5957,0,0
+1793015468028,6063,1 - Connexion,302,FOUND,Utilisateurs 1-1,text,true,,586,252,20,20,http://localhost:8080/connexion,6063,0,0
+1793015468165,5943,1 - Connexion,302,FOUND,Utilisateurs 1-70,text,true,,586,252,19,19,http://localhost:8080/connexion,5943,0,0
+1793015468244,6124,1 - Connexion,302,FOUND,Utilisateurs 1-44,text,true,,586,252,18,18,http://localhost:8080/connexion,6124,0,0
+1793015468290,6112,2 - Mon planning,200,OK,Utilisateurs 1-40,text,true,,6059,276,17,17,http://localhost:8080/planning,6112,0,0
+1793015468551,6011,2 - Mon planning,200,OK,Utilisateurs 1-3,text,true,,6059,276,16,16,http://localhost:8080/planning,6011,0,0
+1793015468575,6114,2 - Mon planning,200,OK,Utilisateurs 1-33,text,true,,6059,276,15,15,http://localhost:8080/planning,6114,0,0
+1793015468349,6454,1 - Connexion,302,FOUND,Utilisateurs 1-69,text,true,,586,252,14,14,http://localhost:8080/connexion,6454,0,0
+1793015468936,5958,2 - Mon planning,200,OK,Utilisateurs 1-58,text,true,,6059,276,13,13,http://localhost:8080/planning,5958,0,0
+1793015468790,6114,1 - Connexion,302,FOUND,Utilisateurs 1-72,text,true,,586,252,12,12,http://localhost:8080/connexion,6114,0,0
+1793015468959,6142,1 - Connexion,302,FOUND,Utilisateurs 1-73,text,true,,586,252,11,11,http://localhost:8080/connexion,6142,0,0
+1793015468937,6184,1 - Connexion,302,FOUND,Utilisateurs 1-71,text,true,,586,252,10,10,http://localhost:8080/connexion,6184,0,0
+1793015469263,5996,2 - Mon planning,200,OK,Utilisateurs 1-55,text,true,,6059,276,9,9,http://localhost:8080/planning,5996,0,0
+1793015469320,6145,1 - Connexion,302,FOUND,Utilisateurs 1-29,text,true,,586,252,8,8,http://localhost:8080/connexion,6145,0,0
+1793015469316,6188,2 - Mon planning,200,OK,Utilisateurs 1-24,text,true,,6059,276,7,7,http://localhost:8080/planning,6188,0,0
+1793015469452,6205,1 - Connexion,302,FOUND,Utilisateurs 1-46,text,true,,586,252,6,6,http://localhost:8080/connexion,6205,0,0
+1793015469452,6272,1 - Connexion,302,FOUND,Utilisateurs 1-74,text,true,,586,252,5,5,http://localhost:8080/connexion,6272,0,0
+1793015469475,6388,1 - Connexion,302,FOUND,Utilisateurs 1-30,text,true,,586,252,4,4,http://localhost:8080/connexion,6388,0,0
+1793015469581,6360,1 - Connexion,302,FOUND,Utilisateurs 1-49,text,true,,586,252,3,3,http://localhost:8080/connexion,6360,0,0
+1793015469697,6349,1 - Connexion,302,FOUND,Utilisateurs 1-2,text,true,,586,252,2,2,http://localhost:8080/connexion,6349,0,0
+1793015469861,6263,2 - Mon planning,200,OK,Utilisateurs 1-60,text,true,,6059,276,1,1,http://localhost:8080/planning,6263,0,0
