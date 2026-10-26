@@ -1,6 +1,6 @@
 # Planizi — Trois machines virtuelles face à trois conteneurs
 
-*Compte rendu de l'étape 14. Relevés bruts : `docs/mesures-vm-20261026-1435.md` (VM) et `docs/mesures-conteneurs-20261025-1634.md` / `…-1644.md` (conteneurs). Isolation : `docs/matrice-joignabilite.md` (11/11 cas conformes).*
+*Compte rendu de l'étape 14. Relevés bruts : `docs/mesures-vm-20261026-1435.md` (VM) et `docs/mesures-conteneurs-20261025-1634.md` / `…-1644.md` (conteneurs). Isolation : `docs/matrice-joignabilite.md` (conteneurs, 11/11 cas conformes) et captures `PreuveVM/` (VM, 6/6 cas conformes).*
 
 ## 1. Conditions de mesure
 
@@ -42,7 +42,7 @@ Le temps de lecture suit la longueur : la procédure VM se lit en une vingtaine 
 
 Les mesures ont aussi fait apparaître un implicite caché de la procédure VM. Netplan faisait attendre à vm-metier et vm-donnees un serveur DNS absent du réseau interne, pendant **2 minutes à chaque démarrage**. C'est l'attente `systemd-networkd-wait-online` ; une fois corrigée, le démarrage des systèmes invités passe de 130 à 11-25 s. Rien dans le fichier de procédure ne le laissait voir. En conteneurs, ce réglage n'existe pas : il n'y a pas de système invité à démarrer.
 
-**Une isolation plus stricte en conteneurs.** Les trois VM partagent **un seul** réseau interne, 10.10.10.0/24 (`intnet-app`). vm-proxy peut donc ouvrir une connexion TCP vers le port 5432 de vm-donnees, et seul `pg_hba.conf` refuse ensuite l'authentification. Aucun pare-feu n'a été configuré. En conteneurs, le proxy et la base n'ont aucun réseau commun : la connexion échoue avant même d'atteindre PostgreSQL, que ce soit par le nom (non résolu) ou par l'adresse IP (aucune route), comme le montre la matrice (11/11). Deux réseaux ont coûté 4 lignes de `compose.yaml` ; en VM, il aurait fallu une deuxième carte, un deuxième sous-réseau et trois fichiers de configuration de plus.
+**Une isolation obtenue plus simplement en conteneurs.** Côté VM, la matrice relevée sur les captures `PreuveVM/` est conforme (6/6) : le PC n'atteint que vm-proxy (port 8080) ; depuis le PC, 10.10.10.20:8000 et 10.10.10.30:5432 sont injoignables ; vm-proxy joint vm-metier (ping, `curl` → 200) mais pas le port 5432 de vm-donnees (`nc -zv -w2 10.10.10.30 5432` : délai dépassé) ; vm-metier joint vm-donnees. Cette isolation repose pourtant sur la configuration de chaque machine, alors que les trois VM partagent **un seul** réseau interne, 10.10.10.0/24 (`intnet-app`). En conteneurs, le proxy et la base n'ont aucun réseau commun : la connexion échoue avant même d'atteindre PostgreSQL, par le nom (non résolu) comme par l'adresse IP (aucune route), comme le montre la matrice (11/11). Deux réseaux ont coûté 4 lignes de `compose.yaml` ; en VM, il aurait fallu une deuxième carte, un deuxième sous-réseau et trois fichiers de configuration de plus. À noter : `ss` montre sur vm-metier un port 80 ouvert sur toutes les adresses, inutile à l'application (serveur web probablement installé par erreur).
 
 ## 4. Analyse
 
@@ -71,5 +71,5 @@ Démarrage **18 fois** plus rapide en conteneurs. Mémoire **2,8 fois** plus fai
 - La configuration réseau des VM a été corrigée pendant les mesures, une attente DNS de 2 minutes. Les deux valeurs sont données, 193 s avant et 105 s après.
 - Versions différentes : PostgreSQL 18.6 contre 16.9, Python 3.14 contre 3.12.8, gunicorn 26.2 contre 23.0, Ubuntu contre images Debian. La procédure VM ne fixait aucune version : c'est l'implicite que l'avertissement du sujet sur les images sans version explicite visait.
 - Les mesures VM de l'étape 10 n'avaient pas été faites pendant la partie 2 (`recapitulatif-deploiement-planizi.md`). Elles ont été prises ici avec le même protocole que les conteneurs (`docker/mesures-vm.ps1`). Le temps de mise en place des VM depuis zéro n'a pas été chronométré.
-- La matrice de joignabilité n'a été relevée que pour les conteneurs (11/11). Côté VM, elle n'a pas été vérifiée case par case : la topologie à un seul réseau interne laisse le proxy atteindre le port de la base, protégé seulement par `pg_hba.conf`.
+- La matrice VM (6 cas) a été relevée à la main à partir de captures, et non par un script comme pour les conteneurs (11 cas).
 - La mémoire « vue de l'hôte » d'une VM dépend de ce que le système invité a déjà touché. Elle augmenterait avec l'usage, jusqu'aux 5 120 Mio alloués.
